@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.14159265-2.6-0.99992 (TeX Live 2015/Debian) (preloaded format=xelatex 2017.10.10)  23 NOV 2017 17:05
+This is XeTeX, Version 3.14159265-2.6-0.99992 (TeX Live 2015/Debian) (preloaded format=xelatex 2017.10.10)  23 NOV 2017 17:22
 entering extended mode
  \write18 enabled.
  %&-line parsing enabled.
@@ -1899,7 +1899,10 @@ rap.dedent(t)); f.close();")...executed.
 runsystem(pygmentize -l cpp -f latex -P commandprefix=PYG -F tokenmerge -P math
 escape=True -o "test.out.pyg" "test.pyg" )...executed.
 
- (./test.out.pyg)
+ (./test.out.pyg
+Underfull \vbox (badness 4013) has occurred while \output is active []
+
+)
 runsystem(python -c "import sys; import textwrap; from io import open; f = open
 (\"source/temp_ypm/minimumpresentation.cpp\", \"r\", encoding=\"UTF8\"); t = f.
 read(); f.close(); f = open(\"test.pyg\", \"w\", encoding=\"UTF8\"); f.write(te
@@ -1908,7 +1911,8 @@ xtwrap.dedent(t)); f.close();")...executed.
 runsystem(pygmentize -l cpp -f latex -P commandprefix=PYG -F tokenmerge -P math
 escape=True -o "test.out.pyg" "test.pyg" )...executed.
 
- (./test.out.pyg [6])
+
+(./test.out.pyg [6])
 runsystem(rm "test.pyg")...executed.
 
 runsystem(rm "test.out.pyg")...executed.
@@ -1926,7 +1930,7 @@ Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 171.
 Here is how much of TeX's memory you used:
  30773 strings out of 495252
  574878 string characters out of 6180857
- 646587 words of memory out of 5000000
+ 645587 words of memory out of 5000000
  33657 multiletter control sequences out of 15000+600000
  9958 words of font info for 69 fonts, out of 8000000 for 9000
  264 hyphenation exceptions out of 8191

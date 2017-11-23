@@ -25,9 +25,7 @@ void SA(char *r, int *sa, int n, int m){
 			x[sa[i]] = cmp(y, sa[i - 1], sa[i], j) ? p : ++p;
 	}
 }
-
-void getheight(char *r, int *sa, int *rk, int *h, int n)
-{
+void getheight(char *r, int *sa, int *rk, int *h, int n){
 	for(int i = 1; i <= n; i++) rk[sa[i]] = i;
 	for(int i = 1, p = 0; i <= n; i++, p ? p-- : 0){
 		int j = sa[rk[i] - 1];
@@ -35,4 +33,3 @@ void getheight(char *r, int *sa, int *rk, int *h, int n)
 		h[rk[i]] = p;
 	}	
 }
-

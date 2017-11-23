@@ -49,4 +49,3 @@ void add(char *s)
 	int len = strlen(s + 1); las = root;
 	for(int i = 1; i <= len; i++) extend(s[i] - 'a');
 }
-

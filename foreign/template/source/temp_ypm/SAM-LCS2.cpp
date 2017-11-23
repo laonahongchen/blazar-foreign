@@ -73,4 +73,3 @@ int main(){
 	for(int i = 1; i<= tot; i++) ans = max(ans, ANS[i]);
 	printf("%d\n", ans);
 }
-
