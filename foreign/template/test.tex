@@ -1,0 +1,171 @@
+%文档类型
+\documentclass[a4paper,twocolumn,landscape]{article}
+
+%引用包裹
+\usepackage{bm}
+\usepackage{cmap}
+\usepackage{ctex}
+\usepackage{cite}
+\usepackage{color}
+\usepackage{float}
+\usepackage{xeCJK}
+\usepackage{amsthm}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{setspace}
+\usepackage{geometry}
+\usepackage{hyperref}
+\usepackage{enumerate}
+\usepackage{indentfirst}
+\usepackage[cache=false]{minted}
+\usepackage{fontspec}
+\usepackage{pdfpages}
+\usepackage{fancyhdr}
+\usepackage[table]{xcolor}
+\usepackage{booktabs}
+\usepackage{harpoon}
+%代码高亮
+\geometry{margin=1in}
+\setmonofont{Ubuntu Mono}
+%字体设置
+\setmainfont{Ubuntu Mono}
+%\setCJKmonofont{SimSun}
+%\setCJKmainfont[BoldFont={SimSun}]{SimSun}
+%\pagestyle{fancy}
+\hypersetup{
+	colorlinks=true,
+	linkcolor=black
+}
+
+%\newcommand{\cppcode}[1]{
+ %   \inputminted[mathescape,
+  %  frame=lines,linenos]{cpp}{source/#1}
+%}
+
+%\newcommand{\javacode}[1]{
+ %   \inputminted[mathescape,
+  %  frame=lines,linenos]{java}{source/#1}
+%}
+
+\newcommand{\cppcode}[1]{
+	\inputminted[mathescape,
+	tabsize=2,
+	style=xcode,
+	%linenos,
+	%frame=single,
+	autogobble,
+	framesep=0.5mm,
+	breakaftergroup=true,
+	breakautoindent=true,
+	breakbytoken=true,
+	breaklines=true,
+	fontsize=\small
+	]{cpp}{source/#1}
+}
+\newcommand{\javacode}[1]{
+	\inputminted[mathescape,
+	tabsize=2,
+	%linenos,
+	%frame=single,
+	framesep=2mm,
+	breakaftergroup=true,
+	breakautoindent=true,
+	breakbytoken=true,
+	breaklines=true,
+	fontsize=\small
+	]{java}{source/#1}
+}
+
+\newcommand{\vimcode}[1]{
+	\inputminted[mathescape,
+	tabsize=2,
+	%linenos,
+	%frame=single,
+	framesep=2mm,
+	breakaftergroup=true,
+	breakautoindent=true,
+	breakbytoken=true,
+	breaklines=true,
+	fontsize=\small
+	]{vim}{source/#1}
+}
+
+\begin{document}
+\iffalse
+
+\title{代码库}
+\author{Blazar}
+\date{\today}
+
+\newpage
+\newpage
+
+\maketitle
+
+\tableofcontents
+
+\newpage
+
+\fi
+
+
+\section{字符串}
+
+\subsection{KMP算法}
+
+\cppcode{temp_ypm/KMP-poj3461.cpp}
+
+\subsection{扩展KMP算法}
+
+%返回结果：$$next_i = lcp(text, text_{i \dots n-1})$$
+
+%\cppcode{string-manipulation/ExtKMP.cpp}
+\cppcode{temp_ypm/exKMP-hdu2594.cpp}
+
+\subsection{AC自动机}
+
+%\cppcode{string-manipulation/ACmachine.cpp}
+\cppcode{temp_ypm/acauto.cpp}
+\subsection{后缀自动机}
+
+\subsubsection{广义后缀自动机(多串)}
+\noindent \textbf{注意事项：}空间是插入字符串总长度的2倍并请注意字符集大小。
+\cppcode{temp_ypm/gy sam.cpp}
+
+\subsubsection{sam-ypm}
+\subsubsection*{sam-nsubstr}
+\cppcode{temp_ypm/SAM-NSUBSTR.cpp}
+\subsubsection*{sam-lcs}
+\cppcode{temp_ypm/SAM-LCS2.cpp}
+
+\subsection{后缀数组}
+\noindent \textbf{注意事项：}$\mathcal{O}(n\log n)$倍增构造。
+%\cppcode{String-Algorithm/Suffix-Array.cpp}
+\cppcode{temp_ypm/SA.cpp}
+
+%\noindent \textbf{注意：}$\mathcal{O}(n)$线性构造，常数大,约为倍增的0.5-0.6倍
+%\cppcode{temp_ypm/dc3-uoj34.cpp}
+
+%\subsection{回文自动机}
+%\noindent \textbf{注意事项：}请注意字符集大小。
+%\cppcode{String-Algorithm/Palindromic-Automaton.cpp}
+%\cppcode{temp_ypm/PAM.cpp}
+\subsection{Manacher}
+\noindent \textbf{注意事项：}1-based算法，请注意下标。
+\cppcode{temp_ypm/manacher-poj3974.cpp}
+\subsection{循环串的最小表示}
+\noindent \textbf{注意事项：}0-Based算法，请注意下标。
+%\cppcode{String-Algorithm/Minimum-Representation.cpp}
+\cppcode{temp_ypm/minimumpresentation.cpp}
+
+\iffalse
+\subsection{后缀树}
+\noindent \textbf{注意事项：}
+\begin{enumerate}
+	\item \indent 边上的字符区间是左闭右开区间；
+	\item \indent 如果要建立关于多个串的后缀树，请用不同的分隔符，并且对于每个叶子结点，去掉和它父亲的连边上出现的第一个分隔符之后的所有字符；
+\end{enumerate}
+\cppcode{String-Algorithm/Suffix-Tree.cpp}
+\fi
+
+\end{document}
