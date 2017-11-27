@@ -8,16 +8,14 @@ pair<LL, LL> comput(LL n, LL p, LL k) {
     cnt += res.first;
     ans = ans * res.second % P;
     for(int i = n - n % P + 1; i <= n; i++)
-		if(i % p)
-            ans = ans * i % P;
+		if(i % p) ans = ans * i % P;
     return make_pair(cnt, ans);
 }
 pair<LL, LL> calc(LL n, LL p, LL k) {
     prod = 1;
     P = pow(p, k, 1e18);
     for(int i = 1; i < P; i++)
-		if(i % p)
-			prod = prod * i % P;
+		if(i % p) prod = prod * i % P;
     pair<LL, LL> res = comput(n, p, k);
     return res;
 }
