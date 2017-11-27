@@ -1,5 +1,7 @@
 %文档类型
 \documentclass[landscape,twocolumn,a4paper]{article}
+\setlength{\columnsep}{0.5cm}
+\setlength{\columnseprule}{0.03cm}
 
 %引用包裹
 \usepackage{bm}
@@ -24,29 +26,18 @@
 \usepackage[table]{xcolor}
 \usepackage{booktabs}
 \usepackage{harpoon}
+
 %代码高亮
-%\geometry{margin=1in}
-\geometry{a4paper,left=1.0cm,right=1.0cm,top=0.75cm,bottom=0.75cm}
+\geometry{a4paper,left=1.0cm,right=1.0cm,top=0.75cm,bottom=1.5cm}
 \setmonofont{Ubuntu Mono}
 %字体设置
 \setmainfont{Ubuntu Mono}
-%\setCJKmonofont{SimSun}
-%\setCJKmainfont[BoldFont={SimSun}]{SimSun}
-%\pagestyle{fancy}
+\pagestyle{plain}
+\hypersetup{hidelinks}
 \hypersetup{
 	colorlinks=true,
 	linkcolor=black
 }
-
-%\newcommand{\cppcode}[1]{
- %   \inputminted[mathescape,
-  %  frame=lines,linenos]{cpp}{source/#1}
-%}
-
-%\newcommand{\javacode}[1]{
- %   \inputminted[mathescape,
-  %  frame=lines,linenos]{java}{source/#1}
-%}
 
 \newcommand{\cppcode}[1]{
 	\inputminted[mathescape,
@@ -66,8 +57,10 @@
 \newcommand{\javacode}[1]{
 	\inputminted[mathescape,
 	tabsize=2,
+	style=xcode,
 	%linenos,
 	%frame=single,
+	autogobble,
 	framesep=2mm,
 	breakaftergroup=true,
 	breakautoindent=true,
@@ -100,76 +93,45 @@
 \newpage
 \tableofcontents
 \newpage
-%\maketitle
-\newpage
 
-\section{数论}
+\section{数学}
 
 \subsection{快速求逆元}
-
-%返回结果：$$x^{-1}(mod)$$
 \indent 使用条件：$x \in [0, mod)$并且$x$与$mod$互质
-
 \cppcode{number-theory/inverse.cpp}
 
-%\subsection{莫比乌斯反演}
-%\cppcode{mobius.cpp}
-
 \subsection{扩展欧几里德算法}
-
-
-返回结果：$$ax+by=gcd(a,b)$$
-\indent 时间复杂度：$\mathcal{O}(nlogn)$
-
+返回结果：$ax+by=gcd(a,b)$
 \cppcode{number-theory/extended-euclid.cpp}
 
 \subsection{中国剩余定理}
-
 返回结果：$$x \equiv r_i (mod \ p_i) \ (0 \leq i < n)$$
-%\indent 使用条件：$p_i$需两两互质\\
-%\indent 时间复杂度：$\mathcal{O}(nlogn)$
-
 \cppcode{number-theory/chinese-remainder-theorem.cpp}
 
 \subsection{中国剩余定理2}
-
 \cppcode{number-theory/china2.cpp}
 
-\subsection{组合数取模}
-\cppcode{number-theory/CnmmodP.cpp}
-
-%\subsection{扩展小步大步}
-%\cppcode{number-theory/exBSGS.cpp}
+%\subsection{组合数取模}
+%\cppcode{number-theory/CnmmodP.cpp}
 
 \subsection{卢卡斯定理}
 \cppcode{number-theory/Lucas.cpp}
 
 \subsection{小步大步}
-
-返回结果：$$a^x=b \ (mod \ p)$$
+返回结果：$a^x=b \ (mod \ p)$
 \indent 使用条件：$p$为质数
-\indent 时间复杂度：$\mathcal{O}(\sqrt{n})$
-
 \cppcode{number-theory/BSGS.cpp}
 
 \subsection{Miller Rabin 素数测试}
-
 \cppcode{number-theory/miller-rabin.cpp}
 
 \subsection{Pollard Rho 大数分解}
-
-时间复杂度：$\mathcal{O}(n^{1/4})$
-
 \cppcode{number-theory/pollard-rho.cpp}
 
 \subsection{快速数论变换(zky)}
-返回结果：$$c_i=\sum_{0 \leq j \leq i} a_j \cdot b_{i-j} (mod) \ (0 \leq i < n)$$
-\indent 使用说明：$magic$是$mod$的原根\\
-\indent 时间复杂度：$\mathcal{O}(n log n)$
+返回结果：$c_i=\sum_{0 \leq j \leq i} a_j \cdot b_{i-j} (mod) \ (0 \leq i < n)$
+%\indent 使用说明：$magic$是$mod$的原根\\
 \cppcode{number-theory/number-theoretic-transform.cpp}
-
-%\subsection{快速数论变换(lyx)}
-%\cppcode{number-theory/DFT.cpp}
 
 \subsection{原根}
 \cppcode{number-theory/primeroot.cpp}
@@ -177,46 +139,23 @@
 \subsection{线性递推}
 \cppcode{number-theory/linear-recurrence.cpp}
 
-\subsection{线性筛}
-\cppcode{number-theory/linear-sieve.cpp}
-
-%\subsection{离散对数}
-
-%\subsection{离散平方根}
-
-%\subsection{佩尔方程求解}
-
 \subsection{直线下整点个数}
-
-返回结果：$$\sum_{0 \leq i < n} \lfloor \frac{a + b \cdot i}{m} \rfloor$$
-\indent 使用条件：$n, m > 0$，$a, b \geq 0$\\
+返回结果：$\sum_{0 \leq i < n} \lfloor \frac{a + b \cdot i}{m} \rfloor$
+\indent 使用条件：$n, m > 0$，$a, b \geq 0$
 \indent 时间复杂度：$\mathcal{O}(n log n)$
-
 \cppcode{number-theory/lattice-count.cpp}
 
-\section{数值}
+%\subsection{高斯消元}
+%\cppcode{numerical-algorithm/Gauss.cpp}
 
-\subsection{高斯消元}
-\cppcode{numerical-algorithm/Gauss.cpp}
-
-\subsection{线性基}
-\cppcode{LB.cpp}
-\iffalse
-\subsection{快速傅立叶变换}
-
-返回结果：$$c_i=\sum_{0 \leq j \leq i} a_j \cdot b_{i-j} \ (0 \leq i < n)$$
-\indent 时间复杂度：$\mathcal{O}(n log n)$
-
-\cppcode{numerical-algorithm/fast-fourier-transform.cpp}
-\fi
 \subsection{1e9+7 FFT}
 \cppcode{numerical-algorithm/fft.cpp}
 
+\iffalse
 \subsection{单纯形法求解线性规划}
-
 返回结果：$$max\{c_{1 \times m} \cdot x_{m \times 1} \ | \ x_{m \times 1} \geq 0_{m \times 1}, a_{n \times m} \cdot x_{m \times 1} \leq b_{n \times 1}\}$$
-
 \cppcode{numerical-algorithm/linear-programming-simplex.cpp}
+\fi
 
 \subsection{自适应辛普森}
 \cppcode{numerical-algorithm/adaptive-simpson.cpp}
@@ -224,16 +163,9 @@
 \subsection{多项式求根}
 \cppcode{numerical-algorithm/polyroot.cpp}
 
-\subsection{快速求逆}
-\cppcode{Mathematical-Algorithm/Quick-Reverse.cpp}
+
 \subsection{魔幻多项式}
 \iffalse
-\subsection*{快速傅里叶变换}
-\noindent \textbf{注意事项：}请实现复数类Complex，并注意快速傅里叶变换精度较差，建议使用快速数论变换。
-\cppcode{Mathematical-Algorithm/Fast-Fourier-Transform.cpp}
-\subsection*{光速数论变换}
-\noindent \textbf{注意事项：}$\mathrm{MOD}$应该为一个特殊的质数$2^n + 1$且$n$应该要足够大，$\mathrm{PRT}$为这个质数的原根。
-\cppcode{Mathematical-Algorithm/Number-Theory-Transform.cpp}
 \subsection*{牛顿迭代法}
 \noindent \textbf{问题描述：}给出多项式$G(x)$，求解多项式$F(x)$满足：
 \[G(F(x)) \equiv 0 \pmod {x^n}\]
@@ -246,6 +178,7 @@
 \[F_{t + 1}(x) \equiv F_t(x) - \dfrac{G(F_t(x))}{G'(F_t(x))} \pmod{x^{2t}}\]
 \noindent \textbf{注意事项：}$G(F(x))$的常数项系数必然为0，这个可以作为求解的初始条件；
 \fi
+
 \subsection*{多项式求逆}
 \noindent \textbf{原理：}令$G(x) = x * A - 1$（其中$A$是一个多项式系数），根据牛顿迭代法有：
 \begin{displaymath}
@@ -261,543 +194,210 @@ F_{t + 1}(x) &\equiv F_t(x) - \dfrac{F_t(x) * A(x) - 1}{A(x)} \\
 	\item 传入的两个数组必须不同，但传入的次数界没有必要是2的次幂；
 \end{enumerate}
 \cppcode{Mathematical-Algorithm/Polynomial-Inverse.cpp}
-\iffalse
-\subsection*{多项式取指数和对数}
-\noindent \textbf{作用：}给出一个多项式$A(x)$，求一个多项式$F(x)$满足$e^A(x) - F(x) \equiv 0 \pmod{x^n}$。\par
-\noindent \textbf{原理：}令$G(x) = \ln x - A$（其中$A$是一个多项式系数），根据牛顿迭代法有：
-\[F_{t + 1}(x) \equiv F_t(x) - F_t(x)(\ln {F_t(x)} - A(x)) \pmod{x^{2t}}\]
-求$\ln {F_t(x)}$可以用先求导再积分的办法，即：
-\[\ln A(x) = \int \dfrac{F'(x)}{F(x)}~\mathrm{d}x\]
-多项式的求导和积分可以在$O(n)$的时间内完成，因此总复杂度为$O(n \log n)$。\par
-\noindent \textbf{应用：}加速多项式快速幂。\par
-\noindent \textbf{注意事项：}
-\begin{enumerate}
-	\item 进行$\log$的多项式必须保证常数项系数为1，否则必须要先求出$\log a[0]$是多少；
-	\item 传入的两个数组必须不同，但传入的次数界没有必要是2的次幂；
-	\item 常数比较大，$10^5$的数据求指数和对数分别需要0.37s和0.85s左右的时间，注意这里{memset}几乎不占用时。
-\end{enumerate}
-\cppcode{Mathematical-Algorithm/Polynomial-ExpAndLn.cpp}
-\fi
-\subsection*{多项式除法}
-\noindent \textbf{作用：}给出两个多项式$A(x)$和$B(x)$，求两个多项式$D(x)$和$R(x)$满足：
-\[A(x) \equiv D(x)B(x) + R(x) \pmod{x^n}\]
-\noindent \textbf{注意事项：}
-\begin{enumerate}
-	\item 常数比较大概为6倍FFT的时间，即大约$10^5$的数据0.07s左右；
-	\item 传入两个多项式的次数界，没有必要是2的次幂，但是要保证除数多项式不为0。
-\end{enumerate}
-\cppcode{Mathematical-Algorithm/Polynomial-Division.cpp}
-
-%\subsection{牛顿迭代法}
-
-%\subsection{多项式方程求解}
-
-%\subsection{最小二乘法}
 
 \section{数据结构}
-\iffalse
-\subsection{平衡的二叉查找树}
 
-\subsubsection{Treap}
-\cppcode{lyx-ds/treap.cpp}
-%\cppcode{data-structure/Treap.cpp}
-
-\subsubsection{Splay}
-\cppcode{lyx-ds/splay.cpp}
-%\cppcode{data-structure/Splay.cpp}
-
-\subsection{坚固的数据结构}
-
-%\subsubsection{坚固的线段树}
-
-%\cppcode{data-structure/persistent-segment-tree.cpp}
-
-\subsubsection{坚固的平衡树}
-
-\cppcode{data-structure/fhqTreap.cpp}
-
-%\subsubsection{坚固的字符串}
-
-%\begin{enumerate}
-%	\item ext库中的rope
-%	\cppcode{data-structure/crope.cpp}
-%	\item 可持久化平衡树实现的rope
-%	\cppcode{data-structure/rope.cpp}
-%\end{enumerate}
-\subsubsection{坚固的左偏树}
-%\cppcode{data-structure/lefttree.cpp}
-\cppcode{lyx-ds/leftist_tree.cpp}
-
-%\subsubsection{不坚固的斜堆}
-%\cppcode{data-structure/SkewHeap.cpp}
-
-\subsection{树上的魔术师}
-
-\subsubsection{轻重树链剖分}
-%\cppcode{data-structure/HLD.cpp}
-\cppcode{lyx-ds/HLD.cpp}
-\fi
-%\subsubsection{轻重树链剖分(lyx)}
-%\cppcode{data-structure/tree-chain.cpp}
-
-%\subsubsection{Link Cut Tree(zky)}
-%\cppcode{data-structure/LCT.cpp}
-\subsection{lct}
-\cppcode{lyx-ds/LCT.cpp}
-
-%\subsubsection{Link Cut Tree(lyx)}
-%\cppcode{data-structure/Link-cut-tree.cpp}
-
-%\subsubsection{AAA Tree}
-%\cppcode{data-structure/toptree.cpp}
-
-%\subsection{RMQ}
-%\cppcode{data-structure/Rmq.cpp}
-
-%\subsection{可持久化线段树}
-%\cppcode{data-structure/ChairTree.cpp}
-
-\subsection{可持久化Trie}
-\cppcode{data-structure/ChairTrie.cpp}
-
- \subsection{k-d树}
-\cppcode{Data-Structure/K-d-Tree.cpp}
-
-
-%\subsection{莫队算法}
-%\cppcode{data-structure/mo-team.cpp}
-%\cppcode{lyx-ds/modui_modify_ver.cpp}
-
-\subsection{树上莫队}
-%\cppcode{data-structure/mo-teamontree.cpp}
-\cppcode{lyx-ds/modui_tree_ver.cpp}
-
-%\subsection{整体二分}
-%\cppcode{data-structure/binary-search.cpp}
-
-\subsection{树状数组kth}
-\cppcode{data-structure/fenwicktree.cpp}
-
-\subsection{虚树}
-\cppcode{data-structure/virtualtree.cpp}
-
-%\subsection{点分治(zky)}
-%\cppcode{data-structure/pointdivide.cpp}
-
-%\subsection{元芳树}
-%\cppcode{data-structure/yuanfang.cpp}
-
+	\subsection{lct}
+	\cppcode{lyx-ds/LCT.cpp}
+	
+	\subsection{可持久化Trie}
+	\cppcode{data-structure/ChairTrie.cpp}
+	
+	\subsection{k-d树}
+	\cppcode{Data-Structure/K-d-Tree.cpp}
+	
+	\subsection{树上莫队}
+	\cppcode{lyx-ds/modui_tree_ver.cpp}
+	
+	\subsection{树状数组kth}
+	\cppcode{data-structure/fenwicktree.cpp}
+	
+	\subsection{虚树}
+	\cppcode{data-structure/virtualtree.cpp}
+	
 
 \section{图论}
-%\subsection{点双连通分量}
-%\cppcode{Graph-Algorithm/Double-Connected-Component.cpp}
-\subsection{点双连通分量(lyx)}
-\cppcode{lyx-ds/bcc.cpp}
 
-%\subsection{Hungary求最大匹配}
-%\cppcode{Graph-Algorithm/Maximum-Matching-Hungary.cpp}
-\subsection{Hopcoft-Karp求最大匹配}
-\cppcode{Graph-Algorithm/Maximum-Matching-Hopcroft-Karp.cpp}
-\subsection{KM带权匹配}
-\noindent \textbf{注意事项：}最小权完美匹配，复杂度为$\mathcal{O}(|V|^3)$。
-\cppcode{Graph-Algorithm/Maximum-Weight-Matching.cpp}
-\iffalse
-\subsection{稀疏图最大流}
-\noindent \textbf{注意事项：}适用于比较稀疏的一般图。
-\cppcode{Graph-Algorithm/Maximum-Flow-ISAP.cpp}
-\subsection{稠密图最大流}
-\noindent \textbf{注意事项：}适用于二分图以及一些比较稠密的、增广路径比较短的图。
-\cppcode{Graph-Algorithm/Maximum-Flow-Dinic.cpp}
-\subsection{稀疏图费用流}
-\cppcode{Graph-Algorithm/Minimum-Cost-Maxflow-SPFA.cpp}
-\subsection{稠密图费用流}
-\cppcode{Graph-Algorithm/Minimum-Cost-Maxflow-ZKW.cpp}
-\fi
-\subsection{2-SAT问题}
-\cppcode{Graph-Algorithm/Two-Satisfiability.cpp}
-\subsection{有根树的同构}
-\cppcode{Graph-Algorithm/Rooted-Tree-Isomorphism.cpp}
-\subsection{Dominator Tree}
-%\cppcode{Graph-Algorithm/Dominator-Tree.cpp}
-\cppcode{graph-theory/dominator.cpp}
-\subsection{哈密尔顿回路（ORE 性质的图）}
-\cppcode{Graph-Algorithm/Hamiltonian-Circuit-Ore.cpp}
-\subsection{无向图最小割}
-\cppcode{Graph-Algorithm/Minimum-Cut-Stoer-Wagner.cpp}
+	\subsection{点双连通分量(lyx)}
+	\cppcode{lyx-ds/bcc.cpp}
+	
+	\subsection{Hopcoft-Karp求最大匹配}
+	\cppcode{Graph-Algorithm/Maximum-Matching-Hopcroft-Karp.cpp}
+	
+	\subsection{KM带权匹配}
+	\noindent \textbf{注意事项：}最小权完美匹配，复杂度为$\mathcal{O}(|V|^3)$。
+	\cppcode{Graph-Algorithm/Maximum-Weight-Matching.cpp}
+	
+	\subsection{2-SAT问题}
+	\cppcode{Graph-Algorithm/Two-Satisfiability.cpp}
+	
+	\subsection{有根树的同构}
+	\cppcode{Graph-Algorithm/Rooted-Tree-Isomorphism.cpp}
+	
+	\subsection{Dominator Tree}
+	\cppcode{graph-theory/dominator.cpp}
+	
+	\subsection{哈密尔顿回路（ORE 性质的图）}
+	\cppcode{Graph-Algorithm/Hamiltonian-Circuit-Ore.cpp}
+	
+	\subsection{无向图最小割}
+	\cppcode{Graph-Algorithm/Minimum-Cut-Stoer-Wagner.cpp}
+	
+	\subsection{带花树}
+	\cppcode{Graph-Algorithm/Maximum-Matching-Blossom.cpp}
 
-\iffalse
-\subsection{弦图判定}
-\cppcode{Graph-Algorithm/Chord-Graph-Judgement.cpp}
-\subsection{弦图求最大团}
-\cppcode{Graph-Algorithm/Chord-Graph-Group-Counter.cpp}
-\subsection{最大团搜索}
-\cppcode{Graph-Algorithm/Maximum-Clique-Search.cpp}
-\subsection{极大团计数}
-\cppcode{Graph-Algorithm/Maximum-Clique-Count.cpp}
-\subsection{最小树形图}
-\cppcode{Graph-Algorithm/Chu-Liu-Algorithm.cpp}
-\subsection{度限制生成树}
-\cppcode{Graph-Algorithm/Minimum-Spanning-Tree-With-Degree-Limit.cpp}
-\fi
-\subsection{带花树}
-\cppcode{Graph-Algorithm/Maximum-Matching-Blossom.cpp}
-
-\iffalse
 \section{字符串}
 
-\subsection{KMP算法}
-
-\cppcode{temp_ypm/KMP-poj3461.cpp}
-
-\subsection{扩展KMP算法}
-
-%返回结果：$$next_i = lcp(text, text_{i \dots n-1})$$
-
-%\cppcode{string-manipulation/ExtKMP.cpp}
-\cppcode{temp_ypm/exKMP-hdu2594.cpp}
-
-\subsection{AC自动机}
-
-%\cppcode{string-manipulation/ACmachine.cpp}
-\cppcode{temp_ypm/acauto.cpp}
-\subsection{后缀自动机}
-
-\subsubsection{广义后缀自动机(多串)}
-\noindent \textbf{注意事项：}空间是插入字符串总长度的2倍并请注意字符集大小。
-\cppcode{temp_ypm/gy sam.cpp}
-
-\subsubsection{sam-ypm}
-\subsubsection*{sam-nsubstr}
-\cppcode{temp_ypm/SAM-NSUBSTR.cpp}
-\subsubsection*{sam-lcs}
-\cppcode{temp_ypm/SAM-LCS2.cpp}
-
-\subsection{后缀数组}
-\noindent \textbf{注意事项：}$\mathcal{O}(n\log n)$倍增构造。
-%\cppcode{String-Algorithm/Suffix-Array.cpp}
-\cppcode{temp_ypm/SA.cpp}
-\noindent \textbf{注意：}$\mathcal{O}(n)$线性构造，常数大,约为倍增的0.5-0.6倍
-\cppcode{temp_ypm/dc3-uoj34.cpp}
-
-\subsection{回文自动机}
-\noindent \textbf{注意事项：}请注意字符集大小。
-%\cppcode{String-Algorithm/Palindromic-Automaton.cpp}
-\cppcode{temp_ypm/PAM.cpp}
-\subsection{Manacher}
-\noindent \textbf{注意事项：}1-based算法，请注意下标。
-\cppcode{temp_ypm/manacher-poj3974.cpp}
-\subsection{循环串的最小表示}
-\noindent \textbf{注意事项：}0-Based算法，请注意下标。
-%\cppcode{String-Algorithm/Minimum-Representation.cpp}
-\cppcode{temp_ypm/minimumpresentation.cpp}
-\subsection{后缀树}
-\noindent \textbf{注意事项：}
-\begin{enumerate}
-	\item \indent 边上的字符区间是左闭右开区间；
-	\item \indent 如果要建立关于多个串的后缀树，请用不同的分隔符，并且对于每个叶子结点，去掉和它父亲的连边上出现的第一个分隔符之后的所有字符；
-\end{enumerate}
-\cppcode{String-Algorithm/Suffix-Tree.cpp}
-
-\fi
-\section{字符串}
-
-\subsection{KMP算法}
-
-\cppcode{temp_ypm/KMP-poj3461.cpp}
-
-\subsection{扩展KMP算法}
-
-%返回结果：$$next_i = lcp(text, text_{i \dots n-1})$$
-
-%\cppcode{string-manipulation/ExtKMP.cpp}
-\cppcode{temp_ypm/exKMP-hdu2594.cpp}
-
-\subsection{AC自动机}
-
-%\cppcode{string-manipulation/ACmachine.cpp}
-\cppcode{temp_ypm/acauto.cpp}
-\subsection{后缀自动机}
-
-\subsubsection{广义后缀自动机(多串)}
-\noindent \textbf{注意事项：}空间是插入字符串总长度的2倍并请注意字符集大小。
-\cppcode{temp_ypm/gy sam.cpp}
-
-\subsubsection{sam-ypm}
-\subsubsection*{sam-nsubstr}
-\cppcode{temp_ypm/SAM-NSUBSTR.cpp}
-\subsubsection*{sam-lcs}
-\cppcode{temp_ypm/SAM-LCS2.cpp}
-
-\subsection{后缀数组}
-\noindent \textbf{注意事项：}$\mathcal{O}(n\log n)$倍增构造。
-%\cppcode{String-Algorithm/Suffix-Array.cpp}
-\cppcode{temp_ypm/SA.cpp}
-
-%\noindent \textbf{注意：}$\mathcal{O}(n)$线性构造，常数大,约为倍增的0.5-0.6倍
-%\cppcode{temp_ypm/dc3-uoj34.cpp}
-
-%\subsection{回文自动机}
-%\noindent \textbf{注意事项：}请注意字符集大小。
-%\cppcode{String-Algorithm/Palindromic-Automaton.cpp}
-%\cppcode{temp_ypm/PAM.cpp}
-\subsection{Manacher}
-\noindent \textbf{注意事项：}1-based算法，请注意下标。
-\cppcode{temp_ypm/manacher-poj3974.cpp}
-\subsection{循环串的最小表示}
-\noindent \textbf{注意事项：}0-Based算法，请注意下标。
-%\cppcode{String-Algorithm/Minimum-Representation.cpp}
-\cppcode{temp_ypm/minimumpresentation.cpp}
-
+	\subsection{KMP算法}
+	\cppcode{temp_ypm/KMP-poj3461.cpp}
+	
+	\subsection{扩展KMP算法}
+	\cppcode{temp_ypm/exKMP-hdu2594.cpp}
+	
+	\subsection{AC自动机}
+	\cppcode{temp_ypm/acauto.cpp}
+	
+	\subsection{后缀自动机}
+	
+		\subsubsection{广义后缀自动机(多串)}
+		\noindent \textbf{注意事项：}空间是字符串总长度的2倍并注意字符集大小。
+		\cppcode{temp_ypm/gy sam.cpp}
+		
+		\subsubsection{sam-ypm}
+			\subsubsection*{sam-nsubstr}
+			\cppcode{temp_ypm/SAM-NSUBSTR.cpp}
+			\subsubsection*{sam-lcs}
+			\cppcode{temp_ypm/SAM-LCS2.cpp}
+		
+	\subsection{倍增后缀数组}
+	\cppcode{temp_ypm/SA.cpp}
+	
+	\subsection{Manacher}
+	\cppcode{temp_ypm/manacher-poj3974.cpp}
+	
+	\subsection{循环串的最小表示}
+	\noindent \textbf{注意事项：}0-Based算法，请注意下标。
+	\cppcode{temp_ypm/minimumpresentation.cpp}
 
 \section{计算几何}
-
-\iffalse
-\subsection{三维几何}
-
-\cppcode{Geometry/1 3DGeo.cpp}
-
-\subsection{三维凸包}
-\cppcode{Geometry/2 3DConvex.cpp}
-
-\subsection{Delaunay 三角剖分}
-\cppcode{Geometry/7 DelaunayTriangulation.cpp}
-
-\fi
-
-\subsection{二维几何}
-\cppcode{Geometry/8 Geo2D_simple.cpp}
-
-\subsection{凸包}
-\cppcode{Geometry/convex.cpp}
-
-\subsection{阿波罗尼茨圆}
-\cppcode{Geometry/3 abolonis.cpp}
-
-\subsection{最小覆盖球}
-\cppcode{Geometry/4 min cover ball.cpp}
-
-\subsection{三角形与圆交}
-\cppcode{Geometry/5 areaCT.cpp}
-
-\subsection{圆并}
-\cppcode{Geometry/6 CircleArea.cpp}
-
-
-\subsection{整数半平面交}
-\cppcode{Geometry/9 HPI_integer.cpp}
-
-%\subsection{凸包闵可夫斯基和}
-%\cppcode{Geometry/10 mink.cpp}
-
-\subsection{三角形}
-\cppcode{Geometry/11 triangle.cpp}
-
-\subsection{经纬度求球面最短距离}
-\cppcode{Geometry/12.cpp}
-
-\subsection{长方体表面两点最短距离}
-\cppcode{Geometry/13.cpp}
-
-\subsection{点到凸包切线}
-\cppcode{Geometry/14.cpp}
-
-\subsection{直线与凸包的交点}
-\cppcode{Geometry/15.cpp}
-
-\subsection{平面最近点对}
-\cppcode{nearest.cpp}
-
-%\subsection{}
-
-\iffalse
-\subsection{二维几何基础}
-\cppcode{Geometry-Algorithm/Basic2D.cpp}
-\subsection{快速凸包}
-\cppcode{Geometry-Algorithm/Convex-Hull.cpp}
-\subsection{半平面交}
-\cppcode{Geometry-Algorithm/Half-Plane-Intersection.cpp}
-\subsection{三角形的心}
-\cppcode{Geometry-Algorithm/Triangle-Core.cpp}
-\subsection{圆与多边形面积交}
-\cppcode{Geometry-Algorithm/Circle-Polygon-Intersection.cpp}
-\subsection{圆并求面积}
-\noindent \textbf{注意事项：}复杂度$\mathcal{O}(n^2\log n)$
-\cppcode{Geometry-Algorithm/Circle-Union.cpp}
-%\section{最近点对}
-\subsection{最小覆盖圆}
-\cppcode{Geometry-Algorithm/Minimum-Coverage-Circle.cpp}
-\subsection{最小覆盖球}
-\cppcode{Geometry-Algorithm/Minimum-Coverage-Ball.cpp}
-\subsection{三维几何基础}
-\cppcode{Geometry-Algorithm/Basic3D.cpp}
-\subsection{三维凸包}
-\cppcode{Geometry-Algorithm/Convex-Hull-3D.cpp}
-\subsection{三维绕轴旋转}
-\noindent \textbf{注意事项：}逆时针绕轴AB旋转$\theta$角。
-\cppcode{Geometry-Algorithm/Rotate-3D.cpp}
-\subsection{Delaunay三角剖分}
-\cppcode{Geometry-Algorithm/Delaunay-Decomposition.cpp}
-\fi
-%\section{求四点外接球}
-
-%\section{计算几何}
-
-%\subsection{二维基础}
-
-%\subsubsection{点类}
-
-%\cppcode{computational-geometry/point.cpp}
-
-%\subsubsection{凸包}
-
-%\cppcode{computational-geometry/convex-hull.cpp}
-
-%\subsubsection{半平面交}
-%\cppcode{computational-geometry/halfplaneintersection.cpp}
-
-%\subsubsection{最近点对}
-%\cppcode{computational-geometry/closest-pair-of-points.cpp}
-
-%\subsubsection{最小圆覆盖}
-%\cppcode{computational-geometry/mincir.cpp}
-
-%\subsubsection{凸包快速询问}
-%\cppcode{computational-geometry/PlayWithConvex.cpp}
-
-%\subsection{三维基础}
-
-%\subsubsection{点类}
-
-%\subsubsection{凸包}
-
-%\subsubsection{绕轴旋转}
-
-%\subsection{多边形}
-
-%\subsubsection{判断点在多边形内部}
-
-%\cppcode{computational-geometry/point-in-polygon.cpp}
+	
+	\subsection{二维几何}
+	\cppcode{Geometry/8 Geo2D_simple.cpp}
+	
+	\subsection{凸包}
+	\cppcode{Geometry/convex.cpp}
+	
+	\subsection{阿波罗尼茨圆}
+	\cppcode{Geometry/3 abolonis.cpp}
+	
+	\subsection{最小覆盖球}
+	\cppcode{Geometry/4 min cover ball.cpp}
+	
+	\subsection{三角形与圆交}
+	\cppcode{Geometry/5 areaCT.cpp}
+	
+	\subsection{圆并}
+	\cppcode{Geometry/6 CircleArea.cpp}
+	
+	
+	\subsection{整数半平面交}
+	\cppcode{Geometry/9 HPI_integer.cpp}
+	
+	%\subsection{凸包闵可夫斯基和}
+	%\cppcode{Geometry/10 mink.cpp}
+	
+	\subsection{三角形}
+	\cppcode{Geometry/11 triangle.cpp}
+	
+	\subsection{经纬度求球面最短距离}
+	\cppcode{Geometry/12.cpp}
+	
+	\subsection{长方体表面两点最短距离}
+	\cppcode{Geometry/13.cpp}
+	
+	\subsection{点到凸包切线}
+	\cppcode{Geometry/14.cpp}
+	
+	\subsection{直线与凸包的交点}
+	\cppcode{Geometry/15.cpp}
+	
+	\subsection{平面最近点对}
+	\cppcode{nearest.cpp}
 
 
-
-%\subsubsection{旋转卡壳}
-
-%\subsubsection{动态凸包}
-
-%\subsubsection{点到凸包的切线}
-
-%\subsubsection{直线与凸包的交点}
-
-%\subsubsection{凸多边形的交集}
-
-%\subsubsection{凸多边形内的最大圆}
-
-%\subsection{圆}
-
-%\subsubsection{圆类}
-
-%\subsubsection{圆的交集}
-
-%\subsubsection{最小覆盖圆}
-
-%\subsubsection{最小覆盖球}
-
-%\subsubsection{判断圆存在交集}
-
-%\subsubsection{圆与多边形的交集}
-
-%\subsection{三角形}
-
-%\subsubsection{三角形的内心}
-
-%\subsubsection{三角形的外心}
-
-%\subsubsection{三角形的垂心}
-
-%\subsection{黑暗科技}
-
-%\subsubsection{平面图形的转动惯量}
-
-%\subsubsection{平面区域处理}
-
-%\subsubsection{Vonoroi图}
 
 \section{其他}
 
-\subsection{斯坦纳树}
-\cppcode{miscellany/Steiner-Tree.cpp}
+	\subsection{斯坦纳树}
+	\cppcode{miscellany/Steiner-Tree.cpp}
+	
+	\subsection{无敌的读入优化}
+	\cppcode{miscellany/Reader.cpp}
+	
+	\subsection{最小树形图}
+	\cppcode{miscellany/mintreegraph.cpp}
+	
+	\subsection{DLX}
+	\cppcode{miscellany/DLX.cpp}
+	
+	\subsection{插头DP}
+	\cppcode{miscellany/plugdp.cpp}
+	
+	
+	\subsection{某年某月某日是星期几}
+	
+	\cppcode{miscellany/what-day-is-today.cpp}
+	
+	\subsection{枚举大小为$k$的子集}
+	
+	使用条件：$k > 0$
+	
+	\cppcode{miscellany/subset-of-size-k.cpp}
+	
+	\subsection{环状最长公共子串}
+	
+	\cppcode{miscellany/cyclic-longest-common-string.cpp}
+	
+	\subsection{LLMOD}
+	
+	\cppcode{miscellany/LLMOD.cpp}
+	
+	\subsection{STL内存清空}
+	\cppcode{Hint/STL-memory-release.cpp}
+	
+	\subsection{开栈}
+	\cppcode{Hint/openstack.cpp}
+	
+	\subsection{32-bit/64-bit随机素数}
+	\begin{tabular}{|l|l|}
+		\hline
+		\texttt{32-bit} & \texttt{64-bit} \\
+		\hline
+		73550053 & 1249292846855685773 \\
+		\hline
+		148898719 & 1701750434419805569 \\
+		\hline
+		189560747 & 3605499878424114901 \\
+		\hline
+		459874703 & 5648316673387803781 \\
+		\hline
+		1202316001 & 6125342570814357977 \\
+		\hline
+		1431183547 & 6215155308775851301 \\
+		\hline
+		1438011109 & 6294606778040623451 \\
+		\hline
+		1538762023 & 6347330550446020547 \\
+		\hline
+		1557944263 & 7429632924303725207 \\
+		\hline
+		1981315913 & 8524720079480389849 \\
+		\hline
+	\end{tabular}
 
-\subsection{无敌的读入优化}
-\cppcode{miscellany/Reader.cpp}
-
-\subsection{最小树形图}
-\cppcode{miscellany/mintreegraph.cpp}
-
-\subsection{DLX}
-\cppcode{miscellany/DLX.cpp}
-
-\subsection{插头DP}
-\cppcode{miscellany/plugdp.cpp}
-
-
-\subsection{某年某月某日是星期几}
-
-\cppcode{miscellany/what-day-is-today.cpp}
-
-\subsection{枚举大小为$k$的子集}
-
-使用条件：$k > 0$
-
-\cppcode{miscellany/subset-of-size-k.cpp}
-
-\subsection{环状最长公共子串}
-
-\cppcode{miscellany/cyclic-longest-common-string.cpp}
-
-\subsection{LLMOD}
-
-\cppcode{miscellany/LLMOD.cpp}
-
-\subsection{STL内存清空}
-\cppcode{Hint/STL-memory-release.cpp}
-
-\subsection{开栈}
-\cppcode{Hint/openstack.cpp}
-
-\subsection{32-bit/64-bit随机素数}
-\begin{tabular}{|l|l|}
-	\hline
-	\texttt{32-bit} & \texttt{64-bit} \\
-	\hline
-	73550053 & 1249292846855685773 \\
-	\hline
-	148898719 & 1701750434419805569 \\
-	\hline
-	189560747 & 3605499878424114901 \\
-	\hline
-	459874703 & 5648316673387803781 \\
-	\hline
-	1202316001 & 6125342570814357977 \\
-	\hline
-	1431183547 & 6215155308775851301 \\
-	\hline
-	1438011109 & 6294606778040623451 \\
-	\hline
-	1538762023 & 6347330550446020547 \\
-	\hline
-	1557944263 & 7429632924303725207 \\
-	\hline
-	1981315913 & 8524720079480389849 \\
-	\hline
-\end{tabular}
-
-%\subsection{搜索}
-
-%\subsubsection{Dancing Links X}
 
 \section{vimrc}
-
-\vimcode{Hint/vimrc}
+	\vimcode{Hint/vimrc}
 
 \section{常用结论}
 
@@ -1186,47 +786,6 @@ $R$为外接圆半径，$r$为内切圆半径
 
 \subsection{积分表}
 \input{source/calculustable.tex}
-\iffalse
-\subsection{立体几何公式}
 
-\subsubsection{球面三角公式}
 
-设$a, b, c$是边长，$A, B, C$是所对的二面角，
-有余弦定理$$cos a = cos b \cdot cos c + sin b \cdot sin c \cdot cos A$$
-正弦定理$$\frac{sin A}{sin a} = \frac{sin B}{sin b} = \frac{sin C}{sin c}$$
-三角形面积是$A + B + C - \pi$
-
-\subsubsection{四面体体积公式}
-
-$U, V, W, u, v, w$是四面体的$6$条棱，$U, V, W$构成三角形，$(U, u), (V, v), (W, w)$互为对棱，
-则$$V = \frac{\sqrt{(s - 2a)(s - 2b)(s - 2c)(s - 2d)}}{192 uvw}$$
-其中$$\left\{\begin{array}{lll}
-a & = & \sqrt{xYZ}, \\
-b & = & \sqrt{yZX}, \\
-c & = & \sqrt{zXY}, \\
-d & = & \sqrt{xyz}, \\
-s & = & a + b + c + d, \\ 
-X & = & (w - U + v)(U + v + w), \\
-x & = & (U - v + w)(v - w + U), \\
-Y & = & (u - V + w)(V + w + u), \\
-y & = & (V - w + u)(w - u + V), \\
-Z & = & (v - W + u)(W + u + v), \\
-z & = & (W - u + v)(u - v + W)
-\end{array}\right.$$
-
-%\subsection{常用数表}
-
-%\subsubsection{梅森数}
-
-\subsection{博弈游戏}
-\input{source/Hint/Game-Theory.tex}
-\subsection{常用数学公式}
-\input{source/Hint/Mathematical-Lemma.tex}
-
-\section{附录}
-\subsection{NTT素数及原根列表}
-\input{source/Appendix/NFT-Primes.tex}
-\subsection{cheat.pdf}
-\includepdf[pages=-]{source/Appendix/cheat.pdf}
-\fi
 \end{document}
