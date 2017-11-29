@@ -1,5 +1,7 @@
 %文档类型
 \documentclass[landscape,twocolumn,a4paper]{article}
+\setlength{\columnsep}{0.5cm}
+\setlength{\columnseprule}{0.03cm}
 
 %引用包裹
 \usepackage{bm}
@@ -26,7 +28,7 @@
 \usepackage{harpoon}
 %代码高亮
 %\geometry{margin=1in}
-\geometry{a4paper,left=1.0cm,right=1.0cm,top=1.5cm,bottom=0.75cm}
+\geometry{a4paper,left=1.0cm,right=1.0cm,top=1.3cm,bottom=0.5cm}
 \setmonofont{Ubuntu Mono}
 %字体设置
 \setmainfont{Ubuntu Mono}
@@ -54,6 +56,7 @@
 	\inputminted[mathescape,
 	tabsize=2,
 	style=xcode,
+	baselinestretch=0.9,
 	%linenos,
 	%frame=single,
 	autogobble,
@@ -62,6 +65,7 @@
 	breakautoindent=true,
 	breakbytoken=true,
 	breaklines=true,
+	numbersep=1mm,
 	fontsize=\small
 	]{cpp}{source/#1}
 }
@@ -72,6 +76,7 @@
 	%frame=single,
 	framesep=2mm,
 	autogobble,
+	baselinestretch=0.9,
 	breakaftergroup=true,
 	breakautoindent=true,
 	breakbytoken=true,
@@ -104,221 +109,27 @@
 \newpage
 %\maketitle
 \newpage
-\iffalse
-\section{数论}
-
-\subsection{快速求逆元}
-
-%返回结果：$$x^{-1}(mod)$$
-\indent 使用条件：$x \in [0, mod)$并且$x$与$mod$互质
-
-\cppcode{number-theory/inverse.cpp}
-
-%\subsection{莫比乌斯反演}
-%\cppcode{mobius.cpp}
-
-\subsection{扩展欧几里德算法}
-
-
-返回结果：$$ax+by=gcd(a,b)$$
-\indent 时间复杂度：$\mathcal{O}(nlogn)$
-
-\cppcode{number-theory/extended-euclid.cpp}
-
-\subsection{中国剩余定理}
-
-返回结果：$$x \equiv r_i (mod \ p_i) \ (0 \leq i < n)$$
-%\indent 使用条件：$p_i$需两两互质\\
-%\indent 时间复杂度：$\mathcal{O}(nlogn)$
-
-\cppcode{number-theory/chinese-remainder-theorem.cpp}
-
-\subsection{中国剩余定理2}
-
-\cppcode{number-theory/china2.cpp}
-
-\subsection{组合数取模}
-\cppcode{number-theory/CnmmodP.cpp}
-
-%\subsection{扩展小步大步}
-%\cppcode{number-theory/exBSGS.cpp}
-
-\subsection{卢卡斯定理}
-\cppcode{number-theory/Lucas.cpp}
-
-\subsection{小步大步}
-
-返回结果：$$a^x=b \ (mod \ p)$$
-\indent 使用条件：$p$为质数
-\indent 时间复杂度：$\mathcal{O}(\sqrt{n})$
-
-\cppcode{number-theory/BSGS.cpp}
-
-\subsection{Miller Rabin 素数测试}
-
-\cppcode{number-theory/miller-rabin.cpp}
-
-\subsection{Pollard Rho 大数分解}
-
-时间复杂度：$\mathcal{O}(n^{1/4})$
-
-\cppcode{number-theory/pollard-rho.cpp}
-
-\subsection{快速数论变换(zky)}
-返回结果：$$c_i=\sum_{0 \leq j \leq i} a_j \cdot b_{i-j} (mod) \ (0 \leq i < n)$$
-\indent 使用说明：$magic$是$mod$的原根\\
-\indent 时间复杂度：$\mathcal{O}(n log n)$
-\cppcode{number-theory/number-theoretic-transform.cpp}
-
-%\subsection{快速数论变换(lyx)}
-%\cppcode{number-theory/DFT.cpp}
-
-\subsection{原根}
-\cppcode{number-theory/primeroot.cpp}
-
-\subsection{线性递推}
-\cppcode{number-theory/linear-recurrence.cpp}
-
-\subsection{线性筛}
-\cppcode{number-theory/linear-sieve.cpp}
-
-%\subsection{离散对数}
-
-%\subsection{离散平方根}
-
-%\subsection{佩尔方程求解}
-
-\subsection{直线下整点个数}
-
-返回结果：$$\sum_{0 \leq i < n} \lfloor \frac{a + b \cdot i}{m} \rfloor$$
-\indent 使用条件：$n, m > 0$，$a, b \geq 0$\\
-\indent 时间复杂度：$\mathcal{O}(n log n)$
-
-\cppcode{number-theory/lattice-count.cpp}
-
-\section{数值}
-
-\subsection{高斯消元}
-\cppcode{numerical-algorithm/Gauss.cpp}
-
-\subsection{线性基}
-\cppcode{LB.cpp}
-\iffalse
-\subsection{快速傅立叶变换}
-
-返回结果：$$c_i=\sum_{0 \leq j \leq i} a_j \cdot b_{i-j} \ (0 \leq i < n)$$
-\indent 时间复杂度：$\mathcal{O}(n log n)$
-
-\cppcode{numerical-algorithm/fast-fourier-transform.cpp}
-\fi
-\subsection{1e9+7 FFT}
-\cppcode{numerical-algorithm/fft.cpp}
-
-\subsection{单纯形法求解线性规划}
-
-返回结果：$$max\{c_{1 \times m} \cdot x_{m \times 1} \ | \ x_{m \times 1} \geq 0_{m \times 1}, a_{n \times m} \cdot x_{m \times 1} \leq b_{n \times 1}\}$$
-
-\cppcode{numerical-algorithm/linear-programming-simplex.cpp}
-
-\subsection{自适应辛普森}
-\cppcode{numerical-algorithm/adaptive-simpson.cpp}
-
-\subsection{多项式求根}
-\cppcode{numerical-algorithm/polyroot.cpp}
-
-\subsection{快速求逆}
-\cppcode{Mathematical-Algorithm/Quick-Reverse.cpp}
-\subsection{魔幻多项式}
-\iffalse
-\subsection*{快速傅里叶变换}
-\noindent \textbf{注意事项：}请实现复数类Complex，并注意快速傅里叶变换精度较差，建议使用快速数论变换。
-\cppcode{Mathematical-Algorithm/Fast-Fourier-Transform.cpp}
-\subsection*{光速数论变换}
-\noindent \textbf{注意事项：}$\mathrm{MOD}$应该为一个特殊的质数$2^n + 1$且$n$应该要足够大，$\mathrm{PRT}$为这个质数的原根。
-\cppcode{Mathematical-Algorithm/Number-Theory-Transform.cpp}
-\subsection*{牛顿迭代法}
-\noindent \textbf{问题描述：}给出多项式$G(x)$，求解多项式$F(x)$满足：
-\[G(F(x)) \equiv 0 \pmod {x^n}\]
-答案只需要精确到$F(x) \bmod {x^n}$即可。\par
-\noindent \textbf{实现原理：}考虑倍增，假设有：
-\[G(F_t(x)) \equiv 0 \pmod{x^t}\]
-对$G(F_{t + 1}(x))$在模$x^{2t}$意义下进行Taylor展开：
-\[G(F_{t + 1}(x)) \equiv G(F_t(x)) + \dfrac{G'(F_t(x))}{1!}(F_{t + 1}(x) - F_t(x)) \pmod{x^{2t}}\]
-那么就有：
-\[F_{t + 1}(x) \equiv F_t(x) - \dfrac{G(F_t(x))}{G'(F_t(x))} \pmod{x^{2t}}\]
-\noindent \textbf{注意事项：}$G(F(x))$的常数项系数必然为0，这个可以作为求解的初始条件；
-\fi
-\subsection*{多项式求逆}
-\noindent \textbf{原理：}令$G(x) = x * A - 1$（其中$A$是一个多项式系数），根据牛顿迭代法有：
-\begin{displaymath}
-\begin{split}
-F_{t + 1}(x) &\equiv F_t(x) - \dfrac{F_t(x) * A(x) - 1}{A(x)} \\
-&\equiv 2F_t(x) - F_t(x)^2 * A(x)\pmod{x^{2t}}
-\end{split}
-\end{displaymath}
-\noindent \textbf{注意事项：}
-\begin{enumerate}
-	\item $F(x)$的常数项系数必然不为0，否则没有逆元；
-	\item 复杂度是$O(n \log n)$但是常数比较大（$10^5$大概需要0.3秒左右）；
-	\item 传入的两个数组必须不同，但传入的次数界没有必要是2的次幂；
-\end{enumerate}
-\cppcode{Mathematical-Algorithm/Polynomial-Inverse.cpp}
-\iffalse
-\subsection*{多项式取指数和对数}
-\noindent \textbf{作用：}给出一个多项式$A(x)$，求一个多项式$F(x)$满足$e^A(x) - F(x) \equiv 0 \pmod{x^n}$。\par
-\noindent \textbf{原理：}令$G(x) = \ln x - A$（其中$A$是一个多项式系数），根据牛顿迭代法有：
-\[F_{t + 1}(x) \equiv F_t(x) - F_t(x)(\ln {F_t(x)} - A(x)) \pmod{x^{2t}}\]
-求$\ln {F_t(x)}$可以用先求导再积分的办法，即：
-\[\ln A(x) = \int \dfrac{F'(x)}{F(x)}~\mathrm{d}x\]
-多项式的求导和积分可以在$O(n)$的时间内完成，因此总复杂度为$O(n \log n)$。\par
-\noindent \textbf{应用：}加速多项式快速幂。\par
-\noindent \textbf{注意事项：}
-\begin{enumerate}
-	\item 进行$\log$的多项式必须保证常数项系数为1，否则必须要先求出$\log a[0]$是多少；
-	\item 传入的两个数组必须不同，但传入的次数界没有必要是2的次幂；
-	\item 常数比较大，$10^5$的数据求指数和对数分别需要0.37s和0.85s左右的时间，注意这里{memset}几乎不占用时。
-\end{enumerate}
-\cppcode{Mathematical-Algorithm/Polynomial-ExpAndLn.cpp}
-\fi
-\subsection*{多项式除法}
-\noindent \textbf{作用：}给出两个多项式$A(x)$和$B(x)$，求两个多项式$D(x)$和$R(x)$满足：
-\[A(x) \equiv D(x)B(x) + R(x) \pmod{x^n}\]
-\noindent \textbf{注意事项：}
-\begin{enumerate}
-	\item 常数比较大概为6倍FFT的时间，即大约$10^5$的数据0.07s左右；
-	\item 传入两个多项式的次数界，没有必要是2的次幂，但是要保证除数多项式不为0。
-\end{enumerate}
-\cppcode{Mathematical-Algorithm/Polynomial-Division.cpp}
-
-%\subsection{牛顿迭代法}
-
-%\subsection{多项式方程求解}
-
-%\subsection{最小二乘法}
-\fi
 
 \section{数学}
 
-\subsection{快速求逆元}
+\subsection{快速求逆元(内含exgcd)}
 \indent 使用条件：$x \in [0, mod)$并且$x$与$mod$互质
+\cppcode{number-theory/extended-euclid.cpp}
 \cppcode{number-theory/inverse.cpp}
 
-\subsection{扩展欧几里德算法}
-返回结果：$ax+by=gcd(a,b)$
-\cppcode{number-theory/extended-euclid.cpp}
+%\subsection{扩展欧几里德算法}
+%返回结果：$ax+by=gcd(a,b)$
+
 
 \subsection{中国剩余定理}
 返回结果：$$x \equiv r_i (mod \ p_i) \ (0 \leq i < n)$$
 \cppcode{number-theory/chinese-remainder-theorem.cpp}
 
-\subsection{中国剩余定理2}
+%\subsection{中国剩余定理2}
 \cppcode{number-theory/china2.cpp}
 
-%\subsection{组合数取模}
-%\cppcode{number-theory/CnmmodP.cpp}
-
-\subsection{卢卡斯定理}
-\cppcode{number-theory/Lucas.cpp}
+%\subsection{卢卡斯定理}
+%\cppcode{number-theory/Lucas.cpp}
 
 \subsection{小步大步}
 返回结果：$a^x=b \ (mod \ p)$
@@ -366,21 +177,8 @@ F_{t + 1}(x) &\equiv F_t(x) - \dfrac{F_t(x) * A(x) - 1}{A(x)} \\
 \subsection{多项式求根}
 \cppcode{numerical-algorithm/polyroot.cpp}
 
-
-\subsection{魔幻多项式}
 \iffalse
-\subsection*{牛顿迭代法}
-\noindent \textbf{问题描述：}给出多项式$G(x)$，求解多项式$F(x)$满足：
-\[G(F(x)) \equiv 0 \pmod {x^n}\]
-答案只需要精确到$F(x) \bmod {x^n}$即可。\par
-\noindent \textbf{实现原理：}考虑倍增，假设有：
-\[G(F_t(x)) \equiv 0 \pmod{x^t}\]
-对$G(F_{t + 1}(x))$在模$x^{2t}$意义下进行Taylor展开：
-\[G(F_{t + 1}(x)) \equiv G(F_t(x)) + \dfrac{G'(F_t(x))}{1!}(F_{t + 1}(x) - F_t(x)) \pmod{x^{2t}}\]
-那么就有：
-\[F_{t + 1}(x) \equiv F_t(x) - \dfrac{G(F_t(x))}{G'(F_t(x))} \pmod{x^{2t}}\]
-\noindent \textbf{注意事项：}$G(F(x))$的常数项系数必然为0，这个可以作为求解的初始条件；
-\fi
+\subsection{魔幻多项式}
 
 \subsection*{多项式求逆}
 \noindent \textbf{原理：}令$G(x) = x * A - 1$（其中$A$是一个多项式系数），根据牛顿迭代法有：
@@ -397,7 +195,7 @@ F_{t + 1}(x) &\equiv F_t(x) - \dfrac{F_t(x) * A(x) - 1}{A(x)} \\
 	\item 传入的两个数组必须不同，但传入的次数界没有必要是2的次幂；
 \end{enumerate}
 \cppcode{Mathematical-Algorithm/Polynomial-Inverse.cpp}
-
+\fi
 
 \section{数据结构}
 \iffalse
@@ -450,8 +248,8 @@ F_{t + 1}(x) &\equiv F_t(x) - \dfrac{F_t(x) * A(x) - 1}{A(x)} \\
 \subsection{lct}
 \cppcode{Data-Structure/LCT.cpp}
 
-\subsection{k-d树}
-\cppcode{Data-Structure/K-d-Tree.cpp}
+%\subsection{k-d树}
+%\cppcode{Data-Structure/K-d-Tree.cpp}
 
 \subsection{树上莫队}
 \cppcode{Data-Structure/modui_tree_ver.cpp}
@@ -480,8 +278,8 @@ F_{t + 1}(x) &\equiv F_t(x) - \dfrac{F_t(x) * A(x) - 1}{A(x)} \\
 \subsection{可持久化Trie}
 \cppcode{data-structure/ChairTrie.cpp}
 
- \subsection{k-d树}
-\cppcode{Data-Structure/K-d-Tree.cpp}
+%\subsection{k-d树}
+%\cppcode{Data-Structure/K-d-Tree.cpp}
 
 
 %\subsection{莫队算法}
@@ -521,6 +319,7 @@ F_{t + 1}(x) &\equiv F_t(x) - \dfrac{F_t(x) * A(x) - 1}{A(x)} \\
 \subsection{KM带权匹配}
 \noindent \textbf{注意事项：}最小权完美匹配，复杂度为$\mathcal{O}(|V|^3)$。
 \cppcode{Graph-Algorithm/Maximum-Weight-Matching.cpp}
+
 \iffalse
 \subsection{稀疏图最大流}
 \noindent \textbf{注意事项：}适用于比较稀疏的一般图。
@@ -533,6 +332,7 @@ F_{t + 1}(x) &\equiv F_t(x) - \dfrac{F_t(x) * A(x) - 1}{A(x)} \\
 \subsection{稠密图费用流}
 \cppcode{Graph-Algorithm/Minimum-Cost-Maxflow-ZKW.cpp}
 \fi
+
 \subsection{2-SAT问题}
 \cppcode{Graph-Algorithm/Two-Satisfiability.cpp}
 \subsection{有根树的同构}
@@ -540,8 +340,8 @@ F_{t + 1}(x) &\equiv F_t(x) - \dfrac{F_t(x) * A(x) - 1}{A(x)} \\
 \subsection{Dominator Tree}
 %\cppcode{Graph-Algorithm/Dominator-Tree.cpp}
 \cppcode{Graph-Algorithm/dominator.cpp}
-\subsection{哈密尔顿回路（ORE 性质的图）}
-\cppcode{Graph-Algorithm/Hamiltonian-Circuit-Ore.cpp}
+%\subsection{哈密尔顿回路（ORE 性质的图）}
+%\cppcode{Graph-Algorithm/Hamiltonian-Circuit-Ore.cpp}
 \subsection{无向图最小割}
 \cppcode{Graph-Algorithm/Minimum-Cut-Stoer-Wagner.cpp}
 
@@ -565,11 +365,11 @@ F_{t + 1}(x) &\equiv F_t(x) - \dfrac{F_t(x) * A(x) - 1}{A(x)} \\
 \iffalse
 \section{字符串}
 
-\subsection{KMP算法}
+\subsection{KMP算法 扩展KMP算法}
 
 \cppcode{temp_ypm/KMP-poj3461.cpp}
 
-\subsection{扩展KMP算法}
+%\subsection{扩展KMP算法}
 
 %返回结果：$$next_i = lcp(text, text_{i \dots n-1})$$
 
@@ -727,6 +527,10 @@ F_{t + 1}(x) &\equiv F_t(x) - \dfrac{F_t(x) * A(x) - 1}{A(x)} \\
 \subsection{平面最近点对}
 \cppcode{nearest.cpp}
 
+\subsection{三维几何}
+
+\cppcode{Geometry/1 3DGeo.cpp}
+
 %\subsection{}
 
 \iffalse
@@ -844,8 +648,8 @@ F_{t + 1}(x) &\equiv F_t(x) - \dfrac{F_t(x) * A(x) - 1}{A(x)} \\
 
 \section{其他}
 
-\subsection{斯坦纳树}
-\cppcode{miscellany/Steiner-Tree.cpp}
+%\subsection{斯坦纳树}
+%\cppcode{miscellany/Steiner-Tree.cpp}
 
 \subsection{无敌的读入优化}
 \cppcode{miscellany/Reader.cpp}
@@ -856,8 +660,8 @@ F_{t + 1}(x) &\equiv F_t(x) - \dfrac{F_t(x) * A(x) - 1}{A(x)} \\
 \subsection{DLX}
 \cppcode{miscellany/DLX.cpp}
 
-\subsection{插头DP}
-\cppcode{miscellany/plugdp.cpp}
+%\subsection{插头DP}
+%\cppcode{miscellany/plugdp.cpp}
 
 
 \subsection{某年某月某日是星期几}
@@ -874,16 +678,17 @@ F_{t + 1}(x) &\equiv F_t(x) - \dfrac{F_t(x) * A(x) - 1}{A(x)} \\
 
 \cppcode{miscellany/cyclic-longest-common-string.cpp}
 
-\subsection{LLMOD}
+\subsection{LLMOD STL内存清空 开栈}
 
 \cppcode{miscellany/LLMOD.cpp}
 
-\subsection{STL内存清空}
+%\subsection{STL内存清空}
 \cppcode{Hint/STL-memory-release.cpp}
 
-\subsection{开栈}
+%\subsection{开栈}
 \cppcode{Hint/openstack.cpp}
 
+\iffalse
 \subsection{32-bit/64-bit随机素数}
 \begin{tabular}{|l|l|}
 	\hline
@@ -910,6 +715,7 @@ F_{t + 1}(x) &\equiv F_t(x) - \dfrac{F_t(x) * A(x) - 1}{A(x)} \\
 	1981315913 & 8524720079480389849 \\
 	\hline
 \end{tabular}
+\fi
 
 %\subsection{搜索}
 
@@ -922,9 +728,12 @@ F_{t + 1}(x) &\equiv F_t(x) - \dfrac{F_t(x) * A(x) - 1}{A(x)} \\
 \section{常用结论}
 
 \subsection{上下界网络流}
+
+\iffalse
 $B(u,v)$表示边$(u,v)$流量的下界，$C(u,v)$表示边$(u,v)$流量的上界，$F(u,v)$表示边$(u,v)$的流量。
 设$G(u,v) = F(u,v) - B(u,v)$，显然有
 $$0 \leq G(u,v) \leq C(u,v)-B(u,v)$$
+\fi
 
 \subsubsection*{无源汇的上下界可行流}
 建立超级源点$S^*$和超级汇点$T^*$，对于原图每条边$(u,v)$在新网络中连如下三条边：$S^* \rightarrow v$，容量为$B(u,v)$；$u \rightarrow T^*$，容量为$B(u,v)$；$u \rightarrow v$，容量为$C(u,v) - B(u,v)$。最后求新网络的最大流，判断从超级源点$S^*$出发的边是否都满流即可，边$(u,v)$的最终解中的实际流量为$G(u,v)+B(u,v)$。
@@ -960,7 +769,7 @@ $$0 \leq G(u,v) \leq C(u,v)-B(u,v)$$
 	\end{itemize}
 \end{enumerate}
 建完图后从S到T跑一遍费用流，即可。（当前跑出来的就是满足上下界的最小费用最小流了）
-
+\iffalse
 \subsection{弦图相关}
 \begin{enumerate}
 	\item[1.] 团数 $\leq$ 色数 , 弦图团数 = 色数
@@ -978,9 +787,11 @@ $$0 \leq G(u,v) \leq C(u,v)-B(u,v)$$
 	则 $\{p_1\cup N(p_1), \dots , p_t \cup N(p_t)\}$ 
 	为最小团覆盖
 \end{enumerate}
+\fi
 
 \subsection{Bernoulli数}
 \input{source/Hint/Bernoulli-Number.tex}
+\iffalse
 \section{常见错误}
 
 \begin{spacing}{0.6}
@@ -1010,7 +821,7 @@ $$0 \leq G(u,v) \leq C(u,v)-B(u,v)$$
 		\item 查清楚厕所方位和打印机方位；
 	\end{enumerate}
 \end{spacing}
-
+\fi
 \section{Java}
 
 
@@ -1073,7 +884,7 @@ $$0 \leq G(u,v) \leq C(u,v)-B(u,v)$$
 \end{enumerate}
 
 \subsubsection{莫比乌斯函数}
-
+\iffalse
 $$\mu(n) = \begin{cases}
 1 & \text{若}n=1\\
 (-1)^k & \text{若}n\text{无平方数因子，且}n = p_1p_2\dots p_k\\
@@ -1083,6 +894,7 @@ $$\sum_{d|n}{\mu(d)} = \begin{cases}
 1 & \text{若}n=1\\
 0 & \text{其他情况}
 \end{cases}$$
+\fi
 $$g(n) = \sum_{d|n}{f(d)} \Leftrightarrow f(n) = \sum_{d|n}{\mu(d)g(\frac{n}{d})}$$
 $$g(x) = \sum_{n=1}^{[x]}f(\frac{x}{n}) \Leftrightarrow f(x) = \sum_{n=1}^{[x]}{\mu(n)g(\frac{x}{n})}$$
 
@@ -1138,16 +950,14 @@ $$p_k = \sum_{i = 1}^n{x_i^k}$$
 \subsubsection{三角形}
 
 \begin{enumerate}
-	\item 半周长
-	$$p=\frac{a+b+c}{2}$$
 	\item 面积
-	$$S=\frac{a \cdot H_a}{2}=\frac{ab \cdot sinC}{2}=\sqrt{p(p-a)(p-b)(p-c)}$$
+	$S=\frac{a \cdot H_a}{2}=\frac{ab \cdot sinC}{2}=\sqrt{p(p-a)(p-b)(p-c)}$
 	\item 中线
-	$$M_a=\frac{\sqrt{2(b^2+c^2)-a^2}}{2}=\frac{\sqrt{b^2+c^2+2bc \cdot cosA}}{2}$$
+	$M_a=\frac{\sqrt{2(b^2+c^2)-a^2}}{2}=\frac{\sqrt{b^2+c^2+2bc \cdot cosA}}{2}$
 	\item 角平分线 
-	$$T_a=\frac{\sqrt{bc \cdot [(b+c)^2-a^2]}}{b+c}=\frac{2bc}{b+c}cos\frac{A}{2}$$
+	$T_a=\frac{\sqrt{bc \cdot [(b+c)^2-a^2]}}{b+c}=\frac{2bc}{b+c}cos\frac{A}{2}$
 	\item 高线
-	$$H_a=bsinC=csinB=\sqrt{b^2-(\frac{a^2+b^2-c^2}{2a})^2}$$
+	$H_a=bsinC=csinB=\sqrt{b^2-(\frac{a^2+b^2-c^2}{2a})^2}$
 	\item 内切圆半径
 	\begin{align*}
 	r&=\frac{S}{p}=\frac{arcsin\frac{B}{2} \cdot sin\frac{C}{2}}{sin\frac{B+C}{2}}=4R \cdot sin\frac{A}{2}sin\frac{B}{2}sin\frac{C}{2}\\
@@ -1164,9 +974,9 @@ $D_1, D_2$为对角线，$M$对角线中点连线，$A$为对角线夹角，$p$�
 	\item $a^2+b^2+c^2+d^2=D_1^2+D_2^2+4M^2$
 	\item $S=\frac{1}{2}D_1D_2sinA$
 	\item 对于圆内接四边形
-	$$ac+bd=D_1D_2$$
+	$ac+bd=D_1D_2$
 	\item 对于圆内接四边形
-	$$S=\sqrt{(p-a)(p-b)(p-c)(p-d)}$$
+	$S=\sqrt{(p-a)(p-b)(p-c)(p-d)}$
 \end{enumerate}
 
 \subsubsection{正$n$边形}
@@ -1174,134 +984,134 @@ $D_1, D_2$为对角线，$M$对角线中点连线，$A$为对角线夹角，$p$�
 $R$为外接圆半径，$r$为内切圆半径
 \begin{enumerate}
 	\item 中心角
-	$$A=\frac{2\pi}{n}$$
+	$A=\frac{2\pi}{n}$
 	\item 内角
-	$$C=\frac{n-2}{n}\pi$$
+	$C=\frac{n-2}{n}\pi$
 	\item 边长
-	$$a=2\sqrt{R^2-r^2}=2R \cdot sin\frac{A}{2}=2r \cdot tan\frac{A}{2}$$
+	$a=2\sqrt{R^2-r^2}=2R \cdot sin\frac{A}{2}=2r \cdot tan\frac{A}{2}$
 	\item 面积
-	$$S=\frac{nar}{2}=nr^2 \cdot tan\frac{A}{2}=\frac{nR^2}{2} \cdot sinA=\frac{na^2}{4 \cdot tan\frac{A}{2}}$$
+	$S=\frac{nar}{2}=nr^2 \cdot tan\frac{A}{2}=\frac{nR^2}{2} \cdot sinA=\frac{na^2}{4 \cdot tan\frac{A}{2}}$
 \end{enumerate}
 
 \subsubsection{圆}
 
 \begin{enumerate}
 	\item 弧长
-	$$l=rA$$
+	$l=rA$
 	\item 弦长
-	$$a=2\sqrt{2hr-h^2}=2r\cdot sin\frac{A}{2}$$
+	$a=2\sqrt{2hr-h^2}=2r\cdot sin\frac{A}{2}$
 	\item 弓形高
-	$$h=r-\sqrt{r^2-\frac{a^2}{4}}=r(1-cos\frac{A}{2})=\frac{1}{2} \cdot arctan\frac{A}{4}$$
+	$h=r-\sqrt{r^2-\frac{a^2}{4}}=r(1-cos\frac{A}{2})=\frac{1}{2} \cdot arctan\frac{A}{4}$
 	\item 扇形面积
-	$$S_1=\frac{rl}{2}=\frac{r^2A}{2}$$
+	$S_1=\frac{rl}{2}=\frac{r^2A}{2}$
 	\item 弓形面积
-	$$S_2=\frac{rl-a(r-h)}{2}=\frac{r^2}{2}(A-sinA)$$
+	$S_2=\frac{rl-a(r-h)}{2}=\frac{r^2}{2}(A-sinA)$
 \end{enumerate}
 
 \subsubsection{棱柱}
 
 \begin{enumerate}
 	\item 体积
-	$$V=Ah$$
+	$V=Ah$
 	$A$为底面积，$h$为高
 	\item 侧面积
-	$$S=lp$$
+	$S=lp$
 	$l$为棱长，$p$为直截面周长
 	\item 全面积
-	$$T=S+2A$$
+	$T=S+2A$
 \end{enumerate}
 
 \subsubsection{棱锥}
 
 \begin{enumerate}
 	\item 体积
-	$$V=Ah$$
+	$V=Ah$
 	$A$为底面积，$h$为高
 	\item 正棱锥侧面积
-	$$S=lp$$
+	$S=lp$
 	$l$为棱长，$p$为直截面周长
 	\item 正棱锥全面积
-	$$T=S+2A$$
+	$T=S+2A$
 \end{enumerate}
 
 \subsubsection{棱台}
 
 \begin{enumerate}
 	\item 体积
-	$$V=(A_1+A_2+\sqrt{A_1A_2}) \cdot \frac{h}{3}$$
+	$V=(A_1+A_2+\sqrt{A_1A_2}) \cdot \frac{h}{3}$
 	$A_1,A_2$为上下底面积，$h$为高
 	\item 正棱台侧面积
-	$$S=\frac{p_1+p_2}{2}l$$
+	$S=\frac{p_1+p_2}{2}l$
 	$p_1,p_2$为上下底面周长，$l$为斜高
 	\item 正棱台全面积
-	$$T=S+A_1+A_2$$
+	$T=S+A_1+A_2$
 \end{enumerate}
 
 \subsubsection{圆柱}
 
 \begin{enumerate}
 	\item 侧面积
-	$$S=2\pi rh$$
+	$S=2\pi rh$
 	\item 全面积
-	$$T=2\pi r(h+r)$$
+	$T=2\pi r(h+r)$
 	\item 体积
-	$$V=\pi r^2h$$
+	$V=\pi r^2h$
 \end{enumerate}
 
 \subsubsection{圆锥}
 
 \begin{enumerate}
 	\item 母线
-	$$l=\sqrt{h^2+r^2}$$
+	$l=\sqrt{h^2+r^2}$
 	\item 侧面积
-	$$S=\pi rl$$
+	$S=\pi rl$
 	\item 全面积
-	$$T=\pi r(l+r)$$
+	$T=\pi r(l+r)$
 	\item 体积
-	$$V=\frac{\pi}{3} r^2h$$
+	$V=\frac{\pi}{3} r^2h$
 \end{enumerate}
 
 \subsubsection{圆台}
 
 \begin{enumerate}
 	\item 母线
-	$$l=\sqrt{h^2+(r_1-r_2)^2}$$
+	$l=\sqrt{h^2+(r_1-r_2)^2}$
 	\item 侧面积
-	$$S=\pi(r_1+r_2)l$$
+	$S=\pi(r_1+r_2)l$
 	\item 全面积
-	$$T=\pi r_1(l+r_1)+\pi r_2(l+r_2)$$
+	$T=\pi r_1(l+r_1)+\pi r_2(l+r_2)$
 	\item 体积
-	$$V=\frac{\pi}{3}(r_1^2+r_2^2+r_1r_2)h$$
+	$V=\frac{\pi}{3}(r_1^2+r_2^2+r_1r_2)h$
 \end{enumerate}
-
+\iffalse
 \subsubsection{球}
 
 \begin{enumerate}
 	\item 全面积
-	$$T=4\pi r^2$$
+	$T=4\pi r^2$
 	\item 体积
-	$$V=\frac{4}{3}\pi r^3$$
+	$V=\frac{4}{3}\pi r^3$
 \end{enumerate}
-
+\fi
 \subsubsection{球台}
 
 \begin{enumerate}
 	\item 侧面积
-	$$S=2\pi rh$$
+	$S=2\pi rh$
 	\item 全面积
-	$$T=\pi(2rh+r_1^2+r_2^2)$$
+	$T=\pi(2rh+r_1^2+r_2^2)$
 	\item 体积
-	$$V=\frac{\pi h[3(r_1^2+r_2^2)+h^2]}{6}$$
+	$V=\frac{\pi h[3(r_1^2+r_2^2)+h^2]}{6}$
 \end{enumerate}
 
 \subsubsection{球扇形}
 
 \begin{enumerate}
 	\item 全面积
-	$$T=\pi r(2h+r_0)$$
+	$T=\pi r(2h+r_0)$
 	$h$为球冠高，$r_0$为球冠底面半径
 	\item 体积
-	$$V=\frac{2}{3}\pi r^2h$$
+	$V=\frac{2}{3}\pi r^2h$
 \end{enumerate}
 
 \subsection{积分表}

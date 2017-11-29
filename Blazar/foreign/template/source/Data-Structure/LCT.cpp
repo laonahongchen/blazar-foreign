@@ -1,24 +1,18 @@
-struct LCT
-{
+struct LCT{
 	int fa[N], c[N][2], rev[N], sz[N];
-
-	void update(int o) {
-		sz[o] = sz[c[o][0]] + sz[c[o][1]] + 1;
-	}
+	void update(int o)
+		{sz[o] = sz[c[o][0]] + sz[c[o][1]] + 1;}
 	void pushdown(int o) {
-		if(rev[o]) {
-			rev[o] = 0;
-			rev[c[o][0]] ^= 1;
-			rev[c[o][1]] ^= 1;
-			swap(c[o][0], c[o][1]);
-		}
+		if(!rev[o]) return;
+		rev[o] = 0;
+		rev[c[o][0]] ^= 1;
+		rev[c[o][1]] ^= 1;
+		swap(c[o][0], c[o][1]);
 	}
-	bool ch(int o) {
-		return o == c[fa[o]][1];
-	}
-	bool isroot(int o) {
-		return c[fa[o]][0] != o && c[fa[o]][1] != o;
-	}
+	bool ch(int o) 
+		{return o == c[fa[o]][1];}
+	bool isroot(int o)
+		{return c[fa[o]][0] != o && c[fa[o]][1] != o;}
 	void setc(int x, int y, bool d) {
 		if(x) fa[x] = y;
 		if(y) c[y][d] = x;
@@ -30,8 +24,7 @@ struct LCT
 		else setc(x, fa(p), ch(p));
 		setc(c[x][d^1], p, d);
 		setc(p, x, d^1);
-		update(p);
-		update(x);
+		update(p); update(x);
 	}
 	void splay(int x) {
 		static int q[N], top;
@@ -48,16 +41,12 @@ struct LCT
 		for(int y = 0; x; y = x, x = fa[x])
 			splay(x), c[x][1] = y, update(x);
 	}
-	void makeroot(int x) {
-		access(x), splay(x), rev(x) ^= 1;
-	}
-	void link(int x, int y) {
-		makeroot(x), fa[x] = y, splay(x);
-	}
+	void makeroot(int x) 
+		{access(x), splay(x), rev(x) ^= 1;}
+	void link(int x, int y) 
+		{makeroot(x), fa[x] = y, splay(x);}
 	void cut(int x, int y) {
-		makeroot(x);
-		access(y);
-		splay(y);
-		c[y][0] = fa[x] = 0;
+		makeroot(x); access(y); 
+		splay(y); c[y][0] = fa[x] = 0;
 	}
 };
