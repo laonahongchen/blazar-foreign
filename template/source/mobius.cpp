@@ -1,8 +1,11 @@
+<<<<<<< HEAD
 #include<cstdio>  
 #include<string>  
 #include<cstring>  
 #include<algorithm>  
 using namespace std;  
+=======
+>>>>>>> Foreign/master
 int mu[100001],prime[100001];  
 bool check[100001];   
 int tot;  
@@ -34,6 +37,7 @@ inline void findmu()
           }  
      }  
 }  
+<<<<<<< HEAD
 int sum[100001];  
 //找[1,n],[1,m]内互质的数的对数  
 inline long long solve(int n,int m)  
@@ -71,3 +75,5 @@ int main()
      return 0;  
 } 
 
+=======
+>>>>>>> Foreign/master
