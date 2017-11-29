@@ -26,6 +26,7 @@
 \usepackage[table]{xcolor}
 \usepackage{booktabs}
 \usepackage{harpoon}
+\usepackage{titlesec}
 %代码高亮
 %\geometry{margin=1in}
 \geometry{a4paper,left=1.0cm,right=1.0cm,top=1.3cm,bottom=0.5cm}
@@ -41,6 +42,23 @@
 	colorlinks=true,
 	linkcolor=black
 }
+
+%\section{Notation}
+%\chapter{Notation}
+%\subsection{Notation}
+%\titlespacing{\chapter} {0pt}{50pt}{40pt}
+\titlespacing{\section}{0cm}{*0.2}{*0.2}
+%\titlespacing{\section}{0cm}{*0.5}{*0.5}
+%\titlespacing{\section}{0cm}{*0.5}{*0.5}
+\titlespacing{\subsubsection}{0cm}{*0.2}{*0.2}
+\titlespacing{\subsection}{0cm}{*0.2}{*0.2}
+\iffalse
+%\titlespacing{\section} {0pt}{3.5ex plus 1ex minus .2ex}{2.3ex plus .2ex}
+\titlespacing{\subsection} {0pt}{3.25ex plus 1ex minus .2ex}{1.5ex plus .2ex}
+\titlespacing{\subsubsection}{0pt}{3.25ex plus 1ex minus .2ex}{1.5ex plus .2ex}
+\titlespacing{\paragraph} {0pt}{3.25ex plus 1ex minus .2ex}{1em}
+\titlespacing{\subparagraph} {\parindent}{3.25ex plus 1ex minus .2ex}{1em}
+\fi
 
 %\newcommand{\cppcode}[1]{
  %   \inputminted[mathescape,
@@ -65,7 +83,7 @@
 	breakautoindent=true,
 	breakbytoken=true,
 	breaklines=true,
-	numbersep=1mm,
+	numbersep=1mm,	
 	fontsize=\small
 	]{cpp}{source/#1}
 }
@@ -134,7 +152,7 @@
 \subsection{小步大步}
 返回结果：$a^x=b \ (mod \ p)$
 \indent 使用条件：$p$为质数
-\cppcode{number-theory/BSGS.cpp}
+\cppcode{number-theory/exBSGS.cpp}
 
 \subsection{Miller Rabin 素数测试}
 \cppcode{number-theory/miller-rabin.cpp}
@@ -493,8 +511,8 @@ F_{t + 1}(x) &\equiv F_t(x) - \dfrac{F_t(x) * A(x) - 1}{A(x)} \\
 \subsection{阿波罗尼茨圆}
 \cppcode{Geometry/3 abolonis.cpp}
 
-\subsection{最小覆盖球}
-\cppcode{Geometry/4 min cover ball.cpp}
+%\subsection{最小覆盖球}
+%\cppcode{Geometry/4 min cover ball.cpp}
 
 \subsection{三角形与圆交}
 \cppcode{Geometry/5 areaCT.cpp}
@@ -651,8 +669,8 @@ F_{t + 1}(x) &\equiv F_t(x) - \dfrac{F_t(x) * A(x) - 1}{A(x)} \\
 %\subsection{斯坦纳树}
 %\cppcode{miscellany/Steiner-Tree.cpp}
 
-\subsection{无敌的读入优化}
-\cppcode{miscellany/Reader.cpp}
+%\subsection{无敌的读入优化}
+%\cppcode{miscellany/Reader.cpp}
 
 \subsection{最小树形图}
 \cppcode{miscellany/mintreegraph.cpp}

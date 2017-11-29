@@ -1,47 +1,38 @@
 int match[N], belong[N], next[N], mark[N], visit[N];
 std::vector<int> queue;
-
 int find(int x) {
-    if (belong[x] != x) {
+    if (belong[x] != x)
         belong[x] = find(belong[x]);
-    }
     return belong[x];
 }
-
 void merge(int x, int y) {
     x = find(x);
     y = find(y);
-    if (x != y) {
+    if (x != y)
         belong[x] = y;
-    }
 }
-
 int lca(int x, int y) {
     static int stamp = 0;
     stamp++;
     while (true) {
         if (x != -1) {
             x = find(x);
-            if (visit[x] == stamp) {
+            if (visit[x] == stamp) 
                 return x;
-            }
             visit[x] = stamp;
-            if (match[x] != -1) {
+            if (match[x] != -1) 
                 x = next[match[x]];
-            } else {
+            else 
                 x = -1;
-            }
         }
         std::swap(x, y);
     }
 }
-
 void group(int a, int p) {
     while (a != p) {
         int b = match[a], c = next[b];
-        if (find(c) != p) {
+        if (find(c) != p)
             next[c] = b;
-        }
         if (mark[b] == 2) {
             mark[b] = 1;
             queue.push_back(b);
@@ -55,7 +46,6 @@ void group(int a, int p) {
         a = c;
     }
 }
-
 void augment(int source) {
     queue.clear();
     for (int i = 0; i < n; ++i) {
@@ -74,12 +64,10 @@ void augment(int source) {
             }
             if (mark[y] == 1) {
                 int r = lca(x, y);
-                if (find(x) != r) {
+                if (find(x) != r)
                     next[x] = y;
-                }
-                if (find(y) != r) {
+                if (find(y) != r)
                     next[y] = x;
-                }
                 group(x, r);
                 group(y, r);
             } else if (match[y] == -1) {
@@ -97,21 +85,17 @@ void augment(int source) {
                 mark[y] = 2;
                 mark[match[y]] = 1;
                 queue.push_back(match[y]);
-            }
-        }
-    }
+			}
+		}
+	}
 }
-
 int solve() {
     std::fill(match, match + n, -1);
-    for (int i = 0; i < n; ++i) {
-        if (match[i] == -1) {
+    for (int i = 0; i < n; ++i)
+        if (match[i] == -1) 
             augment(i);
-        }
-    }
     int answer = 0;
-    for (int i = 0; i < n; ++i) {
+    for (int i = 0; i < n; ++i)
         answer += (match[i] != -1);
-    }
     return answer;
 }
