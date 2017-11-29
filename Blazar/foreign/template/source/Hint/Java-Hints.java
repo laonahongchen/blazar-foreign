@@ -68,8 +68,8 @@ setScale(1,BigDecimal.ROUND_UP)进位处理,2.35变成2.4
 setScale(1,BigDecimal.ROUND_HALF_UP)四舍五入,2.35变成2.4
 setScaler(1,BigDecimal.ROUND_HALF_DOWN)四舍五入,2.35变成2.3,如果是5则向下舍
 setScaler(1,BigDecimal.ROUND_CEILING)接近正无穷大的舍入
-setScaler(1,BigDecimal.ROUND_FLOOR)接近负无穷大的舍入,数字>0==ROUND_UP,数字<0==ROUND_DOWN
-setScaler(1,BigDecimal.ROUND_HALF_EVEN)向最接近的数字舍入,如果距离相等则向相邻的偶数舍入。
+setScaler(1,BigDecimal.ROUND_FLOOR)接近负无穷大的舍入,数字>0=ROUND_UP,数字<0=ROUND_DOWN
+setScaler(1,BigDecimal.ROUND_HALF_EVEN)向最接近的数字舍入,如果距离相等则向相邻的偶数舍入
 // StringBuilder
 StringBuilder sb = new StringBuilder ();
 sb.append(elem) | out.println(sb)

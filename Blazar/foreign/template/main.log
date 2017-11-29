@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.14159265-2.6-0.99992 (TeX Live 2015/Debian) (preloaded format=xelatex 2017.8.23)  29 NOV 2017 11:04
+This is XeTeX, Version 3.14159265-2.6-0.99992 (TeX Live 2015/Debian) (preloaded format=xelatex 2017.8.23)  29 NOV 2017 11:18
 entering extended mode
  \write18 enabled.
  %&-line parsing enabled.
@@ -1814,39 +1814,18 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 LaTeX Font Info:    Font shape `EU1/UbuntuMono(1)/m/sl' in size <10.53937> not 
 available
 (Font)              Font shape `EU1/UbuntuMono(1)/m/it' tried instead on input 
-line 62.
+line 63.
 LaTeX Font Info:    Font shape `EU1/FandolSong-Regular(0)/m/sl' in size <10.539
 37> not available
 (Font)              Font shape `EU1/FandolSong-Regular(0)/m/it' tried instead o
-n input line 62.
+n input line 63.
 
 [1
 
-]
-Overfull \hbox (3.16185pt too wide) detected at line 79
-\EU1/UbuntuMono(1)/m/n/10.53937 10.1.10 
- []
-
-
-Overfull \hbox (3.16185pt too wide) detected at line 90
-\EU1/UbuntuMono(1)/m/n/10.53937 10.2.10 
- []
-
-
-Overfull \hbox (3.16185pt too wide) detected at line 91
-\EU1/UbuntuMono(1)/m/n/10.53937 10.2.11 
- []
-
-
-Overfull \hbox (3.16185pt too wide) detected at line 92
-\EU1/UbuntuMono(1)/m/n/10.53937 10.2.12 
- []
-
-)
+])
 \tf@toc=\write7
 \openout7 = `main.toc'.
 
- [2]
 runsystem(pygmentize -S xcode -f latex -P commandprefix=PYGxcode > "main.out.py
 g")...executed.
 
@@ -1896,7 +1875,7 @@ ent(t)); f.close();")...executed.
 runsystem(pygmentize -l cpp -f latex -P commandprefix=PYG -F tokenmerge -P math
 escape=True -o "main.out.pyg" "main.pyg" )...executed.
 
- (./main.out.pyg)
+ (./main.out.pyg [2])
 runsystem(python -c "import sys; import textwrap; from io import open; f = open
 (\"source/number-theory/miller-rabin.cpp\", \"r\", encoding=\"UTF8\"); t = f.re
 ad(); f.close(); f = open(\"main.pyg\", \"w\", encoding=\"UTF8\"); f.write(text
@@ -1914,7 +1893,7 @@ rap.dedent(t)); f.close();")...executed.
 runsystem(pygmentize -l cpp -f latex -P commandprefix=PYG -F tokenmerge -P math
 escape=True -o "main.out.pyg" "main.pyg" )...executed.
 
- (./main.out.pyg [3])
+ (./main.out.pyg)
 runsystem(python -c "import sys; import textwrap; from io import open; f = open
 (\"source/number-theory/number-theoretic-transform.cpp\", \"r\", encoding=\"UTF
 8\"); t = f.read(); f.close(); f = open(\"main.pyg\", \"w\", encoding=\"UTF8\")
@@ -1936,7 +1915,7 @@ escape=True -o "main.out.pyg" "main.pyg" )...executed.
  (./main.out.pyg
 Underfull \vbox (badness 5832) has occurred while \output is active []
 
-)
+ [3])
 runsystem(python -c "import sys; import textwrap; from io import open; f = open
 (\"source/number-theory/linear-recurrence.cpp\", \"r\", encoding=\"UTF8\"); t =
  f.read(); f.close(); f = open(\"main.pyg\", \"w\", encoding=\"UTF8\"); f.write
@@ -1946,7 +1925,7 @@ runsystem(pygmentize -l cpp -f latex -P commandprefix=PYG -F tokenmerge -P math
 escape=True -o "main.out.pyg" "main.pyg" )...executed.
 
 
-(./main.out.pyg [4])
+(./main.out.pyg)
 runsystem(python -c "import sys; import textwrap; from io import open; f = open
 (\"source/number-theory/lattice-count.cpp\", \"r\", encoding=\"UTF8\"); t = f.r
 ead(); f.close(); f = open(\"main.pyg\", \"w\", encoding=\"UTF8\"); f.write(tex
@@ -1964,7 +1943,7 @@ p.dedent(t)); f.close();")...executed.
 runsystem(pygmentize -l cpp -f latex -P commandprefix=PYG -F tokenmerge -P math
 escape=True -o "main.out.pyg" "main.pyg" )...executed.
 
- (./main.out.pyg)
+ (./main.out.pyg [4])
 runsystem(python -c "import sys; import textwrap; from io import open; f = open
 (\"source/numerical-algorithm/adaptive-simpson.cpp\", \"r\", encoding=\"UTF8\")
 ; t = f.read(); f.close(); f = open(\"main.pyg\", \"w\", encoding=\"UTF8\"); f.
@@ -1973,7 +1952,7 @@ write(textwrap.dedent(t)); f.close();")...executed.
 runsystem(pygmentize -l cpp -f latex -P commandprefix=PYG -F tokenmerge -P math
 escape=True -o "main.out.pyg" "main.pyg" )...executed.
 
- (./main.out.pyg [5])
+ (./main.out.pyg)
 runsystem(python -c "import sys; import textwrap; from io import open; f = open
 (\"source/numerical-algorithm/polyroot.cpp\", \"r\", encoding=\"UTF8\"); t = f.
 read(); f.close(); f = open(\"main.pyg\", \"w\", encoding=\"UTF8\"); f.write(te
@@ -1983,7 +1962,7 @@ runsystem(pygmentize -l cpp -f latex -P commandprefix=PYG -F tokenmerge -P math
 escape=True -o "main.out.pyg" "main.pyg" )...executed.
 
 
-(./main.out.pyg)
+(./main.out.pyg [5])
 runsystem(python -c "import sys; import textwrap; from io import open; f = open
 (\"source/Data-Structure/LCT.cpp\", \"r\", encoding=\"UTF8\"); t = f.read(); f.
 close(); f = open(\"main.pyg\", \"w\", encoding=\"UTF8\"); f.write(textwrap.ded
@@ -1992,7 +1971,7 @@ ent(t)); f.close();")...executed.
 runsystem(pygmentize -l cpp -f latex -P commandprefix=PYG -F tokenmerge -P math
 escape=True -o "main.out.pyg" "main.pyg" )...executed.
 
- (./main.out.pyg [6])
+ (./main.out.pyg)
 runsystem(python -c "import sys; import textwrap; from io import open; f = open
 (\"source/Data-Structure/modui_tree_ver.cpp\", \"r\", encoding=\"UTF8\"); t = f
 .read(); f.close(); f = open(\"main.pyg\", \"w\", encoding=\"UTF8\"); f.write(t
@@ -2001,10 +1980,10 @@ extwrap.dedent(t)); f.close();")...executed.
 runsystem(pygmentize -l cpp -f latex -P commandprefix=PYG -F tokenmerge -P math
 escape=True -o "main.out.pyg" "main.pyg" )...executed.
 
- (./main.out.pyg
+ (./main.out.pyg [6]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [7])
+)
 runsystem(python -c "import sys; import textwrap; from io import open; f = open
 (\"source/Data-Structure/fenwicktree.cpp\", \"r\", encoding=\"UTF8\"); t = f.re
 ad(); f.close(); f = open(\"main.pyg\", \"w\", encoding=\"UTF8\"); f.write(text
@@ -2023,7 +2002,7 @@ wrap.dedent(t)); f.close();")...executed.
 runsystem(pygmentize -l cpp -f latex -P commandprefix=PYG -F tokenmerge -P math
 escape=True -o "main.out.pyg" "main.pyg" )...executed.
 
- (./main.out.pyg)
+ (./main.out.pyg [7])
 runsystem(python -c "import sys; import textwrap; from io import open; f = open
 (\"source/Graph-Algorithm/bcc.cpp\", \"r\", encoding=\"UTF8\"); t = f.read(); f
 .close(); f = open(\"main.pyg\", \"w\", encoding=\"UTF8\"); f.write(textwrap.de
@@ -2032,7 +2011,7 @@ dent(t)); f.close();")...executed.
 runsystem(pygmentize -l cpp -f latex -P commandprefix=PYG -F tokenmerge -P math
 escape=True -o "main.out.pyg" "main.pyg" )...executed.
 
- (./main.out.pyg [8])
+ (./main.out.pyg)
 runsystem(python -c "import sys; import textwrap; from io import open; f = open
 (\"source/Graph-Algorithm/Maximum-Matching-Hopcroft-Karp.cpp\", \"r\", encoding
 =\"UTF8\"); t = f.read(); f.close(); f = open(\"main.pyg\", \"w\", encoding=\"U
@@ -2041,7 +2020,7 @@ TF8\"); f.write(textwrap.dedent(t)); f.close();")...executed.
 runsystem(pygmentize -l cpp -f latex -P commandprefix=PYG -F tokenmerge -P math
 escape=True -o "main.out.pyg" "main.pyg" )...executed.
 
- (./main.out.pyg)
+ (./main.out.pyg [8])
 runsystem(python -c "import sys; import textwrap; from io import open; f = open
 (\"source/Graph-Algorithm/Maximum-Weight-Matching.cpp\", \"r\", encoding=\"UTF8
 \"); t = f.read(); f.close(); f = open(\"main.pyg\", \"w\", encoding=\"UTF8\");
@@ -2051,7 +2030,7 @@ runsystem(pygmentize -l cpp -f latex -P commandprefix=PYG -F tokenmerge -P math
 escape=True -o "main.out.pyg" "main.pyg" )...executed.
 
 
-(./main.out.pyg [9])
+(./main.out.pyg)
 runsystem(python -c "import sys; import textwrap; from io import open; f = open
 (\"source/Graph-Algorithm/Two-Satisfiability.cpp\", \"r\", encoding=\"UTF8\"); 
 t = f.read(); f.close(); f = open(\"main.pyg\", \"w\", encoding=\"UTF8\"); f.wr
@@ -2060,7 +2039,7 @@ ite(textwrap.dedent(t)); f.close();")...executed.
 runsystem(pygmentize -l cpp -f latex -P commandprefix=PYG -F tokenmerge -P math
 escape=True -o "main.out.pyg" "main.pyg" )...executed.
 
- (./main.out.pyg)
+ (./main.out.pyg [9])
 runsystem(python -c "import sys; import textwrap; from io import open; f = open
 (\"source/Graph-Algorithm/Rooted-Tree-Isomorphism.cpp\", \"r\", encoding=\"UTF8
 \"); t = f.read(); f.close(); f = open(\"main.pyg\", \"w\", encoding=\"UTF8\");
@@ -2069,7 +2048,7 @@ runsystem(python -c "import sys; import textwrap; from io import open; f = open
 runsystem(pygmentize -l cpp -f latex -P commandprefix=PYG -F tokenmerge -P math
 escape=True -o "main.out.pyg" "main.pyg" )...executed.
 
- (./main.out.pyg [10])
+ (./main.out.pyg)
 runsystem(python -c "import sys; import textwrap; from io import open; f = open
 (\"source/Graph-Algorithm/dominator.cpp\", \"r\", encoding=\"UTF8\"); t = f.rea
 d(); f.close(); f = open(\"main.pyg\", \"w\", encoding=\"UTF8\"); f.write(textw
@@ -2078,10 +2057,10 @@ rap.dedent(t)); f.close();")...executed.
 runsystem(pygmentize -l cpp -f latex -P commandprefix=PYG -F tokenmerge -P math
 escape=True -o "main.out.pyg" "main.pyg" )...executed.
 
- (./main.out.pyg
+ (./main.out.pyg [10]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [11])
+)
 runsystem(python -c "import sys; import textwrap; from io import open; f = open
 (\"source/Graph-Algorithm/Minimum-Cut-Stoer-Wagner.cpp\", \"r\", encoding=\"UTF
 8\"); t = f.read(); f.close(); f = open(\"main.pyg\", \"w\", encoding=\"UTF8\")
@@ -2103,10 +2082,10 @@ escape=True -o "main.out.pyg" "main.pyg" )...executed.
  (./main.out.pyg
 Underfull \vbox (badness 5652) has occurred while \output is active []
 
- [12]
+ [11]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
-)
+ [12])
 runsystem(python -c "import sys; import textwrap; from io import open; f = open
 (\"source/temp_ypm/KMP-poj3461.cpp\", \"r\", encoding=\"UTF8\"); t = f.read(); 
 f.close(); f = open(\"main.pyg\", \"w\", encoding=\"UTF8\"); f.write(textwrap.d
@@ -2125,7 +2104,7 @@ runsystem(python -c "import sys; import textwrap; from io import open; f = open
 runsystem(pygmentize -l cpp -f latex -P commandprefix=PYG -F tokenmerge -P math
 escape=True -o "main.out.pyg" "main.pyg" )...executed.
 
- (./main.out.pyg [13])
+ (./main.out.pyg)
 runsystem(python -c "import sys; import textwrap; from io import open; f = open
 (\"source/temp_ypm/acauto.cpp\", \"r\", encoding=\"UTF8\"); t = f.read(); f.clo
 se(); f = open(\"main.pyg\", \"w\", encoding=\"UTF8\"); f.write(textwrap.dedent
@@ -2134,7 +2113,7 @@ se(); f = open(\"main.pyg\", \"w\", encoding=\"UTF8\"); f.write(textwrap.dedent
 runsystem(pygmentize -l cpp -f latex -P commandprefix=PYG -F tokenmerge -P math
 escape=True -o "main.out.pyg" "main.pyg" )...executed.
 
- (./main.out.pyg)
+ (./main.out.pyg [13])
 runsystem(python -c "import sys; import textwrap; from io import open; f = open
 (\"source/temp_ypm/gy sam.cpp\", \"r\", encoding=\"UTF8\"); t = f.read(); f.clo
 se(); f = open(\"main.pyg\", \"w\", encoding=\"UTF8\"); f.write(textwrap.dedent
@@ -2143,8 +2122,7 @@ se(); f = open(\"main.pyg\", \"w\", encoding=\"UTF8\"); f.write(textwrap.dedent
 runsystem(pygmentize -l cpp -f latex -P commandprefix=PYG -F tokenmerge -P math
 escape=True -o "main.out.pyg" "main.pyg" )...executed.
 
- (./main.out.pyg
-[14])
+ (./main.out.pyg)
 runsystem(python -c "import sys; import textwrap; from io import open; f = open
 (\"source/temp_ypm/SAM-NSUBSTR.cpp\", \"r\", encoding=\"UTF8\"); t = f.read(); 
 f.close(); f = open(\"main.pyg\", \"w\", encoding=\"UTF8\"); f.write(textwrap.d
@@ -2153,7 +2131,8 @@ edent(t)); f.close();")...executed.
 runsystem(pygmentize -l cpp -f latex -P commandprefix=PYG -F tokenmerge -P math
 escape=True -o "main.out.pyg" "main.pyg" )...executed.
 
- (./main.out.pyg)
+
+(./main.out.pyg [14])
 runsystem(python -c "import sys; import textwrap; from io import open; f = open
 (\"source/temp_ypm/SAM-LCS2.cpp\", \"r\", encoding=\"UTF8\"); t = f.read(); f.c
 lose(); f = open(\"main.pyg\", \"w\", encoding=\"UTF8\"); f.write(textwrap.dede
@@ -2162,7 +2141,7 @@ nt(t)); f.close();")...executed.
 runsystem(pygmentize -l cpp -f latex -P commandprefix=PYG -F tokenmerge -P math
 escape=True -o "main.out.pyg" "main.pyg" )...executed.
 
- (./main.out.pyg [15])
+ (./main.out.pyg)
 runsystem(python -c "import sys; import textwrap; from io import open; f = open
 (\"source/temp_ypm/SA.cpp\", \"r\", encoding=\"UTF8\"); t = f.read(); f.close()
 ; f = open(\"main.pyg\", \"w\", encoding=\"UTF8\"); f.write(textwrap.dedent(t))
@@ -2171,7 +2150,7 @@ runsystem(python -c "import sys; import textwrap; from io import open; f = open
 runsystem(pygmentize -l cpp -f latex -P commandprefix=PYG -F tokenmerge -P math
 escape=True -o "main.out.pyg" "main.pyg" )...executed.
 
- (./main.out.pyg)
+ (./main.out.pyg [15])
 runsystem(python -c "import sys; import textwrap; from io import open; f = open
 (\"source/temp_ypm/manacher-poj3974.cpp\", \"r\", encoding=\"UTF8\"); t = f.rea
 d(); f.close(); f = open(\"main.pyg\", \"w\", encoding=\"UTF8\"); f.write(textw
@@ -2190,7 +2169,7 @@ runsystem(pygmentize -l cpp -f latex -P commandprefix=PYG -F tokenmerge -P math
 escape=True -o "main.out.pyg" "main.pyg" )...executed.
 
 
-(./main.out.pyg [16])
+(./main.out.pyg)
 runsystem(python -c "import sys; import textwrap; from io import open; f = open
 (\"source/Geometry/8 Geo2D_simple.cpp\", \"r\", encoding=\"UTF8\"); t = f.read(
 ); f.close(); f = open(\"main.pyg\", \"w\", encoding=\"UTF8\"); f.write(textwra
@@ -2199,10 +2178,10 @@ p.dedent(t)); f.close();")...executed.
 runsystem(pygmentize -l cpp -f latex -P commandprefix=PYG -F tokenmerge -P math
 escape=True -o "main.out.pyg" "main.pyg" )...executed.
 
- (./main.out.pyg
+ (./main.out.pyg [16]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [17])
+)
 runsystem(python -c "import sys; import textwrap; from io import open; f = open
 (\"source/Geometry/convex.cpp\", \"r\", encoding=\"UTF8\"); t = f.read(); f.clo
 se(); f = open(\"main.pyg\", \"w\", encoding=\"UTF8\"); f.write(textwrap.dedent
@@ -2221,7 +2200,7 @@ dent(t)); f.close();")...executed.
 runsystem(pygmentize -l cpp -f latex -P commandprefix=PYG -F tokenmerge -P math
 escape=True -o "main.out.pyg" "main.pyg" )...executed.
 
- (./main.out.pyg)
+ (./main.out.pyg [17])
 runsystem(python -c "import sys; import textwrap; from io import open; f = open
 (\"source/Geometry/4 min cover ball.cpp\", \"r\", encoding=\"UTF8\"); t = f.rea
 d(); f.close(); f = open(\"main.pyg\", \"w\", encoding=\"UTF8\"); f.write(textw
@@ -2230,7 +2209,7 @@ rap.dedent(t)); f.close();")...executed.
 runsystem(pygmentize -l cpp -f latex -P commandprefix=PYG -F tokenmerge -P math
 escape=True -o "main.out.pyg" "main.pyg" )...executed.
 
- (./main.out.pyg [18])
+ (./main.out.pyg)
 runsystem(python -c "import sys; import textwrap; from io import open; f = open
 (\"source/Geometry/5 areaCT.cpp\", \"r\", encoding=\"UTF8\"); t = f.read(); f.c
 lose(); f = open(\"main.pyg\", \"w\", encoding=\"UTF8\"); f.write(textwrap.dede
@@ -2249,7 +2228,7 @@ runsystem(pygmentize -l cpp -f latex -P commandprefix=PYG -F tokenmerge -P math
 escape=True -o "main.out.pyg" "main.pyg" )...executed.
 
 
-(./main.out.pyg)
+(./main.out.pyg [18])
 runsystem(python -c "import sys; import textwrap; from io import open; f = open
 (\"source/Geometry/9 HPI_integer.cpp\", \"r\", encoding=\"UTF8\"); t = f.read()
 ; f.close(); f = open(\"main.pyg\", \"w\", encoding=\"UTF8\"); f.write(textwrap
@@ -2258,7 +2237,7 @@ runsystem(python -c "import sys; import textwrap; from io import open; f = open
 runsystem(pygmentize -l cpp -f latex -P commandprefix=PYG -F tokenmerge -P math
 escape=True -o "main.out.pyg" "main.pyg" )...executed.
 
- (./main.out.pyg [19])
+ (./main.out.pyg)
 runsystem(python -c "import sys; import textwrap; from io import open; f = open
 (\"source/Geometry/11 triangle.cpp\", \"r\", encoding=\"UTF8\"); t = f.read(); 
 f.close(); f = open(\"main.pyg\", \"w\", encoding=\"UTF8\"); f.write(textwrap.d
@@ -2267,7 +2246,7 @@ edent(t)); f.close();")...executed.
 runsystem(pygmentize -l cpp -f latex -P commandprefix=PYG -F tokenmerge -P math
 escape=True -o "main.out.pyg" "main.pyg" )...executed.
 
- (./main.out.pyg)
+ (./main.out.pyg [19])
 runsystem(python -c "import sys; import textwrap; from io import open; f = open
 (\"source/Geometry/12.cpp\", \"r\", encoding=\"UTF8\"); t = f.read(); f.close()
 ; f = open(\"main.pyg\", \"w\", encoding=\"UTF8\"); f.write(textwrap.dedent(t))
@@ -2286,7 +2265,7 @@ runsystem(pygmentize -l cpp -f latex -P commandprefix=PYG -F tokenmerge -P math
 escape=True -o "main.out.pyg" "main.pyg" )...executed.
 
 
-(./main.out.pyg [20])
+(./main.out.pyg)
 runsystem(python -c "import sys; import textwrap; from io import open; f = open
 (\"source/Geometry/14.cpp\", \"r\", encoding=\"UTF8\"); t = f.read(); f.close()
 ; f = open(\"main.pyg\", \"w\", encoding=\"UTF8\"); f.write(textwrap.dedent(t))
@@ -2304,7 +2283,7 @@ runsystem(python -c "import sys; import textwrap; from io import open; f = open
 runsystem(pygmentize -l cpp -f latex -P commandprefix=PYG -F tokenmerge -P math
 escape=True -o "main.out.pyg" "main.pyg" )...executed.
 
- (./main.out.pyg
+ (./main.out.pyg [20]
 Overfull \hbox (19.1091pt too wide) in paragraph at lines 27--27
 []|  
  []
@@ -2318,7 +2297,7 @@ close();")...executed.
 runsystem(pygmentize -l cpp -f latex -P commandprefix=PYG -F tokenmerge -P math
 escape=True -o "main.out.pyg" "main.pyg" )...executed.
 
- (./main.out.pyg [21])
+ (./main.out.pyg)
 runsystem(python -c "import sys; import textwrap; from io import open; f = open
 (\"source/Geometry/1 3DGeo.cpp\", \"r\", encoding=\"UTF8\"); t = f.read(); f.cl
 ose(); f = open(\"main.pyg\", \"w\", encoding=\"UTF8\"); f.write(textwrap.deden
@@ -2327,7 +2306,7 @@ t(t)); f.close();")...executed.
 runsystem(pygmentize -l cpp -f latex -P commandprefix=PYG -F tokenmerge -P math
 escape=True -o "main.out.pyg" "main.pyg" )...executed.
 
- (./main.out.pyg)
+ (./main.out.pyg [21])
 runsystem(python -c "import sys; import textwrap; from io import open; f = open
 (\"source/miscellany/Reader.cpp\", \"r\", encoding=\"UTF8\"); t = f.read(); f.c
 lose(); f = open(\"main.pyg\", \"w\", encoding=\"UTF8\"); f.write(textwrap.dede
@@ -2345,8 +2324,7 @@ p.dedent(t)); f.close();")...executed.
 runsystem(pygmentize -l cpp -f latex -P commandprefix=PYG -F tokenmerge -P math
 escape=True -o "main.out.pyg" "main.pyg" )...executed.
 
- (./main.out.pyg
-[22])
+ (./main.out.pyg)
 runsystem(python -c "import sys; import textwrap; from io import open; f = open
 (\"source/miscellany/DLX.cpp\", \"r\", encoding=\"UTF8\"); t = f.read(); f.clos
 e(); f = open(\"main.pyg\", \"w\", encoding=\"UTF8\"); f.write(textwrap.dedent(
@@ -2355,10 +2333,11 @@ t)); f.close();")...executed.
 runsystem(pygmentize -l cpp -f latex -P commandprefix=PYG -F tokenmerge -P math
 escape=True -o "main.out.pyg" "main.pyg" )...executed.
 
- (./main.out.pyg
+
+(./main.out.pyg [22]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [23])
+)
 runsystem(python -c "import sys; import textwrap; from io import open; f = open
 (\"source/miscellany/what-day-is-today.cpp\", \"r\", encoding=\"UTF8\"); t = f.
 read(); f.close(); f = open(\"main.pyg\", \"w\", encoding=\"UTF8\"); f.write(te
@@ -2394,7 +2373,7 @@ runsystem(python -c "import sys; import textwrap; from io import open; f = open
 runsystem(pygmentize -l cpp -f latex -P commandprefix=PYG -F tokenmerge -P math
 escape=True -o "main.out.pyg" "main.pyg" )...executed.
 
- (./main.out.pyg [24])
+ (./main.out.pyg [23])
 runsystem(python -c "import sys; import textwrap; from io import open; f = open
 (\"source/miscellany/LLMOD.cpp\", \"r\", encoding=\"UTF8\"); t = f.read(); f.cl
 ose(); f = open(\"main.pyg\", \"w\", encoding=\"UTF8\"); f.write(textwrap.deden
@@ -2426,7 +2405,7 @@ escape=True -o "main.out.pyg" "main.pyg" )...executed.
 runsystem(pygmentize -l vim -f latex -P commandprefix=PYG -F tokenmerge -P math
 escape=True -o "main.out.pyg" "source/Hint/vimrc" )...executed.
 
- (./main.out.pyg) [25] (./source/Hint/Bernoulli-Number.tex)
+ (./main.out.pyg [24]) (./source/Hint/Bernoulli-Number.tex)
 runsystem(python -c "import sys; import textwrap; from io import open; f = open
 (\"source/Hint/Java-Hints.java\", \"r\", encoding=\"UTF8\"); t = f.read(); f.cl
 ose(); f = open(\"main.pyg\", \"w\", encoding=\"UTF8\"); f.write(textwrap.deden
@@ -2436,20 +2415,17 @@ runsystem(pygmentize -l java -f latex -P commandprefix=PYG -F tokenmerge -P mat
 hescape=True -o "main.out.pyg" "main.pyg" )...executed.
 
 
-(./main.out.pyg [26]
-Overfull \hbox (15.04391pt too wide) in paragraph at lines 72--72
+(./main.out.pyg [25]
+Overfull \hbox (6.0102pt too wide) in paragraph at lines 72--72
 | | | |[][][][][][][][][][][][][][][][][][][][][]|  
  []
 
 
-Overfull \hbox (20.36073pt too wide) in paragraph at lines 73--73
-| | | |[][][][][][][][][][][][]|  
+Overfull \hbox (10.52701pt too wide) in paragraph at lines 73--73
+| | | |[][][][][][][][][][][]|  
  []
 
-) [27]
-Underfull \vbox (badness 2556) has occurred while \output is active []
-
- [28]
+) [26] [27]
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `math shift' on input line 982.
@@ -2458,136 +2434,136 @@ Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `math shift' on input line 982.
 
-[29] (./source/calculustable.tex
-Underfull \vbox (badness 10000) detected at line 5
+[28] (./source/calculustable.tex
+Underfull \vbox (badness 10000) detected at line 4
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2--7
-
- []
-
-
-Underfull \vbox (badness 10000) detected at line 10
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 10--12
+Underfull \hbox (badness 10000) in paragraph at lines 4--6
 
  []
 
 
-Underfull \vbox (badness 10000) detected at line 15
+Underfull \vbox (badness 10000) detected at line 9
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 15--17
-
- []
-
-
-Underfull \vbox (badness 10000) detected at line 20
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 20--22
+Underfull \hbox (badness 10000) in paragraph at lines 9--11
 
  []
 
 
-Underfull \vbox (badness 10000) detected at line 27
+Underfull \vbox (badness 10000) detected at line 14
  []
 
 
-Underfull \vbox (badness 10000) detected at line 33
- []
-
-
-Underfull \vbox (badness 10000) detected at line 39
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 27--41
+Underfull \hbox (badness 10000) in paragraph at lines 14--16
 
  []
 
 
-Underfull \vbox (badness 10000) detected at line 44
+Underfull \vbox (badness 10000) detected at line 19
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 44--46
-
- []
-
-
-Underfull \vbox (badness 10000) detected at line 49
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 49--51
+Underfull \hbox (badness 10000) in paragraph at lines 19--21
 
  []
 
 
-Underfull \vbox (badness 10000) detected at line 54
+Underfull \vbox (badness 10000) detected at line 26
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 54--56
+Underfull \vbox (badness 10000) detected at line 32
+ []
+
+
+Underfull \vbox (badness 10000) detected at line 38
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 26--40
 
  []
 
 
-Underfull \vbox (badness 10000) detected at line 59
+Underfull \vbox (badness 10000) detected at line 43
  []
 
 
-Underfull \vbox (badness 10000) detected at line 67
+Underfull \hbox (badness 10000) in paragraph at lines 43--45
+
  []
 
 
-Underfull \vbox (badness 10000) detected at line 72
+Underfull \vbox (badness 10000) detected at line 48
  []
 
 
-Underfull \vbox (badness 10000) detected at line 76
+Underfull \hbox (badness 10000) in paragraph at lines 48--50
+
  []
 
 
-Underfull \vbox (badness 10000) detected at line 80
+Underfull \vbox (badness 10000) detected at line 53
  []
 
 
-Underfull \vbox (badness 10000) detected at line 84
+Underfull \hbox (badness 10000) in paragraph at lines 53--55
+
  []
 
 
-Underfull \vbox (badness 10000) detected at line 88
+Underfull \vbox (badness 10000) detected at line 58
  []
 
 
-Underfull \vbox (badness 10000) detected at line 92
+Underfull \vbox (badness 10000) detected at line 66
  []
 
 
-Underfull \vbox (badness 10000) detected at line 96
+Underfull \vbox (badness 10000) detected at line 71
  []
 
 
-Underfull \vbox (badness 10000) detected at line 100
+Underfull \vbox (badness 10000) detected at line 75
  []
 
 
-Underfull \vbox (badness 10000) detected at line 104
+Underfull \vbox (badness 10000) detected at line 79
  []
 
 
-Underfull \vbox (badness 10000) detected at line 108
+Underfull \vbox (badness 10000) detected at line 83
  []
 
 
-Underfull \vbox (badness 10000) detected at line 112
+Underfull \vbox (badness 10000) detected at line 87
+ []
+
+
+Underfull \vbox (badness 10000) detected at line 91
+ []
+
+
+Underfull \vbox (badness 10000) detected at line 95
+ []
+
+
+Underfull \vbox (badness 10000) detected at line 99
+ []
+
+
+Underfull \vbox (badness 10000) detected at line 103
+ []
+
+
+Underfull \vbox (badness 10000) detected at line 107
+ []
+
+
+Underfull \vbox (badness 10000) detected at line 111
  []
 
 )
@@ -2596,7 +2572,7 @@ runsystem(rm "main.pyg")...executed.
 runsystem(rm "main.out.pyg")...executed.
 
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 1162.
- [30]
+ [29]
 Package atveryend Info: Empty hook `AfterLastShipout' on input line 1162.
  (./main.aux)
 Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 1162.
@@ -2604,12 +2580,12 @@ Package atveryend Info: Empty hook `AtEndAfterFileList' on input line 1162.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 1162.
  ) 
 Here is how much of TeX's memory you used:
- 31080 strings out of 493638
- 582975 string characters out of 6146796
- 686023 words of memory out of 5000000
- 33938 multiletter control sequences out of 15000+600000
+ 31069 strings out of 493638
+ 582353 string characters out of 6146796
+ 688691 words of memory out of 5000000
+ 33927 multiletter control sequences out of 15000+600000
  24857 words of font info for 135 fonts, out of 8000000 for 9000
  1328 hyphenation exceptions out of 8191
- 65i,11n,77p,10427b,649s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 65i,10n,77p,10427b,649s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on main.pdf (31 pages).
+Output written on main.pdf (30 pages).
