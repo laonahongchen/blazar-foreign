@@ -1,4 +1,3 @@
-
 namespace Reader {
 	const int L = (1 << 20) + 5;
 	char buffer[L], *S, *T;

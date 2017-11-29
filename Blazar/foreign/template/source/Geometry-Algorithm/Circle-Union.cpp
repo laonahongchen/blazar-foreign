@@ -6,30 +6,25 @@ struct arc {
 	arc(const double &theta, const point &p, int d)
 			: theta(theta), p(p), delta(d) {}
 };
-
 vector<arc> vec;
 vector<double> ans;
 vector<point> center;
 int cnt = 0;
-
 inline bool operator<(const arc &a, const arc &b) {
 	return a.theta + EPS < b.theta;
 }
-
 inline void psh(const double t1, const point p1, const double t2,
 								const point p2) {
 	if (t2 + EPS < t1) cnt++;
 	vec.push_back(arc(t1, p1, 1));
 	vec.push_back(arc(t2, p2, -1));
 }
-
 inline double cub(const double &x) { return x * x * x; }
 inline void combine(int d, const double &area, const point &o) {
 	if (sign(area) == 0) return;
 	center[d] = (center[d] * ans[d] + o * area) * (1 / (ans[d] + area));
 	ans[d] += area;
 }
-
 void area(vector<circle> &cir) {
 	int n = cir.size();
 	vector<bool> f;

@@ -3,8 +3,7 @@ void extend(int c);//传入转化为数字之后的字符，从0开始
 int main(){
 	static char s[N];
 	while(scanf("%s", s + 1) == 1){
-		tot = 0;
-		root = las = newNode();
+		tot = 0; root = las = newNode();
 		int n = strlen(s + 1);
 		for(int i = 1;i <= n; i++) extend(s[i] - 'a');
 		static int cnt[N], order[N << 1];

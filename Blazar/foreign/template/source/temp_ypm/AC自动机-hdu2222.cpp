@@ -10,13 +10,11 @@ const int N = 5e5+10;
 int n, cnt, fail[N], son[N][26], num[N];
 char s[N << 1];
 bool f[N];
-
 inline void clear(int i){
 	memset(son[i], 0, sizeof(son[i]));
 	fail[i] = num[i] = 0;
 	f[i] = 0;
 }
-
 void insert(char *s, int n){
 	int now = 1;
 	for(int i = 1; i <= n; i++){
@@ -30,7 +28,6 @@ void insert(char *s, int n){
 	}
 	num[now]++;
 }
-
 queue<int> Q;
 void ACmatch(){//建立fail指针
 	fail[1] = 0;
@@ -52,7 +49,7 @@ void ACmatch(){//建立fail指针
 }
 	
 int main(){
-	int T = 0;
+	int T = 0, len = 0, ans = 0;
 	scanf("%d", &T);
 	while(T--){
 		scanf("%d", &n);
@@ -60,7 +57,7 @@ int main(){
 		clear(1);
 		for(int i = 0; i < 26; i++)
 			son[0][i] = 1;
-		int len = 0;
+		int ;
 		for(int i = 1; i <= n; i++){
 			scanf("%s", s + 1);
 			len = strlen(s + 1);
@@ -75,12 +72,10 @@ int main(){
 			int c = s[i] - 'a';
 			now = son[now][c];
 			for(int j = now; j; j = fail[j]){
-				if(f[j])
-					break;
+				if(f[j]) break;
 				f[j] = 1;
 				ans += num[j];
 			}
-			
 		}
 		printf("%d\n", ans);
 	}

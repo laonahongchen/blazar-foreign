@@ -10,13 +10,13 @@ int bfs(){
 int dfs(int u,int ext){
 	if (u == t) return ext;
 	int k = w[u],ret = 0;
-	for (; k > -1; k = nxt[k], w[u] = k){      //w数组为当前弧 
+	for (; k > -1; k = nxt[k], w[u] = k){	  //w数组为当前弧 
 		if (ext == 0) break;
 		if (d[p[k]] == d[u] + 1 && c[k] > 0){
 			int flow = dfs(p[k], min(c[k], ext));
 			if (flow > 0){
 				c[k] -= flow, c[k ^ 1] += flow;
-				ret += flow, ext -= flow;     //ret累计增广量，ext记录还可增广的量 
+				ret += flow, ext -= flow;	 //ret累计增广量，ext记录还可增广的量 
 			}
 		}
 	}

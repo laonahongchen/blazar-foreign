@@ -1,16 +1,12 @@
-int n, m;
-int w[N];
+int n, m, w[N], bid[N << 1];
 vector<int> g[N];
-int bid[N << 1];
 struct Query{
 	int l, r, extra, i;
 	friend bool operator < (const Query &a, const Query &b) {
-		if(bid[a.l] != bid[b.l])
-			return bid[a.l] < bid[b.l];
+		if(bid[a.l] != bid[b.l]) return bid[a.l] < bid[b.l];
 		return a.r < b.r;
 	}
 } q[M];
-
 void input(){
 	vector<int> vs;
 	scanf("%d%d", &n, &m);
@@ -22,21 +18,16 @@ void input(){
 	vs.resize(unique(vs.begin(), vs.end()) - vs.begin());
 	for(int i = 1; i <= n; i++)
 		w[i] = lower_bound(vs.begin(), vs.end(), w[i]) - vs.begin() + 1;
-	for(int i = 2; i <= n; i++){
-		int a, b;
+	for(int a, b, i = 2; i <= n; i++){
 		scanf("%d%d", &a, &b);
-		g[a].push_back(b);
-		g[b].push_back(a);
+		g[a].push_back(b); g[b].push_back(a);
 	}
 	for(int i = 1; i <= m; i++){
 		scanf("%d%d", &q[i].l, &q[i].r);
 		q[i].i = i;
 	}
 }
-
-int dfs_clock, st[N], ed[N];
-int fa[N][LOGN], dep[N];
-int col[N << 1], id[N << 1];
+int dfs_clock, st[N], ed[N], fa[N][LOGN], dep[N], col[N << 1], id[N << 1];
 void dfs(int x, int p){
 	col[st[x] = ++dfs_clock] = w[x];
 	id[st[x]] = x;
@@ -44,24 +35,19 @@ void dfs(int x, int p){
 	for(int i = 0; fa[x][i]; i++)
 		fa[x][i + 1] = fa[fa[x][i]][i];
 	for(auto y: g[x])
-		if(y != p)
-			dfs(y, x);
+		if(y != p) dfs(y, x);
 	col[ed[x] = ++dfs_clock] = w[x];
 	id[ed[x]] = x;
 }
-
 int lca(int x, int y){
 	if(dep[x] < dep[y]) swap(x, y);
 	for(int i = LOGN - 1; i >= 0; i--)
-		if(dep[fa[x][i]] >= dep[y])
-			x = fa[x][i];
+		if(dep[fa[x][i]] >= dep[y])	x = fa[x][i];
 	if(x == y) return x;
 	for(int i = LOGN - 1; i >= 0; i--)
-		if(fa[x][i] != fa[y][i])
-			x = fa[x][i], y = fa[y][i];
+		if(fa[x][i] != fa[y][i]) x = fa[x][i], y = fa[y][i];
 	return fa[x][0];
 }
-
 void prepare(){
 	dfs_clock = 0;
 	dfs(1, 0);
@@ -69,9 +55,7 @@ void prepare(){
 	for(int i = 1; i <= dfs_clock; i++)
 		bid[i] = (i + BS - 1) / BS;
 	for(int i = 1; i <= m; i++){
-		int a = q[i].l;
-		int b = q[i].r;
-		int c = lca(a, b);
+		int a = q[i].l, b = q[i].r, c = lca(a, b);
 		if(st[a] > st[b]) swap(a, b);
 		if(c == a){
 			q[i].l = st[a];
@@ -86,7 +70,6 @@ void prepare(){
 	}
 	sort(q + 1, q + m + 1);
 }
-
 int curans, ans[M], cnt[N];
 bool state[N];
 void rev(int x){
@@ -95,7 +78,6 @@ void rev(int x){
 	c += (state[id[x]] ^= 1) ? 1 : -1;
 	curans += !!c;
 }
-
 void solve(){
 	prepare();
 	curans = 0;
@@ -111,7 +93,5 @@ void solve(){
 		ans[q[i].i] = curans;
 		if(q[i].extra) rev(st[q[i].extra]);
 	}
-	for(int i = 1; i <= m; i++)
-		printf("%d\n", ans[i]);
+	for(int i = 1; i <= m; i++) printf("%d\n", ans[i]);
 }
-

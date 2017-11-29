@@ -96,7 +96,7 @@ Circle calc() {
 	}else if(3 == (int)vec.size()) {
 		double r((vec[0] - vec[1]).len() * (vec[1] - vec[2]).len() * (vec[2] - vec[0]).len() / 2 / fabs(((vec[0] - vec[2]) * (vec[1] - vec[2])).len()));
 		return Circle(intersect(Plane(vec[1] - vec[0], 0.5 * (vec[1] + vec[0])),
-				       	Plane(vec[2] - vec[1], 0.5 * (vec[2] + vec[1])),
+					   	Plane(vec[2] - vec[1], 0.5 * (vec[2] + vec[1])),
 					Plane((vec[1] - vec[0]) * (vec[2] - vec[0]), vec[0])), r);
 	}else {
 		Point o(intersect(Plane(vec[1] - vec[0], 0.5 * (vec[1] + vec[0])),

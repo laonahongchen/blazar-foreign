@@ -1,7 +1,6 @@
 import java.util.*;
 import java.math.*;
 import java.io.*;
-
 public class Main{
 	static class Task{
 		void solve(int testId, InputReader cin, PrintWriter cout) {
@@ -22,12 +21,10 @@ public class Main{
 	static class InputReader {
 		public BufferedReader reader;
 		public StringTokenizer tokenizer;
-
 		public InputReader(InputStream stream) {
 			reader = new BufferedReader(new InputStreamReader(stream), 32768);
 			tokenizer = null;
 		}
-
 		public String next() {
 			while (tokenizer == null || !tokenizer.hasMoreTokens()) {
 				try {
@@ -38,11 +35,9 @@ public class Main{
 			}
 			return tokenizer.nextToken();
 		}
-
 		public int nextInt() {
 			return Integer.parseInt(next());
 		}
-
 	}
 };
 // Arrays
@@ -62,7 +57,7 @@ nextProbablePrime () | shiftLeft(int) | valueOf ()
 .divide(BigDecimal b, int scale , int round_mode) | doubleValue () | movePointLeft(int) | pow(int) |
 setScale(int scale , int round_mode) | stripTrailingZeros ()
  BigDecimal.setScale()方法用于格式化小数点
-setScale(1)表示保留一位小数，默认用四舍五入方式 
+setScale(1)表示保留一位小数,默认用四舍五入方式 
 setScale(1,BigDecimal.ROUND_DOWN)直接删除多余的小数位,如2.35会变成2.3 
 setScale(1,BigDecimal.ROUND_UP)进位处理,2.35变成2.4 
 setScale(1,BigDecimal.ROUND_HALF_UP)四舍五入,2.35变成2.4

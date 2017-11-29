@@ -1,7 +1,6 @@
 struct Point{
 	int data[MAXK], id;
 }p[MAXN];
-
 struct KdNode{
 	int l, r;
 	Point p, dmin, dmax;
@@ -26,13 +25,12 @@ struct KdNode{
 		long long ret = 0;
 		for (register int i = 0; i < k; i++) {
 			int tmp = std::max(std::abs(dmin.data[i] - rhs.data[i]),
-			    std::abs(dmax.data[i] - rhs.data[i]));
+				std::abs(dmax.data[i] - rhs.data[i]));
 			ret += 1ll * tmp * tmp;
 		}
 		return ret;
 	}
 }tree[MAXN * 4];
-
 struct Result{
 	long long dist;
 	Point d;
@@ -45,7 +43,6 @@ struct Result{
 		return dist < rhs.dist || (dist == rhs.dist && d.id > rhs.d.id);
 	}
 };
-
 inline long long sqrdist(const Point &a, const Point &b) {
 	register long long ret = 0;
 	for (register int i = 0; i < k; i++) {
@@ -53,13 +50,11 @@ inline long long sqrdist(const Point &a, const Point &b) {
 	}
 	return ret;
 }
-
 inline int alloc() {
 	size++;
 	tree[size].l = tree[size].r = 0;
 	return size;
 }
-
 void build(const int &depth, int &rt, const int &l, const int &r) {
 	if (l > r) return;
 	register int middle = l + r >> 1;
@@ -72,9 +67,7 @@ void build(const int &depth, int &rt, const int &l, const int &r) {
 	if (tree[rt].l) tree[rt].merge(tree[tree[rt].l]);
 	if (tree[rt].r) tree[rt].merge(tree[tree[rt].r]);
 }
-
 std::priority_queue<Result, std::vector<Result>, std::greater<Result> > heap;
-
 void getMinKth(const int &depth, const int &rt, const int &m, const Point &d) { // 求K近点
 	Result tmp = Result(sqrdist(tree[rt].p, d), tree[rt].p);
 	if ((int)heap.size() < m) {
@@ -92,7 +85,6 @@ void getMinKth(const int &depth, const int &rt, const int &m, const Point &d) { 
 		getMinKth((depth + 1) % k, y, m, d);
 	}
 }
-
 void getMaxKth(const int &depth, const int &rt, const int &m, const Point &d) { // 求K远点
 	Result tmp = Result(sqrdist(tree[rt].p, d), tree[rt].p);
 	if ((int)heap.size() < m) {

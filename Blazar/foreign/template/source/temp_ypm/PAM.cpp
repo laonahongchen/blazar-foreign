@@ -1,9 +1,7 @@
 const int C = 26;
 const int N = 301010;
-
 char s[N];
 int cnt, last;
-
 struct Node
 {
 	int son[C], fail, size, len;
@@ -14,7 +12,6 @@ struct Node
 		len = l;
 	}
 }node[N];
-
 void init()
 {
 	cnt = 2;
@@ -24,7 +21,6 @@ void init()
 	node[1].fail = 2;
 	node[2].fail = 1;
 }
-
 void add(int c, int L)
 {
 	int p = last;
@@ -43,13 +39,11 @@ void add(int c, int L)
 	last = node[p].son[c];
 	node[last].size++;
 }
-
 void calc()
 {
 	for(int i = cnt; i; i--)
 		node[node[i].fail].size += node[i].size;
 }
-
 int main()
 {
 	scanf("%s", s + 1)

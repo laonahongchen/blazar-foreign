@@ -1,7 +1,6 @@
 inline bool turn_left(const Point &a, const Point &b, const Point &c) {
 	return sgn(det(b - a, c - a)) >= 0;
 }
-
 void convex_hull(vector<Data> p, vector<Data> &res) {
 	int n = (int)p.size(), cnt = 0;
 	sort(p.begin(), p.end(), [&](const Data &a, const Data &b) {

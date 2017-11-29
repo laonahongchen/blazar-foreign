@@ -1,7 +1,6 @@
 import java.io.*;
 import java.math.*;
 import java.util.*;
-
 public static class edge implements Comparable<edge>{
 	public int u,v,w;
 	public int compareTo(edge e){
@@ -15,7 +14,6 @@ public static class cmp implements Comparator<edge>{
 		return 0;
 	}
 }
-
 public class Main{
 	public static long max(long a,long b){
 		if(a>b)return a;
@@ -29,43 +27,36 @@ public class Main{
 		return Ret;
 	}
 	private static class InputReader {
-
-      public BufferedReader rea;
-      public StringTokenizer tok;
-
-      public InputReader(InputStream stream) {
-          rea = new BufferedReader(new InputStreamReader(stream), 32768);
-          tok = null;
-      }
-
-      public String next() {
-          while (tok == null || !tok.hasMoreTokens()) {
-              try {
-                  tok = new StringTokenizer(rea.readLine());
-              } catch (IOException e) {
-                  throw new RuntimeException(e);
-              }
-          }
-          return tok.nextToken();
-      }
-
-      public int nextInt() {
-          return Integer.parseInt(next());
-      }
-
-      public long nextLong() {
-          return Long.parseLong(next());
-      }      
+	  public BufferedReader rea;
+	  public StringTokenizer tok;
+	  public InputReader(InputStream stream) {
+		  rea = new BufferedReader(new InputStreamReader(stream), 32768);
+		  tok = null;
+	  }
+	  public String next() {
+		  while (tok == null || !tok.hasMoreTokens()) {
+			  try {
+				  tok = new StringTokenizer(rea.readLine());
+			  } catch (IOException e) {
+				  throw new RuntimeException(e);
+			  }
+		  }
+		  return tok.nextToken();
+	  }
+	  public int nextInt() {
+		  return Integer.parseInt(next());
+	  }
+	  public long nextLong() {
+		  return Long.parseLong(next());
+	  }	  
   }
 	
 	public static void main(String arg[]){
 		InputReader cin = new InputReader(System.in);
 		//Scanner cin = new Scanner(System.in);
 		int N = 70;
-
 		long k[] = new long[N];
 		int n;
-
 		while(true){
 			n=cin.nextInt();
 			if (n == 0) break;

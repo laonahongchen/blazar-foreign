@@ -76,4 +76,3 @@ P project(P p,L l){
 double dis(P p,L l){
 	return fabs((p-l.a)*l.v())/l.v().len();
 }
-

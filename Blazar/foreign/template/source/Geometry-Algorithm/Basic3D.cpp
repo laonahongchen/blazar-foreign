@@ -1,7 +1,6 @@
 int dcmp(const double &x) {
 	return fabs(x) < eps ? 0 : (x > 0 ? 1 : -1);
 }
-
 struct TPoint{
 	double x, y, z;
 	TPoint() {}
@@ -26,7 +25,6 @@ struct TPoint{
 		return scanf("%lf%lf%lf", &x, &y, &z) == 3;
 	}
 };
-
 double sqrdist(const TPoint &a) {
 	double ret = 0;
 	ret += a.x * a.x;

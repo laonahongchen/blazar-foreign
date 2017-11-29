@@ -16,7 +16,6 @@ long long pollard_rho(const long long &number, const long long &seed) {
 		}
 	}
 }
-
 void factorize(const long long &number, std::vector<long long> &divisor) {
 	if (number > 1) {
 		if (miller_rabin(number)) {

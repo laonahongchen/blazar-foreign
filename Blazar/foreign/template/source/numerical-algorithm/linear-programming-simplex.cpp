@@ -67,4 +67,3 @@ namespace LP{
 		return x;
 	}
 }
-

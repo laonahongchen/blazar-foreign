@@ -17,8 +17,7 @@ int main(){
 		n = strlen(s + 1);
 		for(int now = root, len = 0, i = 1; i <= n; i++){
 			int c = s[i] - 'a';
-			while(now != root && !node[now].son[c])
-				now = node[now].par;
+			while(now != root && !node[now].son[c]) now = node[now].par;
 			if(node[now].son[c]){
 				len = min(len, node[now].len) + 1;
 				now = node[now].son[c];

@@ -1,6 +1,5 @@
 inline int sign(double x) { return x < -EPS ? -1 : x > EPS; }
 inline double sqr(double x) { return x * x; }
-
 struct point {
 	double x, y;
 	point(double x = 0, double y = 0) : x(x), y(y) {}
@@ -25,7 +24,6 @@ struct point {
 	int get() { return scanf("%lf %lf", &x, &y); }
 	void out() { printf("(%.5f, %.5f)\n", x, y); }
 };
-
 inline bool operator==(const point &a, const point &b) {
 	return fabs(a.x - b.x) < EPS && fabs(a.y - b.y) < EPS;
 }

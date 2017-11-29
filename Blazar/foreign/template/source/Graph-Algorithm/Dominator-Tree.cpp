@@ -1,8 +1,6 @@
 #define foreach(A, x, it) for (int it = A.h[x]; it; it = A.e[it].next)
-
 const int MAXN = 200001;
 const int MAXM = 400001;
-
 template<class T, int MAXN, int MAXM>
 struct AdjList{
 	struct Edge{
@@ -31,7 +29,6 @@ struct AdjList{
 int dfn[MAXN], sdom[MAXN], idom[MAXN], id[MAXN], f[MAXN], fa[MAXN], smin[MAXN];
 AdjList<int, MAXN, MAXM> pred, succ;
 long long answer[MAXN];
-
 void predfs(int x) {
 	id[dfn[x] = ++stamp] = x;
 	foreach(succ, x, i) {
@@ -42,7 +39,6 @@ void predfs(int x) {
 		}
 	}
 }
-
 int getfa(int x) {
 	if (fa[x] == x) return x;
 	int ret = getfa(fa[x]);
@@ -51,7 +47,6 @@ int getfa(int x) {
 	}
 	return fa[x] = ret;
 }
-
 void tarjan(int s) {
 	static AdjList<int, MAXN, MAXN> tmp;
 	stamp = tmp.t = 0;

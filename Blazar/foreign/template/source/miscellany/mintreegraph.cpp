@@ -1,7 +1,5 @@
 const int maxn=1100;
-
 int n,m , g[maxn][maxn] , used[maxn] , pass[maxn] , eg[maxn] , more , queue[maxn]; 	 
-
 void combine (int id , int &sum ) {
 	int tot = 0 , from , i , j , k ; 		 
 	for ( ; id!=0 && !pass[ id ] ; id=eg[id] ) { 

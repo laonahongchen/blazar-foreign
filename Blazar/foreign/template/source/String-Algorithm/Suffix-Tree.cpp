@@ -1,6 +1,5 @@
 const int MAXL = 100001; // The length of the string being inserted into the ST.
-const int MAXD = 27;     // The size of the alphabet.
-
+const int MAXD = 27;	 // The size of the alphabet.
 struct SuffixTree{
 	int size, length, pCur, dCur, lCur, lBuf, text[MAXL];
 	std::pair<int, int> suffix[MAXL];

@@ -7,16 +7,13 @@
 #define G(x) ((x) < tb ? (x) * 3 + 1 : ((x) - tb) * 3 + 2)
 using namespace std;
 const int N = 101010;
-
 int wa[N], wb[N], wv[N], wss[N];
 int r[N * 3], sa[N * 3], rank[N], height[N];
 char s[N];
-
 bool c0(int *r, int a, int b)
 {
 	return r[a] == r[b] && r[a + 1] == r[b + 1] && r[a + 2] == r[b + 2];
 }
-
 int c12(int k, int *r, int a, int b)
 {
 	if(k == 2)
@@ -24,7 +21,6 @@ int c12(int k, int *r, int a, int b)
 	else
 		return r[a] < r[b] || (r[a] == r[b] && wv[a + 1] < wv[b + 1]);
 }
-
 void sort(int *r, int *a, int *b, int n, int m)
 {
 	memset(wss, 0, sizeof(*wss) * (m + 2));
@@ -32,7 +28,6 @@ void sort(int *r, int *a, int *b, int n, int m)
 	for(int i = 1; i < m; i++) wss[i] += wss[i - 1];
 	for(int i = n - 1; i >= 0; i--) b[ --wss[wv[i]] ] = a[i];
 }
-
 void dc3(int *r, int *sa, int n, int m)
 {
 	int *rn = r + n, *san = sa + n, ta = 0, tb = (n + 1) / 3, tbc = 0, p;
@@ -62,7 +57,6 @@ void dc3(int *r, int *sa, int n, int m)
 	for(int i = 0; i < tbc; i++)
 		wv[wb[i] = G(san[i])] = i;
 	
-
 	
 	p = 0;
 	int i = 0, j = 0;
@@ -73,7 +67,6 @@ void dc3(int *r, int *sa, int n, int m)
 	for(; j < tbc; p++)
 		sa[p] = wb[j++];
 }
-
 void getheight(char s[], int sa[], int n)
 {
 	for(int i = 1; i <= n; i++)
@@ -87,8 +80,6 @@ void getheight(char s[], int sa[], int n)
 			height[rank[i]] = p;
 		}
 }
-
-
 int main()
 {
 	scanf("%s", s + 1);

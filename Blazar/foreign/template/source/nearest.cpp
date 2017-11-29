@@ -1,24 +1,18 @@
 // Create: 2017-10-22 20:15:34
 #include <bits/stdc++.h>
-
 using namespace std;
-
 const int N = 100005;
-
 struct Data {
 	double x, y;
 };
-
 double sqr(double x) {
 	return x * x;
 }
 double dis(Data a, Data b) {
 	return sqrt(sqr(a.x - b.x) + sqr(a.y - b.y));
 }
-
 int n;
 Data p[N], q[N];
-
 double solve(int l, int r) {
 	if(l == r) return 1e18;
 	if(l + 1 == r) return dis(p[l], p[r]);
@@ -40,7 +34,6 @@ double solve(int l, int r) {
 	}
 	return d;
 }
-
 int main()
 {
 	while(scanf("%d", &n) == 1 && n) {

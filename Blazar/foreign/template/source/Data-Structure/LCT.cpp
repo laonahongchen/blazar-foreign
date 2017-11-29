@@ -32,8 +32,7 @@ struct LCT{
 		while(!isroot(y)) q[++top] = y = fa[y];
 		while(top) pushdown(q[top--]);
 		while(!isroot(x)) {
-			if(!isroot(fa[x]))
-				rotate(ch(fa[x]) == ch(x) ? fa[x] : x);
+			if(!isroot(fa[x]))	rotate(ch(fa[x]) == ch(x) ? fa[x] : x);
 			rotate(x);
 		}
 	}

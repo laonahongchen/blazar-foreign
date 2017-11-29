@@ -36,10 +36,8 @@ int main(){
 	cnt = 0; root = newNode();
 	scanf("%d", &n);
 	for(int i = 0; i < C; i++) son[0][i] = 1;
-	for(int i = 1; i <= n; i++){
-		scanf("%s", s + 1);
-		insert(s);
-	}
+	for(int i = 1; i <= n; i++)
+		scanf("%s", s + 1), insert(s);
 	getfail();
 	return 0;
 }

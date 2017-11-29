@@ -1,11 +1,9 @@
 // 精确覆盖
 const int MAXD = 1120;
 const int MAXN = 1000200;
-
 int n, m, t, size;
 int U[MAXN], D[MAXN], L[MAXN], R[MAXN], C[MAXN], Row[MAXN];
 int H[MAXD], S[MAXD];
-
 void init(int n, int m) {
 	for(int i = 0; i <= m; ++i) {
 		S[i] = 0, D[i] = U[i] = i;
@@ -56,7 +54,6 @@ bool dance(int k) {
 	resume(c);
 	return 0;
 }
-
 // 可重复覆盖
 const int mxm = 15 * 15 + 10;
 const int MAXD = 15 * 15 + 10;

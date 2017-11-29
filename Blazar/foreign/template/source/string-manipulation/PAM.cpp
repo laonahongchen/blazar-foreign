@@ -35,4 +35,3 @@ int main(){
 	for(int i=0;i<n;i++)
 		P.add(s[i]-'a');
 	P.count();
-

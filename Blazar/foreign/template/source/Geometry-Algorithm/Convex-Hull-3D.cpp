@@ -14,14 +14,11 @@ namespace Convex_Hull {
 		Face() {}
 		Face(int a, int b, int c) : a(a), b(b), c(c) {}
 	};
-
 	int nFace, left, right, whe[MAXN][MAXN];
 	Face queue[MAXF], tmp[MAXF];
-
 	bool isVisible(const std::vector<TPoint> &p, const Face &f, const TPoint &a) {
 		return dcmp(detdot(p[f.a], p[f.b], p[f.c], a)) > 0;
 	}
-
 	bool init(std::vector<TPoint> &p) {
 		bool check = false;
 		for (int i = 1; i < (int)p.size(); i++) {
@@ -56,7 +53,6 @@ namespace Convex_Hull {
 			}
 		return true;
 	}
-
 	void pushface(const int &a, const int &b, const int &c) {
 		nFace++;
 		tmp[nFace] = Face(a, b, c);
@@ -65,7 +61,6 @@ namespace Convex_Hull {
 		whe[b][c] = nFace;
 		whe[c][a] = nFace;
 	}
-
 	bool deal(const std::vector<TPoint> &p, const std::pair<int, int> &now, const TPoint &base) {
 		int id = whe[now.second][now.first];
 		if (!tmp[id].isOnConvex) return true;
@@ -76,7 +71,6 @@ namespace Convex_Hull {
 		}
 		return false;
 	}
-
 	std::vector<Triangle> getConvex(std::vector<TPoint> &p) {
 		static std::vector<Triangle> ret;
 		ret.clear();
@@ -111,11 +105,9 @@ namespace Convex_Hull {
 		return ret;
 	}
 };
-
 int n;
 std::vector<TPoint> p;
 std::vector<Triangle> answer;
-
 int main() {
 	scanf("%d", &n);
 	for (int i = 1; i <= n; i++) {
@@ -131,4 +123,3 @@ int main() {
 	printf("%.3f\n", areaCounter);
 	return 0;
 }
-

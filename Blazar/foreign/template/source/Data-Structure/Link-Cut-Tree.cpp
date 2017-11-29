@@ -89,11 +89,11 @@ void link(int x, int y) {
 	p[x] = y;
 }
 void cut(int x, int y) {
-    access(x); splay(y, -1);
-    if (p[y] == x) p[y] = -1;
-    else {
-    	access(y); 
-    	splay(x,-1);
-    	p[x] = -1;
-    }
+	access(x); splay(y, -1);
+	if (p[y] == x) p[y] = -1;
+	else {
+		access(y); 
+		splay(x,-1);
+		p[x] = -1;
+	}
 }

@@ -13,5 +13,5 @@ void getInv(int *a, int *b, int n) {
 		}
 		DFT(b, M, 1);
 		meminit(b, c, M);
-    }
+	}
 }

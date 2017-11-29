@@ -65,5 +65,4 @@ struct Sa{
 		Prep(); Suffix(); Calc();
 	}
 }P,S;
-
 /// Hints : 1 - Base

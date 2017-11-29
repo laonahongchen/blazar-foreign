@@ -1,7 +1,6 @@
 const int N = 251010, C = 26;
 int tot, las, root;
-struct Node
-{
+struct Node{
 	int son[C], len, par;
 	void clear(){
 		memset(son, 0, sizeof(son));
@@ -9,8 +8,7 @@ struct Node
 	}
 }node[N << 1];
 inline int newNode(){return node[++tot].clear(), tot;}
-void extend(int c) 
-{
+void extend(int c) {
 	int p = las;
 	if (node[p].son[c]) {
 		int q = node[p].son[c];
@@ -31,8 +29,7 @@ void extend(int c)
 		if (!p) node[np].par = root;
 		else{
 			int q = node[p].son[c];
-			if (node[p].len + 1 == node[q].len)
-				node[np].par = q;
+			if (node[p].len + 1 == node[q].len)	node[np].par = q;
 			else{
 				int nq = newNode();
 				node[nq] = node[q];
@@ -44,8 +41,7 @@ void extend(int c)
 		}
 	}
 }
-void add(char *s)
-{
+void add(char *s){
 	int len = strlen(s + 1); las = root;
 	for(int i = 1; i <= len; i++) extend(s[i] - 'a');
 }

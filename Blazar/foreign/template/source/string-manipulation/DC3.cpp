@@ -5,7 +5,6 @@
 #define maxn 10000
 #define F(x) ((x)/3+((x)%3==1?0:tb))
 #define G(x) ((x)<tb?(x)*3+1:((x)-tb)*3+2)
-
 int wa[maxn],wb[maxn],wv[maxn],wss[maxn];
 int s[maxn*3],sa[maxn*3];
 int c0(int *r,int a,int b)
@@ -50,7 +49,6 @@ void dc3(int *r,int *sa,int n,int m)
 	for(;i<ta;p++) sa[p]=wa[i++];
 	for(;j<tbc;p++) sa[p]=wb[j++];
 }
-
 int main(){
 	int n,m=0;
 	scanf("%d",&n);

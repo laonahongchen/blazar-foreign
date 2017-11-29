@@ -55,33 +55,33 @@ struct DLX{
 		}
 	}
 	void del(int c){//exactly cover
-        L[R[c]]=L[c];R[L[c]]=R[c];  
+		L[R[c]]=L[c];R[L[c]]=R[c];  
 		for(int i=D[c];i!=c;i=D[i])
 			for(int j=R[i];j!=i;j=R[j])
 				U[D[j]]=U[j],D[U[j]]=D[j],--s[col[j]];  
-    }  
-    void add(int c){  //exactly cover
-        R[L[c]]=L[R[c]]=c;  
+	}  
+	void add(int c){  //exactly cover
+		R[L[c]]=L[R[c]]=c;  
 		for(int i=U[c];i!=c;i=U[i])
 			for(int j=L[i];j!=i;j=L[j])
 				++s[col[U[D[j]]=D[U[j]]=j]];  
-    }  
+	}  
 	bool dfs2(int k){//exactly cover
-        if(!R[0]){  
-            cnt=k;return 1;  
-        }  
-        int c=R[0];
+		if(!R[0]){  
+			cnt=k;return 1;  
+		}  
+		int c=R[0];
 		for(int i=R[0];i;i=R[i])
 			if(s[c]>s[i])c=i;  
-        del(c);  
+		del(c);  
 		for(int i=D[c];i!=c;i=D[i]){  
 			for(int j=R[i];j!=i;j=R[j])
 				del(col[j]);  
-            ans[k]=row[i];if(dfs2(k+1))return true;  
+			ans[k]=row[i];if(dfs2(k+1))return true;  
 			for(int j=L[i];j!=i;j=L[j])
 				add(col[j]);  
-        }  
-        add(c); 
+		}  
+		add(c); 
 		return 0;
 	}
 }dlx;

@@ -18,12 +18,11 @@ int boundLower(int le, int ri, const P & s, const P & t) {
 	}
 	return le;
 }
-
 void calc(P s, P t) {
 	if(t < s) swap(t, s);
 	int i3(lowerBound(i1, j1, t - s)); // 和上凸包的切点
 	int j3(lowerBound(j1, i1 + n, s - t)); // 和下凸包的切点
 	int i4(boundLower(i3, j3, s, t)); // 如果有交则是右侧的交点, 与 a[i4]~a[i4+1] 相交 要判断是否有交的话 就手动 check 一下
 	int j4(boundLower(j3, i3 + n, t, s)); // 如果有交左侧的交点, 与 a[j4]~a[j4+1] 相交
-    // 返回的下标不一定在 [0 ~ n-1] 内
+	// 返回的下标不一定在 [0 ~ n-1] 内
 }

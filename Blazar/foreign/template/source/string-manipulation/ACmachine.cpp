@@ -1,8 +1,6 @@
-
 struct Node{
 	int Next[30], fail, mark;
 }Tree[N];
-
 void Init(){
 	memset(Tree, 0, sizeof Tree);
 	cnt = 1;
@@ -19,7 +17,6 @@ void Init(){
 		}
 	}
 }
-
 void Build_Ac(){
 	int en = 0;
 	Q[0] = 1;
@@ -40,5 +37,4 @@ void Build_Ac(){
 			}
 	}
 }
-
 /// Hints : when not match , fail = 1

@@ -4,7 +4,7 @@ int wa[MAXN], wb[MAXN], wv[MAXN], ws[MAXN];
 int sa[MAXN], rk[MAXN], height[MAXN];
 char s[MAXN];
 inline bool cmp(int *r, int a, int b, int l)
-{return r[a] == r[b] && r[a + l] == r[b + l];}
+	{return r[a] == r[b] && r[a + l] == r[b + l];}
 void SA(char *r, int *sa, int n, int m){
 	int *x = wa, *y = wb;
 	for(int i = 1; i <= m; i++)ws[i] = 0;

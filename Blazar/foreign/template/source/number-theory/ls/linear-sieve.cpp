@@ -7,9 +7,7 @@ int minpw[maxn];
 int p[maxn];
 int phi[maxn];
 int mu[maxn];
-
 int f[maxn];
-
 void sieve(){
 	f[1]=mu[1]=phi[1]=1;
 	for(int i=2;i<maxn;i++){
@@ -44,7 +42,6 @@ void sieve(){
 		}
 	}
 }
-
 int main(){	
 	sieve();
 	for(int i=1;i<=10;i++)

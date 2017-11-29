@@ -53,4 +53,3 @@ vector<P> intersection(vector<L> &l) {
 	ret.push_back(intersect(q[i], q[(i + 1) % q.size()]));
 	return ret;
 }
-
