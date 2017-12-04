@@ -4,27 +4,24 @@ typedef vector<double> vd;
 int sgn(double x) { return x < -eps ? -1 : x > eps; }
 double mypow(double x,int num){
 	double ans=1.0;
-	for(int i=1;i<=num;++i)ans*=x;
+	for(int i=1;i<=num;++i) ans*=x;
 	return ans;
 }
 double f(int n,double x){
 	double ans=0;
-	for(int i=n;i>=0;--i)ans+=a[n][i]*mypow(x,i);
+	for(int i=n;i>=0;--i) ans+=a[n][i]*mypow(x,i);
 	return ans;
 }
 double getRoot(int n,double l,double r){
 	if(sgn(f(n,l))==0)return l;
 	if(sgn(f(n,r))==0)return r;
 	double temp;
-	if(sgn(f(n,l))>0)temp=-1;else temp=1;
-	double m;
+	if(sgn(f(n,l))>0)temp=-1; else temp=1;
 	for(int i=1;i<=10000;++i){
-		m=(l+r)/2;
+		double m=(l+r)/2;
 		double mid=f(n,m);
-		if(sgn(mid)==0){
-			return m;
-		}
-		if(mid*temp<0)l=m;else r=m;
+		if(sgn(mid)==0) return m;
+		if(mid*temp<0)l=m; else r=m;
 	}
 	return (l+r)/2;
 }
@@ -48,9 +45,7 @@ vd did(int n){
 }
 int main(){
 	int n; scanf("%d",&n);
-	for(int i=n;i>=0;--i){
-		scanf("%lf",&a[n][i]);
-	}
+	for(int i=n;i>=0;--i) scanf("%lf",&a[n][i]);
 	for(int i=n-1;i>=0;--i)
 		for(int j=0;j<=i;++j)a[i][j]=a[i+1][j+1]*(j+1);
 	vd ans=did(n);
