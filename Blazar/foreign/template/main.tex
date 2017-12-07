@@ -41,9 +41,15 @@
 	linkcolor=black
 }
 
-\titlespacing{\section}{0cm}{*0.2}{*0.2}
-\titlespacing{\subsubsection}{0cm}{*0.2}{*0.2}
-\titlespacing{\subsection}{0cm}{*0.2}{*0.2}
+%\titlespacing{\section}{0cm}{*0}{*0}
+%\titlespacing{\subsubsection}{0cm}{*0}{*0}
+%\titlespacing{\subsection}{0cm}{*0}{*0}
+\titlespacing*{\section} {0pt}{0pt}{0pt}
+\titlespacing*{\subsection} {0pt}{0pt}{0pt}
+\titlespacing*{\subsubsection} {0pt}{-1pt}{-1pt}
+\titleformat{\section}{\normalsize}{}{0pt}{}
+\titleformat{\subsection}{\small}{}{0pt}{}
+\titleformat{\subsubsection}{\small}{}{0pt}{}
 
 \newcommand{\cppcode}[1]{
 	\inputminted[mathescape,
