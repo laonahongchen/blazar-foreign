@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.14159265-2.6-0.99992 (TeX Live 2015/Debian) (preloaded format=xelatex 2017.8.23)  7 DEC 2017 12:29
+This is XeTeX, Version 3.14159265-2.6-0.99992 (TeX Live 2015/Debian) (preloaded format=xelatex 2017.8.23)  9 DEC 2017 09:24
 entering extended mode
  \write18 enabled.
  %&-line parsing enabled.
@@ -1809,30 +1809,19 @@ Package: lscape 2000/10/22 v3.01 Landscape Pages (DPC)
 )
 Package pdflscape Info: Auto-detected driver: dvipdfm (xetex) on input line 98.
 
-)
-LaTeX Font Info:    Try loading font information for U+msa on input line 107.
+) (./main.toc
+LaTeX Font Info:    Try loading font information for U+msa on input line 2.
 
 (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Try loading font information for U+msb on input line 107.
+LaTeX Font Info:    Try loading font information for U+msb on input line 2.
 
 (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 ) [1
 
 
-] (./main.toc
-LaTeX Font Info:    Font shape `EU1/UbuntuMono(1)/m/sl' in size <10.53937> not 
-available
-(Font)              Font shape `EU1/UbuntuMono(1)/m/it' tried instead on input 
-line 63.
-LaTeX Font Info:    Font shape `EU1/FandolSong-Regular(0)/m/sl' in size <10.539
-37> not available
-(Font)              Font shape `EU1/FandolSong-Regular(0)/m/it' tried instead o
-n input line 63.
-
-[1
 
 ])
 \tf@toc=\write7
@@ -1877,8 +1866,7 @@ edent(t)); f.close();")...executed.
 runsystem(pygmentize -l cpp -f latex -P commandprefix=PYG -F tokenmerge -P math
 escape=True -o "main.out.pyg" "main.pyg" )...executed.
 
-
-(./main.out.pyg)
+ (./main.out.pyg)
 runsystem(python -c "import sys; import textwrap; from io import open; f = open
 (\"source/number-theory/exBSGS.cpp\", \"r\", encoding=\"UTF8\"); t = f.read(); 
 f.close(); f = open(\"main.pyg\", \"w\", encoding=\"UTF8\"); f.write(textwrap.d
@@ -1887,7 +1875,8 @@ edent(t)); f.close();")...executed.
 runsystem(pygmentize -l cpp -f latex -P commandprefix=PYG -F tokenmerge -P math
 escape=True -o "main.out.pyg" "main.pyg" )...executed.
 
- (./main.out.pyg)
+
+(./main.out.pyg)
 runsystem(python -c "import sys; import textwrap; from io import open; f = open
 (\"source/number-theory/miller-rabin.cpp\", \"r\", encoding=\"UTF8\"); t = f.re
 ad(); f.close(); f = open(\"main.pyg\", \"w\", encoding=\"UTF8\"); f.write(text
@@ -1896,7 +1885,16 @@ wrap.dedent(t)); f.close();")...executed.
 runsystem(pygmentize -l cpp -f latex -P commandprefix=PYG -F tokenmerge -P math
 escape=True -o "main.out.pyg" "main.pyg" )...executed.
 
- (./main.out.pyg [2])
+ (./main.out.pyg
+LaTeX Font Info:    Font shape `EU1/UbuntuMono(1)/m/sl' in size <10.53937> not 
+available
+(Font)              Font shape `EU1/UbuntuMono(1)/m/it' tried instead on input 
+line 12.
+LaTeX Font Info:    Font shape `EU1/FandolSong-Regular(0)/m/sl' in size <10.539
+37> not available
+(Font)              Font shape `EU1/FandolSong-Regular(0)/m/it' tried instead o
+n input line 12.
+ [2])
 runsystem(python -c "import sys; import textwrap; from io import open; f = open
 (\"source/number-theory/pollard-rho.cpp\", \"r\", encoding=\"UTF8\"); t = f.rea
 d(); f.close(); f = open(\"main.pyg\", \"w\", encoding=\"UTF8\"); f.write(textw
@@ -1914,8 +1912,7 @@ runsystem(python -c "import sys; import textwrap; from io import open; f = open
 runsystem(pygmentize -l cpp -f latex -P commandprefix=PYG -F tokenmerge -P math
 escape=True -o "main.out.pyg" "main.pyg" )...executed.
 
-
-(./main.out.pyg)
+ (./main.out.pyg)
 runsystem(python -c "import sys; import textwrap; from io import open; f = open
 (\"source/number-theory/primeroot.cpp\", \"r\", encoding=\"UTF8\"); t = f.read(
 ); f.close(); f = open(\"main.pyg\", \"w\", encoding=\"UTF8\"); f.write(textwra
@@ -1924,7 +1921,8 @@ p.dedent(t)); f.close();")...executed.
 runsystem(pygmentize -l cpp -f latex -P commandprefix=PYG -F tokenmerge -P math
 escape=True -o "main.out.pyg" "main.pyg" )...executed.
 
- (./main.out.pyg)
+
+(./main.out.pyg)
 runsystem(python -c "import sys; import textwrap; from io import open; f = open
 (\"source/number-theory/linear-recurrence.cpp\", \"r\", encoding=\"UTF8\"); t =
  f.read(); f.close(); f = open(\"main.pyg\", \"w\", encoding=\"UTF8\"); f.write
@@ -1951,8 +1949,7 @@ rap.dedent(t)); f.close();")...executed.
 runsystem(pygmentize -l cpp -f latex -P commandprefix=PYG -F tokenmerge -P math
 escape=True -o "main.out.pyg" "main.pyg" )...executed.
 
-
-(./main.out.pyg)
+ (./main.out.pyg)
 runsystem(python -c "import sys; import textwrap; from io import open; f = open
 (\"source/numerical-algorithm/fft.cpp\", \"r\", encoding=\"UTF8\"); t = f.read(
 ); f.close(); f = open(\"main.pyg\", \"w\", encoding=\"UTF8\"); f.write(textwra
@@ -1961,7 +1958,8 @@ p.dedent(t)); f.close();")...executed.
 runsystem(pygmentize -l cpp -f latex -P commandprefix=PYG -F tokenmerge -P math
 escape=True -o "main.out.pyg" "main.pyg" )...executed.
 
- (./main.out.pyg [4])
+
+(./main.out.pyg [4])
 runsystem(python -c "import sys; import textwrap; from io import open; f = open
 (\"source/number-theory/fwt.cpp\", \"r\", encoding=\"UTF8\"); t = f.read(); f.c
 lose(); f = open(\"main.pyg\", \"w\", encoding=\"UTF8\"); f.write(textwrap.dede
@@ -1988,8 +1986,7 @@ xtwrap.dedent(t)); f.close();")...executed.
 runsystem(pygmentize -l cpp -f latex -P commandprefix=PYG -F tokenmerge -P math
 escape=True -o "main.out.pyg" "main.pyg" )...executed.
 
-
-(./main.out.pyg [5])
+ (./main.out.pyg [5])
 runsystem(python -c "import sys; import textwrap; from io import open; f = open
 (\"source/Data-Structure/LCT.cpp\", \"r\", encoding=\"UTF8\"); t = f.read(); f.
 close(); f = open(\"main.pyg\", \"w\", encoding=\"UTF8\"); f.write(textwrap.ded
@@ -1998,7 +1995,8 @@ ent(t)); f.close();")...executed.
 runsystem(pygmentize -l cpp -f latex -P commandprefix=PYG -F tokenmerge -P math
 escape=True -o "main.out.pyg" "main.pyg" )...executed.
 
- (./main.out.pyg)
+
+(./main.out.pyg)
 runsystem(python -c "import sys; import textwrap; from io import open; f = open
 (\"source/Data-Structure/modui_tree_ver.cpp\", \"r\", encoding=\"UTF8\"); t = f
 .read(); f.close(); f = open(\"main.pyg\", \"w\", encoding=\"UTF8\"); f.write(t
@@ -2543,12 +2541,12 @@ Package atveryend Info: Empty hook `AtEndAfterFileList' on input line 621.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 621.
  ) 
 Here is how much of TeX's memory you used:
- 31323 strings out of 493638
- 585379 string characters out of 6146796
- 701957 words of memory out of 5000000
- 34180 multiletter control sequences out of 15000+600000
- 24825 words of font info for 131 fonts, out of 8000000 for 9000
+ 31286 strings out of 493638
+ 584597 string characters out of 6146796
+ 702172 words of memory out of 5000000
+ 34155 multiletter control sequences out of 15000+600000
+ 19855 words of font info for 108 fonts, out of 8000000 for 9000
  1328 hyphenation exceptions out of 8191
  65i,9n,77p,10427b,645s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on main.pdf (26 pages).
+Output written on main.pdf (25 pages).
