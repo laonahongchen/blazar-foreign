@@ -35,6 +35,7 @@
 \setmainfont{Ubuntu Mono}
 \pagestyle{headings}                                        
 \hypersetup{hidelinks}
+%\fontsize{5}{0}
 
 \hypersetup{
 	colorlinks=true,
@@ -100,13 +101,13 @@
 }
 \begin{document}
 \begin{titlepage}
-	\title{code library}
-	\author{Blazar}
+	\title{代码库}
+	\author{BlaZaR}
 %	\date{\today}
-%	\maketitle
+	\maketitle
 \end{titlepage}
 \tableofcontents
-
+fontsize = \small
 \section{数学}
 
 	\subsection{快速求逆元(内含exgcd)}
@@ -249,25 +250,27 @@
 \section{计算几何}
 	
 	\subsection{二维几何}
-	\cppcode{Geometry/8 Geo2D_simple.cpp}
-	
-	\subsection{凸包}
-	\cppcode{Geometry/convex.cpp}
+%	\cppcode{Geometry/8 Geo2D_simple.cpp}
+	\cppcode{geometry/Geo2D.cpp}
+%	\subsection{凸包}
+%	\cppcode{Geometry/convex.cpp}
 	
 	\subsection{阿波罗尼茨圆}
 	\cppcode{Geometry/3 abolonis.cpp}
 	
 	\subsection{三角形与圆交}
-	\cppcode{Geometry/5 areaCT.cpp}
+	\cppcode{geometry/areaCT.cpp}
 	
 	\subsection{圆并}
-	\cppcode{Geometry/6 CircleArea.cpp}
+	\cppcode{geometry/CircleArea.cpp}
 	
 	\subsection{整数半平面交}
-	\cppcode{Geometry/9 HPI_integer.cpp}
+	\cppcode{geometry/HPI_integer.cpp}
+	\subsection{半平面交}
+	\cppcode{geometry/HalfPlaneIntersection.cpp}
 	
 	\subsection{三角形}
-	\cppcode{Geometry/11 triangle.cpp}
+	\cppcode{geometry/Triangle.cpp}
 	
 	\subsection{经纬度求球面最短距离}
 	\cppcode{Geometry/12.cpp}
@@ -282,10 +285,10 @@
 	\cppcode{Geometry/15.cpp}
 	
 	\subsection{平面最近点对}
-	\cppcode{nearest.cpp}
+	\cppcode{geometry/nearest.cpp}
 	
 	\subsection{三维几何}
-	\cppcode{Geometry/1 3DGeo.cpp}
+	\cppcode{geometry/3DGeo.cpp}
 
 
 \section{其他}

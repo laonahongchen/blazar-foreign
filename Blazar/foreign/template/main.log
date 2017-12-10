@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.14159265-2.6-0.99992 (TeX Live 2015/Debian) (preloaded format=xelatex 2017.8.23)  9 DEC 2017 09:24
+This is XeTeX, Version 3.14159265-2.6-0.99992 (TeX Live 2015/Debian) (preloaded format=xelatex 2017.8.23)  10 DEC 2017 13:04
 entering extended mode
  \write18 enabled.
  %&-line parsing enabled.
@@ -1639,7 +1639,7 @@ Package: titlesec 2016/03/15 v2.10.1 Sectioning titles
 . Mono/BI/OT:script=latn;language=DFLT;mapping=tex-text;"
 . - 'bold italic small caps'  (bx/itsc) with NFSS spec.: 
 .................................................
-Package hyperref Info: Option `colorlinks' set `true' on input line 42.
+Package hyperref Info: Option `colorlinks' set `true' on input line 43.
 runsystem(which "pygmentize" && touch "main.aex")...executed.
 
 runsystem(rm "main.aex")...executed.
@@ -1647,36 +1647,36 @@ runsystem(rm "main.aex")...executed.
  (./main.aux)
 \openout1 = `main.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 101.
-LaTeX Font Info:    ... okay on input line 101.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 101.
-LaTeX Font Info:    ... okay on input line 101.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 101.
-LaTeX Font Info:    ... okay on input line 101.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 101.
-LaTeX Font Info:    ... okay on input line 101.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 101.
-LaTeX Font Info:    ... okay on input line 101.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 101.
-LaTeX Font Info:    ... okay on input line 101.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 101.
-LaTeX Font Info:    ... okay on input line 101.
-LaTeX Font Info:    Checking defaults for EU1/lmr/m/n on input line 101.
-LaTeX Font Info:    ... okay on input line 101.
-LaTeX Font Info:    Checking defaults for T3/cmr/m/n on input line 101.
-LaTeX Font Info:    Try loading font information for T3+cmr on input line 101.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 102.
+LaTeX Font Info:    ... okay on input line 102.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 102.
+LaTeX Font Info:    ... okay on input line 102.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 102.
+LaTeX Font Info:    ... okay on input line 102.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 102.
+LaTeX Font Info:    ... okay on input line 102.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 102.
+LaTeX Font Info:    ... okay on input line 102.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 102.
+LaTeX Font Info:    ... okay on input line 102.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 102.
+LaTeX Font Info:    ... okay on input line 102.
+LaTeX Font Info:    Checking defaults for EU1/lmr/m/n on input line 102.
+LaTeX Font Info:    ... okay on input line 102.
+LaTeX Font Info:    Checking defaults for T3/cmr/m/n on input line 102.
+LaTeX Font Info:    Try loading font information for T3+cmr on input line 102.
 
 (/usr/share/texmf/tex/latex/tipa/t3cmr.fd
 File: t3cmr.fd 2001/12/31 TIPA font definitions
 )
-LaTeX Font Info:    ... okay on input line 101.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 101.
-LaTeX Font Info:    ... okay on input line 101.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 101.
-LaTeX Font Info:    ... okay on input line 101.
+LaTeX Font Info:    ... okay on input line 102.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 102.
+LaTeX Font Info:    ... okay on input line 102.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 102.
+LaTeX Font Info:    ... okay on input line 102.
 
 ABD: EverySelectfont initializing macros
-LaTeX Info: Redefining \selectfont on input line 101.
+LaTeX Info: Redefining \selectfont on input line 102.
 .................................................
 . fontspec info: "setup-math"
 . 
@@ -1684,66 +1684,66 @@ LaTeX Info: Redefining \selectfont on input line 101.
 .................................................
 \symlegacymaths=\mathgroup9
 LaTeX Font Info:    Overwriting symbol font `legacymaths' in version `bold'
-(Font)                  OT1/cmr/m/n --> OT1/cmr/bx/n on input line 101.
-LaTeX Font Info:    Redeclaring math accent \acute on input line 101.
-LaTeX Font Info:    Redeclaring math accent \grave on input line 101.
-LaTeX Font Info:    Redeclaring math accent \ddot on input line 101.
-LaTeX Font Info:    Redeclaring math accent \tilde on input line 101.
-LaTeX Font Info:    Redeclaring math accent \bar on input line 101.
-LaTeX Font Info:    Redeclaring math accent \breve on input line 101.
-LaTeX Font Info:    Redeclaring math accent \check on input line 101.
-LaTeX Font Info:    Redeclaring math accent \hat on input line 101.
-LaTeX Font Info:    Redeclaring math accent \dot on input line 101.
-LaTeX Font Info:    Redeclaring math accent \mathring on input line 101.
-LaTeX Font Info:    Redeclaring math symbol \Gamma on input line 101.
-LaTeX Font Info:    Redeclaring math symbol \Delta on input line 101.
-LaTeX Font Info:    Redeclaring math symbol \Theta on input line 101.
-LaTeX Font Info:    Redeclaring math symbol \Lambda on input line 101.
-LaTeX Font Info:    Redeclaring math symbol \Xi on input line 101.
-LaTeX Font Info:    Redeclaring math symbol \Pi on input line 101.
-LaTeX Font Info:    Redeclaring math symbol \Sigma on input line 101.
-LaTeX Font Info:    Redeclaring math symbol \Upsilon on input line 101.
-LaTeX Font Info:    Redeclaring math symbol \Phi on input line 101.
-LaTeX Font Info:    Redeclaring math symbol \Psi on input line 101.
-LaTeX Font Info:    Redeclaring math symbol \Omega on input line 101.
-LaTeX Font Info:    Redeclaring math symbol \mathdollar on input line 101.
-LaTeX Font Info:    Redeclaring symbol font `operators' on input line 101.
+(Font)                  OT1/cmr/m/n --> OT1/cmr/bx/n on input line 102.
+LaTeX Font Info:    Redeclaring math accent \acute on input line 102.
+LaTeX Font Info:    Redeclaring math accent \grave on input line 102.
+LaTeX Font Info:    Redeclaring math accent \ddot on input line 102.
+LaTeX Font Info:    Redeclaring math accent \tilde on input line 102.
+LaTeX Font Info:    Redeclaring math accent \bar on input line 102.
+LaTeX Font Info:    Redeclaring math accent \breve on input line 102.
+LaTeX Font Info:    Redeclaring math accent \check on input line 102.
+LaTeX Font Info:    Redeclaring math accent \hat on input line 102.
+LaTeX Font Info:    Redeclaring math accent \dot on input line 102.
+LaTeX Font Info:    Redeclaring math accent \mathring on input line 102.
+LaTeX Font Info:    Redeclaring math symbol \Gamma on input line 102.
+LaTeX Font Info:    Redeclaring math symbol \Delta on input line 102.
+LaTeX Font Info:    Redeclaring math symbol \Theta on input line 102.
+LaTeX Font Info:    Redeclaring math symbol \Lambda on input line 102.
+LaTeX Font Info:    Redeclaring math symbol \Xi on input line 102.
+LaTeX Font Info:    Redeclaring math symbol \Pi on input line 102.
+LaTeX Font Info:    Redeclaring math symbol \Sigma on input line 102.
+LaTeX Font Info:    Redeclaring math symbol \Upsilon on input line 102.
+LaTeX Font Info:    Redeclaring math symbol \Phi on input line 102.
+LaTeX Font Info:    Redeclaring math symbol \Psi on input line 102.
+LaTeX Font Info:    Redeclaring math symbol \Omega on input line 102.
+LaTeX Font Info:    Redeclaring math symbol \mathdollar on input line 102.
+LaTeX Font Info:    Redeclaring symbol font `operators' on input line 102.
 LaTeX Font Info:    Encoding `OT1' has changed to `EU1' for symbol font
-(Font)              `operators' in the math version `normal' on input line 101.
+(Font)              `operators' in the math version `normal' on input line 102.
 
 LaTeX Font Info:    Overwriting symbol font `operators' in version `normal'
-(Font)                  OT1/cmr/m/n --> EU1/UbuntuMono(1)/m/n on input line 101
+(Font)                  OT1/cmr/m/n --> EU1/UbuntuMono(1)/m/n on input line 102
 .
 LaTeX Font Info:    Encoding `OT1' has changed to `EU1' for symbol font
-(Font)              `operators' in the math version `bold' on input line 101.
+(Font)              `operators' in the math version `bold' on input line 102.
 LaTeX Font Info:    Overwriting symbol font `operators' in version `bold'
 (Font)                  OT1/cmr/bx/n --> EU1/UbuntuMono(1)/m/n on input line 10
-1.
+2.
 LaTeX Font Info:    Overwriting symbol font `operators' in version `normal'
 (Font)                  EU1/UbuntuMono(1)/m/n --> EU1/UbuntuMono(1)/m/n on inpu
-t line 101.
+t line 102.
 LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `normal'
 (Font)                  OT1/cmr/m/it --> EU1/UbuntuMono(1)/m/it on input line 1
-01.
+02.
 LaTeX Font Info:    Overwriting math alphabet `\mathbf' in version `normal'
 (Font)                  OT1/cmr/bx/n --> EU1/UbuntuMono(1)/bx/n on input line 1
-01.
+02.
 LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `normal'
-(Font)                  OT1/cmss/m/n --> EU1/lmss/m/n on input line 101.
+(Font)                  OT1/cmss/m/n --> EU1/lmss/m/n on input line 102.
 LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `normal'
 (Font)                  OT1/cmtt/m/n --> EU1/UbuntuMono(0)/m/n on input line 10
-1.
+2.
 LaTeX Font Info:    Overwriting symbol font `operators' in version `bold'
 (Font)                  EU1/UbuntuMono(1)/m/n --> EU1/UbuntuMono(1)/bx/n on inp
-ut line 101.
+ut line 102.
 LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `bold'
 (Font)                  OT1/cmr/bx/it --> EU1/UbuntuMono(1)/bx/it on input line
- 101.
+ 102.
 LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `bold'
-(Font)                  OT1/cmss/bx/n --> EU1/lmss/bx/n on input line 101.
+(Font)                  OT1/cmss/bx/n --> EU1/lmss/bx/n on input line 102.
 LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `bold'
 (Font)                  OT1/cmtt/m/n --> EU1/UbuntuMono(0)/bx/n on input line 1
-01.
+02.
 
 *geometry* driver: auto-detecting
 *geometry* detected driver: xetex
@@ -1780,7 +1780,7 @@ LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `bold'
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
 \AtBeginShipoutBox=\box66
-Package hyperref Info: Link coloring ON on input line 101.
+Package hyperref Info: Link coloring ON on input line 102.
 (/usr/share/texlive/texmf-dist/tex/latex/hyperref/nameref.sty
 Package: nameref 2012/10/27 v2.43 Cross-referencing by name of section
 
@@ -1789,9 +1789,9 @@ Package: gettitlestring 2010/12/03 v1.4 Cleanup title references (HO)
 )
 \c@section@level=\count190
 )
-LaTeX Info: Redefining \ref on input line 101.
-LaTeX Info: Redefining \pageref on input line 101.
-LaTeX Info: Redefining \nameref on input line 101.
+LaTeX Info: Redefining \ref on input line 102.
+LaTeX Info: Redefining \pageref on input line 102.
+LaTeX Info: Redefining \nameref on input line 102.
 
 (./main.out) (./main.out)
 \@outlinefile=\write6
@@ -1809,19 +1809,30 @@ Package: lscape 2000/10/22 v3.01 Landscape Pages (DPC)
 )
 Package pdflscape Info: Auto-detected driver: dvipdfm (xetex) on input line 98.
 
-) (./main.toc
-LaTeX Font Info:    Try loading font information for U+msa on input line 2.
+)
+LaTeX Font Info:    Try loading font information for U+msa on input line 108.
 
 (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Try loading font information for U+msb on input line 2.
+LaTeX Font Info:    Try loading font information for U+msb on input line 108.
 
 (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 ) [1
 
 
+] (./main.toc
+LaTeX Font Info:    Font shape `EU1/UbuntuMono(1)/m/sl' in size <10.53937> not 
+available
+(Font)              Font shape `EU1/UbuntuMono(1)/m/it' tried instead on input 
+line 63.
+LaTeX Font Info:    Font shape `EU1/FandolSong-Regular(0)/m/sl' in size <10.539
+37> not available
+(Font)              Font shape `EU1/FandolSong-Regular(0)/m/it' tried instead o
+n input line 63.
+
+[1
 
 ])
 \tf@toc=\write7
@@ -1866,7 +1877,8 @@ edent(t)); f.close();")...executed.
 runsystem(pygmentize -l cpp -f latex -P commandprefix=PYG -F tokenmerge -P math
 escape=True -o "main.out.pyg" "main.pyg" )...executed.
 
- (./main.out.pyg)
+
+(./main.out.pyg)
 runsystem(python -c "import sys; import textwrap; from io import open; f = open
 (\"source/number-theory/exBSGS.cpp\", \"r\", encoding=\"UTF8\"); t = f.read(); 
 f.close(); f = open(\"main.pyg\", \"w\", encoding=\"UTF8\"); f.write(textwrap.d
@@ -1875,8 +1887,7 @@ edent(t)); f.close();")...executed.
 runsystem(pygmentize -l cpp -f latex -P commandprefix=PYG -F tokenmerge -P math
 escape=True -o "main.out.pyg" "main.pyg" )...executed.
 
-
-(./main.out.pyg)
+ (./main.out.pyg)
 runsystem(python -c "import sys; import textwrap; from io import open; f = open
 (\"source/number-theory/miller-rabin.cpp\", \"r\", encoding=\"UTF8\"); t = f.re
 ad(); f.close(); f = open(\"main.pyg\", \"w\", encoding=\"UTF8\"); f.write(text
@@ -1885,16 +1896,7 @@ wrap.dedent(t)); f.close();")...executed.
 runsystem(pygmentize -l cpp -f latex -P commandprefix=PYG -F tokenmerge -P math
 escape=True -o "main.out.pyg" "main.pyg" )...executed.
 
- (./main.out.pyg
-LaTeX Font Info:    Font shape `EU1/UbuntuMono(1)/m/sl' in size <10.53937> not 
-available
-(Font)              Font shape `EU1/UbuntuMono(1)/m/it' tried instead on input 
-line 12.
-LaTeX Font Info:    Font shape `EU1/FandolSong-Regular(0)/m/sl' in size <10.539
-37> not available
-(Font)              Font shape `EU1/FandolSong-Regular(0)/m/it' tried instead o
-n input line 12.
- [2])
+ (./main.out.pyg [2])
 runsystem(python -c "import sys; import textwrap; from io import open; f = open
 (\"source/number-theory/pollard-rho.cpp\", \"r\", encoding=\"UTF8\"); t = f.rea
 d(); f.close(); f = open(\"main.pyg\", \"w\", encoding=\"UTF8\"); f.write(textw
@@ -1912,7 +1914,8 @@ runsystem(python -c "import sys; import textwrap; from io import open; f = open
 runsystem(pygmentize -l cpp -f latex -P commandprefix=PYG -F tokenmerge -P math
 escape=True -o "main.out.pyg" "main.pyg" )...executed.
 
- (./main.out.pyg)
+
+(./main.out.pyg)
 runsystem(python -c "import sys; import textwrap; from io import open; f = open
 (\"source/number-theory/primeroot.cpp\", \"r\", encoding=\"UTF8\"); t = f.read(
 ); f.close(); f = open(\"main.pyg\", \"w\", encoding=\"UTF8\"); f.write(textwra
@@ -1921,8 +1924,7 @@ p.dedent(t)); f.close();")...executed.
 runsystem(pygmentize -l cpp -f latex -P commandprefix=PYG -F tokenmerge -P math
 escape=True -o "main.out.pyg" "main.pyg" )...executed.
 
-
-(./main.out.pyg)
+ (./main.out.pyg)
 runsystem(python -c "import sys; import textwrap; from io import open; f = open
 (\"source/number-theory/linear-recurrence.cpp\", \"r\", encoding=\"UTF8\"); t =
  f.read(); f.close(); f = open(\"main.pyg\", \"w\", encoding=\"UTF8\"); f.write
@@ -1949,7 +1951,8 @@ rap.dedent(t)); f.close();")...executed.
 runsystem(pygmentize -l cpp -f latex -P commandprefix=PYG -F tokenmerge -P math
 escape=True -o "main.out.pyg" "main.pyg" )...executed.
 
- (./main.out.pyg)
+
+(./main.out.pyg)
 runsystem(python -c "import sys; import textwrap; from io import open; f = open
 (\"source/numerical-algorithm/fft.cpp\", \"r\", encoding=\"UTF8\"); t = f.read(
 ); f.close(); f = open(\"main.pyg\", \"w\", encoding=\"UTF8\"); f.write(textwra
@@ -1958,8 +1961,7 @@ p.dedent(t)); f.close();")...executed.
 runsystem(pygmentize -l cpp -f latex -P commandprefix=PYG -F tokenmerge -P math
 escape=True -o "main.out.pyg" "main.pyg" )...executed.
 
-
-(./main.out.pyg [4])
+ (./main.out.pyg [4])
 runsystem(python -c "import sys; import textwrap; from io import open; f = open
 (\"source/number-theory/fwt.cpp\", \"r\", encoding=\"UTF8\"); t = f.read(); f.c
 lose(); f = open(\"main.pyg\", \"w\", encoding=\"UTF8\"); f.write(textwrap.dede
@@ -1986,7 +1988,8 @@ xtwrap.dedent(t)); f.close();")...executed.
 runsystem(pygmentize -l cpp -f latex -P commandprefix=PYG -F tokenmerge -P math
 escape=True -o "main.out.pyg" "main.pyg" )...executed.
 
- (./main.out.pyg [5])
+
+(./main.out.pyg [5])
 runsystem(python -c "import sys; import textwrap; from io import open; f = open
 (\"source/Data-Structure/LCT.cpp\", \"r\", encoding=\"UTF8\"); t = f.read(); f.
 close(); f = open(\"main.pyg\", \"w\", encoding=\"UTF8\"); f.write(textwrap.ded
@@ -1995,8 +1998,7 @@ ent(t)); f.close();")...executed.
 runsystem(pygmentize -l cpp -f latex -P commandprefix=PYG -F tokenmerge -P math
 escape=True -o "main.out.pyg" "main.pyg" )...executed.
 
-
-(./main.out.pyg)
+ (./main.out.pyg)
 runsystem(python -c "import sys; import textwrap; from io import open; f = open
 (\"source/Data-Structure/modui_tree_ver.cpp\", \"r\", encoding=\"UTF8\"); t = f
 .read(); f.close(); f = open(\"main.pyg\", \"w\", encoding=\"UTF8\"); f.write(t
@@ -2036,10 +2038,7 @@ dent(t)); f.close();")...executed.
 runsystem(pygmentize -l cpp -f latex -P commandprefix=PYG -F tokenmerge -P math
 escape=True -o "main.out.pyg" "main.pyg" )...executed.
 
- (./main.out.pyg [7]
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-)
+ (./main.out.pyg [7])
 runsystem(python -c "import sys; import textwrap; from io import open; f = open
 (\"source/Graph-Algorithm/Maximum-Matching-Hopcroft-Karp.cpp\", \"r\", encoding
 =\"UTF8\"); t = f.read(); f.close(); f = open(\"main.pyg\", \"w\", encoding=\"U
@@ -2048,8 +2047,10 @@ TF8\"); f.write(textwrap.dedent(t)); f.close();")...executed.
 runsystem(pygmentize -l cpp -f latex -P commandprefix=PYG -F tokenmerge -P math
 escape=True -o "main.out.pyg" "main.pyg" )...executed.
 
+ (./main.out.pyg
+Underfull \vbox (badness 10000) has occurred while \output is active []
 
-(./main.out.pyg)
+)
 runsystem(python -c "import sys; import textwrap; from io import open; f = open
 (\"source/Graph-Algorithm/Maximum-Weight-Matching.cpp\", \"r\", encoding=\"UTF8
 \"); t = f.read(); f.close(); f = open(\"main.pyg\", \"w\", encoding=\"UTF8\");
@@ -2058,7 +2059,8 @@ runsystem(python -c "import sys; import textwrap; from io import open; f = open
 runsystem(pygmentize -l cpp -f latex -P commandprefix=PYG -F tokenmerge -P math
 escape=True -o "main.out.pyg" "main.pyg" )...executed.
 
- (./main.out.pyg [8])
+
+(./main.out.pyg [8])
 runsystem(python -c "import sys; import textwrap; from io import open; f = open
 (\"source/Graph-Algorithm/Two-Satisfiability.cpp\", \"r\", encoding=\"UTF8\"); 
 t = f.read(); f.close(); f = open(\"main.pyg\", \"w\", encoding=\"UTF8\"); f.wr
@@ -2085,8 +2087,7 @@ rap.dedent(t)); f.close();")...executed.
 runsystem(pygmentize -l cpp -f latex -P commandprefix=PYG -F tokenmerge -P math
 escape=True -o "main.out.pyg" "main.pyg" )...executed.
 
-
-(./main.out.pyg)
+ (./main.out.pyg)
 runsystem(python -c "import sys; import textwrap; from io import open; f = open
 (\"source/Graph-Algorithm/Minimum-Cut-Stoer-Wagner.cpp\", \"r\", encoding=\"UTF
 8\"); t = f.read(); f.close(); f = open(\"main.pyg\", \"w\", encoding=\"UTF8\")
@@ -2095,7 +2096,8 @@ runsystem(python -c "import sys; import textwrap; from io import open; f = open
 runsystem(pygmentize -l cpp -f latex -P commandprefix=PYG -F tokenmerge -P math
 escape=True -o "main.out.pyg" "main.pyg" )...executed.
 
- (./main.out.pyg [10])
+
+(./main.out.pyg [10])
 runsystem(python -c "import sys; import textwrap; from io import open; f = open
 (\"source/Graph-Algorithm/Maximum-Matching-Blossom.cpp\", \"r\", encoding=\"UTF
 8\"); t = f.read(); f.close(); f = open(\"main.pyg\", \"w\", encoding=\"UTF8\")
@@ -2113,8 +2115,7 @@ runsystem(python -c "import sys; import textwrap; from io import open; f = open
 runsystem(pygmentize -l cpp -f latex -P commandprefix=PYG -F tokenmerge -P math
 escape=True -o "main.out.pyg" "main.pyg" )...executed.
 
- (./main.out.pyg
-[11])
+ (./main.out.pyg [11])
 runsystem(python -c "import sys; import textwrap; from io import open; f = open
 (\"source/temp_ypm/acauto.cpp\", \"r\", encoding=\"UTF8\"); t = f.read(); f.clo
 se(); f = open(\"main.pyg\", \"w\", encoding=\"UTF8\"); f.write(textwrap.dedent
@@ -2132,7 +2133,8 @@ se(); f = open(\"main.pyg\", \"w\", encoding=\"UTF8\"); f.write(textwrap.dedent
 runsystem(pygmentize -l cpp -f latex -P commandprefix=PYG -F tokenmerge -P math
 escape=True -o "main.out.pyg" "main.pyg" )...executed.
 
- (./main.out.pyg [12])
+
+(./main.out.pyg [12])
 runsystem(python -c "import sys; import textwrap; from io import open; f = open
 (\"source/temp_ypm/SAM-NSUBSTR.cpp\", \"r\", encoding=\"UTF8\"); t = f.read(); 
 f.close(); f = open(\"main.pyg\", \"w\", encoding=\"UTF8\"); f.write(textwrap.d
@@ -2159,8 +2161,8 @@ runsystem(python -c "import sys; import textwrap; from io import open; f = open
 runsystem(pygmentize -l cpp -f latex -P commandprefix=PYG -F tokenmerge -P math
 escape=True -o "main.out.pyg" "main.pyg" )...executed.
 
-
-(./main.out.pyg [13])
+ (./main.out.pyg
+[13])
 runsystem(python -c "import sys; import textwrap; from io import open; f = open
 (\"source/temp_ypm/manacher-poj3974.cpp\", \"r\", encoding=\"UTF8\"); t = f.rea
 d(); f.close(); f = open(\"main.pyg\", \"w\", encoding=\"UTF8\"); f.write(textw
@@ -2180,9 +2182,9 @@ escape=True -o "main.out.pyg" "main.pyg" )...executed.
 
  (./main.out.pyg)
 runsystem(python -c "import sys; import textwrap; from io import open; f = open
-(\"source/Geometry/8 Geo2D_simple.cpp\", \"r\", encoding=\"UTF8\"); t = f.read(
-); f.close(); f = open(\"main.pyg\", \"w\", encoding=\"UTF8\"); f.write(textwra
-p.dedent(t)); f.close();")...executed.
+(\"source/geometry/Geo2D.cpp\", \"r\", encoding=\"UTF8\"); t = f.read(); f.clos
+e(); f = open(\"main.pyg\", \"w\", encoding=\"UTF8\"); f.write(textwrap.dedent(
+t)); f.close();")...executed.
 
 runsystem(pygmentize -l cpp -f latex -P commandprefix=PYG -F tokenmerge -P math
 escape=True -o "main.out.pyg" "main.pyg" )...executed.
@@ -2190,17 +2192,10 @@ escape=True -o "main.out.pyg" "main.pyg" )...executed.
  (./main.out.pyg
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [14])
-runsystem(python -c "import sys; import textwrap; from io import open; f = open
-(\"source/Geometry/convex.cpp\", \"r\", encoding=\"UTF8\"); t = f.read(); f.clo
-se(); f = open(\"main.pyg\", \"w\", encoding=\"UTF8\"); f.write(textwrap.dedent
-(t)); f.close();")...executed.
+ [14]
+Underfull \vbox (badness 10000) has occurred while \output is active []
 
-runsystem(pygmentize -l cpp -f latex -P commandprefix=PYG -F tokenmerge -P math
-escape=True -o "main.out.pyg" "main.pyg" )...executed.
-
-
-(./main.out.pyg)
+)
 runsystem(python -c "import sys; import textwrap; from io import open; f = open
 (\"source/Geometry/3 abolonis.cpp\", \"r\", encoding=\"UTF8\"); t = f.read(); f
 .close(); f = open(\"main.pyg\", \"w\", encoding=\"UTF8\"); f.write(textwrap.de
@@ -2209,9 +2204,47 @@ dent(t)); f.close();")...executed.
 runsystem(pygmentize -l cpp -f latex -P commandprefix=PYG -F tokenmerge -P math
 escape=True -o "main.out.pyg" "main.pyg" )...executed.
 
+
+(./main.out.pyg)
+runsystem(python -c "import sys; import textwrap; from io import open; f = open
+(\"source/geometry/areaCT.cpp\", \"r\", encoding=\"UTF8\"); t = f.read(); f.clo
+se(); f = open(\"main.pyg\", \"w\", encoding=\"UTF8\"); f.write(textwrap.dedent
+(t)); f.close();")...executed.
+
+runsystem(pygmentize -l cpp -f latex -P commandprefix=PYG -F tokenmerge -P math
+escape=True -o "main.out.pyg" "main.pyg" )...executed.
+
+ (./main.out.pyg [15])
+runsystem(python -c "import sys; import textwrap; from io import open; f = open
+(\"source/geometry/CircleArea.cpp\", \"r\", encoding=\"UTF8\"); t = f.read(); f
+.close(); f = open(\"main.pyg\", \"w\", encoding=\"UTF8\"); f.write(textwrap.de
+dent(t)); f.close();")...executed.
+
+runsystem(pygmentize -l cpp -f latex -P commandprefix=PYG -F tokenmerge -P math
+escape=True -o "main.out.pyg" "main.pyg" )...executed.
+
  (./main.out.pyg)
 runsystem(python -c "import sys; import textwrap; from io import open; f = open
-(\"source/Geometry/5 areaCT.cpp\", \"r\", encoding=\"UTF8\"); t = f.read(); f.c
+(\"source/geometry/HPI_integer.cpp\", \"r\", encoding=\"UTF8\"); t = f.read(); 
+f.close(); f = open(\"main.pyg\", \"w\", encoding=\"UTF8\"); f.write(textwrap.d
+edent(t)); f.close();")...executed.
+
+runsystem(pygmentize -l cpp -f latex -P commandprefix=PYG -F tokenmerge -P math
+escape=True -o "main.out.pyg" "main.pyg" )...executed.
+
+ (./main.out.pyg
+[16])
+runsystem(python -c "import sys; import textwrap; from io import open; f = open
+(\"source/geometry/HalfPlaneIntersection.cpp\", \"r\", encoding=\"UTF8\"); t = 
+f.read(); f.close(); f = open(\"main.pyg\", \"w\", encoding=\"UTF8\"); f.write(
+textwrap.dedent(t)); f.close();")...executed.
+
+runsystem(pygmentize -l cpp -f latex -P commandprefix=PYG -F tokenmerge -P math
+escape=True -o "main.out.pyg" "main.pyg" )...executed.
+
+ (./main.out.pyg)
+runsystem(python -c "import sys; import textwrap; from io import open; f = open
+(\"source/geometry/Triangle.cpp\", \"r\", encoding=\"UTF8\"); t = f.read(); f.c
 lose(); f = open(\"main.pyg\", \"w\", encoding=\"UTF8\"); f.write(textwrap.dede
 nt(t)); f.close();")...executed.
 
@@ -2220,40 +2253,6 @@ escape=True -o "main.out.pyg" "main.pyg" )...executed.
 
  (./main.out.pyg)
 runsystem(python -c "import sys; import textwrap; from io import open; f = open
-(\"source/Geometry/6 CircleArea.cpp\", \"r\", encoding=\"UTF8\"); t = f.read();
- f.close(); f = open(\"main.pyg\", \"w\", encoding=\"UTF8\"); f.write(textwrap.
-dedent(t)); f.close();")...executed.
-
-runsystem(pygmentize -l cpp -f latex -P commandprefix=PYG -F tokenmerge -P math
-escape=True -o "main.out.pyg" "main.pyg" )...executed.
-
- (./main.out.pyg
-Underfull \vbox (badness 1924) has occurred while \output is active []
-
- [15])
-runsystem(python -c "import sys; import textwrap; from io import open; f = open
-(\"source/Geometry/9 HPI_integer.cpp\", \"r\", encoding=\"UTF8\"); t = f.read()
-; f.close(); f = open(\"main.pyg\", \"w\", encoding=\"UTF8\"); f.write(textwrap
-.dedent(t)); f.close();")...executed.
-
-runsystem(pygmentize -l cpp -f latex -P commandprefix=PYG -F tokenmerge -P math
-escape=True -o "main.out.pyg" "main.pyg" )...executed.
-
-
-(./main.out.pyg)
-runsystem(python -c "import sys; import textwrap; from io import open; f = open
-(\"source/Geometry/11 triangle.cpp\", \"r\", encoding=\"UTF8\"); t = f.read(); 
-f.close(); f = open(\"main.pyg\", \"w\", encoding=\"UTF8\"); f.write(textwrap.d
-edent(t)); f.close();")...executed.
-
-runsystem(pygmentize -l cpp -f latex -P commandprefix=PYG -F tokenmerge -P math
-escape=True -o "main.out.pyg" "main.pyg" )...executed.
-
- (./main.out.pyg
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [16])
-runsystem(python -c "import sys; import textwrap; from io import open; f = open
 (\"source/Geometry/12.cpp\", \"r\", encoding=\"UTF8\"); t = f.read(); f.close()
 ; f = open(\"main.pyg\", \"w\", encoding=\"UTF8\"); f.write(textwrap.dedent(t))
 ; f.close();")...executed.
@@ -2261,8 +2260,7 @@ runsystem(python -c "import sys; import textwrap; from io import open; f = open
 runsystem(pygmentize -l cpp -f latex -P commandprefix=PYG -F tokenmerge -P math
 escape=True -o "main.out.pyg" "main.pyg" )...executed.
 
-
-(./main.out.pyg)
+ (./main.out.pyg)
 runsystem(python -c "import sys; import textwrap; from io import open; f = open
 (\"source/Geometry/13.cpp\", \"r\", encoding=\"UTF8\"); t = f.read(); f.close()
 ; f = open(\"main.pyg\", \"w\", encoding=\"UTF8\"); f.write(textwrap.dedent(t))
@@ -2271,7 +2269,8 @@ runsystem(python -c "import sys; import textwrap; from io import open; f = open
 runsystem(pygmentize -l cpp -f latex -P commandprefix=PYG -F tokenmerge -P math
 escape=True -o "main.out.pyg" "main.pyg" )...executed.
 
- (./main.out.pyg)
+ (./main.out.pyg
+[17])
 runsystem(python -c "import sys; import textwrap; from io import open; f = open
 (\"source/Geometry/14.cpp\", \"r\", encoding=\"UTF8\"); t = f.read(); f.close()
 ; f = open(\"main.pyg\", \"w\", encoding=\"UTF8\"); f.write(textwrap.dedent(t))
@@ -2290,25 +2289,13 @@ runsystem(pygmentize -l cpp -f latex -P commandprefix=PYG -F tokenmerge -P math
 escape=True -o "main.out.pyg" "main.pyg" )...executed.
 
  (./main.out.pyg
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [17]
 Overfull \hbox (19.1091pt too wide) in paragraph at lines 26--26
 []|  
  []
 
 )
 runsystem(python -c "import sys; import textwrap; from io import open; f = open
-(\"source/nearest.cpp\", \"r\", encoding=\"UTF8\"); t = f.read(); f.close(); f 
-= open(\"main.pyg\", \"w\", encoding=\"UTF8\"); f.write(textwrap.dedent(t)); f.
-close();")...executed.
-
-runsystem(pygmentize -l cpp -f latex -P commandprefix=PYG -F tokenmerge -P math
-escape=True -o "main.out.pyg" "main.pyg" )...executed.
-
- (./main.out.pyg)
-runsystem(python -c "import sys; import textwrap; from io import open; f = open
-(\"source/Geometry/1 3DGeo.cpp\", \"r\", encoding=\"UTF8\"); t = f.read(); f.cl
+(\"source/geometry/nearest.cpp\", \"r\", encoding=\"UTF8\"); t = f.read(); f.cl
 ose(); f = open(\"main.pyg\", \"w\", encoding=\"UTF8\"); f.write(textwrap.deden
 t(t)); f.close();")...executed.
 
@@ -2316,6 +2303,20 @@ runsystem(pygmentize -l cpp -f latex -P commandprefix=PYG -F tokenmerge -P math
 escape=True -o "main.out.pyg" "main.pyg" )...executed.
 
  (./main.out.pyg)
+runsystem(python -c "import sys; import textwrap; from io import open; f = open
+(\"source/geometry/3DGeo.cpp\", \"r\", encoding=\"UTF8\"); t = f.read(); f.clos
+e(); f = open(\"main.pyg\", \"w\", encoding=\"UTF8\"); f.write(textwrap.dedent(
+t)); f.close();")...executed.
+
+runsystem(pygmentize -l cpp -f latex -P commandprefix=PYG -F tokenmerge -P math
+escape=True -o "main.out.pyg" "main.pyg" )...executed.
+
+ (./main.out.pyg [18]
+Overfull \hbox (42.14507pt too wide) in paragraph at lines 18--18
+| | | |[]|  
+ []
+
+)
 runsystem(python -c "import sys; import textwrap; from io import open; f = open
 (\"source/miscellany/mintreegraph.cpp\", \"r\", encoding=\"UTF8\"); t = f.read(
 ); f.close(); f = open(\"main.pyg\", \"w\", encoding=\"UTF8\"); f.write(textwra
@@ -2327,7 +2328,7 @@ escape=True -o "main.out.pyg" "main.pyg" )...executed.
  (./main.out.pyg
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [18])
+)
 runsystem(python -c "import sys; import textwrap; from io import open; f = open
 (\"source/miscellany/DLX.cpp\", \"r\", encoding=\"UTF8\"); t = f.read(); f.clos
 e(); f = open(\"main.pyg\", \"w\", encoding=\"UTF8\"); f.write(textwrap.dedent(
@@ -2337,10 +2338,10 @@ runsystem(pygmentize -l cpp -f latex -P commandprefix=PYG -F tokenmerge -P math
 escape=True -o "main.out.pyg" "main.pyg" )...executed.
 
 
-(./main.out.pyg
+(./main.out.pyg [19]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [19])
+)
 runsystem(python -c "import sys; import textwrap; from io import open; f = open
 (\"source/miscellany/what-day-is-today.cpp\", \"r\", encoding=\"UTF8\"); t = f.
 read(); f.close(); f = open(\"main.pyg\", \"w\", encoding=\"UTF8\"); f.write(te
@@ -2353,11 +2354,11 @@ escape=True -o "main.out.pyg" "main.pyg" )...executed.
 (./main.out.pyg)
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 302.
+(hyperref)                removing `math shift' on input line 305.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 302.
+(hyperref)                removing `math shift' on input line 305.
 
 runsystem(python -c "import sys; import textwrap; from io import open; f = open
 (\"source/miscellany/subset-of-size-k.cpp\", \"r\", encoding=\"UTF8\"); t = f.r
@@ -2367,7 +2368,7 @@ twrap.dedent(t)); f.close();")...executed.
 runsystem(pygmentize -l cpp -f latex -P commandprefix=PYG -F tokenmerge -P math
 escape=True -o "main.out.pyg" "main.pyg" )...executed.
 
-(./main.out.pyg)
+(./main.out.pyg [20])
 runsystem(python -c "import sys; import textwrap; from io import open; f = open
 (\"source/miscellany/cyclic-longest-common-string.cpp\", \"r\", encoding=\"UTF8
 \"); t = f.read(); f.close(); f = open(\"main.pyg\", \"w\", encoding=\"UTF8\");
@@ -2376,7 +2377,7 @@ runsystem(python -c "import sys; import textwrap; from io import open; f = open
 runsystem(pygmentize -l cpp -f latex -P commandprefix=PYG -F tokenmerge -P math
 escape=True -o "main.out.pyg" "main.pyg" )...executed.
 
- (./main.out.pyg [20])
+ (./main.out.pyg)
 runsystem(python -c "import sys; import textwrap; from io import open; f = open
 (\"source/miscellany/LLMOD.cpp\", \"r\", encoding=\"UTF8\"); t = f.read(); f.cl
 ose(); f = open(\"main.pyg\", \"w\", encoding=\"UTF8\"); f.write(textwrap.deden
@@ -2419,6 +2420,9 @@ hescape=True -o "main.out.pyg" "main.pyg" )...executed.
 
 
 (./main.out.pyg
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [22]
 Overfull \hbox (6.0102pt too wide) in paragraph at lines 67--67
 | | | |[][][][][][][][][][][][][][][][][][][][][]|  
  []
@@ -2428,7 +2432,7 @@ Overfull \hbox (10.52701pt too wide) in paragraph at lines 68--68
 | | | |[][][][][][][][][][][]|  
  []
 
-) [22] [23] (./source/calculustable.tex
+) [23] (./source/calculustable.tex
 Underfull \vbox (badness 10000) detected at line 4
  []
 
@@ -2532,21 +2536,21 @@ runsystem(rm "main.pyg")...executed.
 
 runsystem(rm "main.out.pyg")...executed.
 
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 621.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 624.
  [25]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 621.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 624.
  (./main.aux)
-Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 621.
-Package atveryend Info: Empty hook `AtEndAfterFileList' on input line 621.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 621.
+Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 624.
+Package atveryend Info: Empty hook `AtEndAfterFileList' on input line 624.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 624.
  ) 
 Here is how much of TeX's memory you used:
- 31286 strings out of 493638
- 584597 string characters out of 6146796
- 702172 words of memory out of 5000000
- 34155 multiletter control sequences out of 15000+600000
- 19855 words of font info for 108 fonts, out of 8000000 for 9000
+ 31328 strings out of 493638
+ 585500 string characters out of 6146796
+ 703462 words of memory out of 5000000
+ 34183 multiletter control sequences out of 15000+600000
+ 24841 words of font info for 133 fonts, out of 8000000 for 9000
  1328 hyphenation exceptions out of 8191
- 65i,9n,77p,10427b,645s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 65i,9n,77p,10427b,640s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on main.pdf (25 pages).
+Output written on main.pdf (26 pages).
